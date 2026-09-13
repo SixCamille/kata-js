@@ -8,8 +8,15 @@ body {
   background: #f7f3ea;
 }
 
+.starter-layout {
+  width: min(980px, calc(100% - 32px));
+  display: grid;
+  grid-template-columns: minmax(280px, 440px) minmax(260px, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
 .panel {
-  width: min(440px, calc(100% - 32px));
   padding: 26px;
   border: 2px solid #202633;
   border-radius: 8px;
@@ -53,4 +60,63 @@ button {
 
 .hint {
   color: #5f6b7a;
+}
+
+.kata-brief {
+  padding: 22px;
+  border: 2px solid #202633;
+  border-radius: 8px;
+  background: #fffdf8;
+  box-shadow: 10px 10px 0 #202633;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #5f6b7a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.kata-brief h2,
+.kata-brief h3 {
+  margin: 0 0 10px;
+}
+
+.kata-brief h3 {
+  margin-top: 18px;
+}
+
+.kata-brief p,
+.kata-brief li {
+  color: #5f6b7a;
+  line-height: 1.5;
+}
+
+.kata-brief ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.memo-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.memo-links a {
+  padding: 7px 10px;
+  border: 2px solid #202633;
+  border-radius: 999px;
+  color: #202633;
+  background: #f2c14e;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .starter-layout {
+    grid-template-columns: 1fr;
+  }
 }

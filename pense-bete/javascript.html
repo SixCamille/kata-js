@@ -40,7 +40,7 @@
       </section>
 
       <section class="memo-grid" aria-label="Notions JavaScript">
-        <article class="memo-card">
+        <article class="memo-card" id="variables">
           <p class="memo-index">01</p>
           <h3>Variables</h3>
           <p><code>const</code> sert pour une reference que l'on ne reassigne pas. <code>let</code> sert pour une valeur qui peut changer.</p>
@@ -48,7 +48,7 @@
 let count = 0;</code></pre>
         </article>
 
-        <article class="memo-card">
+        <article class="memo-card" id="conditions">
           <p class="memo-index">02</p>
           <h3>Conditions</h3>
           <p>Une condition permet de choisir un comportement selon l'etat actuel.</p>
@@ -59,7 +59,7 @@ let count = 0;</code></pre>
 }</code></pre>
         </article>
 
-        <article class="memo-card">
+        <article class="memo-card" id="fonctions">
           <p class="memo-index">03</p>
           <h3>Fonctions</h3>
           <p>Une fonction regroupe une action que l'on veut nommer, declencher ou reutiliser.</p>
@@ -68,7 +68,7 @@ let count = 0;</code></pre>
 }</code></pre>
         </article>
 
-        <article class="memo-card">
+        <article class="memo-card" id="tableaux">
           <p class="memo-index">04</p>
           <h3>Tableaux</h3>
           <p>Un tableau stocke plusieurs valeurs dans un ordre. On le parcourt souvent avec <code>forEach</code>.</p>
@@ -80,7 +80,7 @@ colors.forEach(function (color) {
 });</code></pre>
         </article>
 
-        <article class="memo-card">
+        <article class="memo-card" id="selection-dom">
           <p class="memo-index">05</p>
           <h3>Selectionner dans le DOM</h3>
           <p><code>querySelector</code> recupere le premier element qui correspond au selecteur CSS. <code>querySelectorAll</code> recupere une liste.</p>
@@ -89,7 +89,7 @@ const card = document.querySelector(".card");
 const buttons = document.querySelectorAll("button");</code></pre>
         </article>
 
-        <article class="memo-card">
+        <article class="memo-card" id="modifier-dom">
           <p class="memo-index">06</p>
           <h3>Modifier un element</h3>
           <p>Le DOM peut changer son texte, ses classes ou certains styles en reaction a l'utilisateur.</p>
@@ -99,7 +99,7 @@ card.classList.remove("hidden");
 card.style.transform = "translateX(20px)";</code></pre>
         </article>
 
-        <article class="memo-card">
+        <article class="memo-card" id="evenements">
           <p class="memo-index">07</p>
           <h3>Ecouter un evenement</h3>
           <p><code>addEventListener</code> relie une action utilisateur ou navigateur a une fonction.</p>
@@ -116,7 +116,7 @@ card.style.transform = "translateX(20px)";</code></pre>
           </ul>
         </article>
 
-        <article class="memo-card">
+        <article class="memo-card" id="temps">
           <p class="memo-index">08</p>
           <h3>Temps</h3>
           <p><code>setTimeout</code> lance une action une seule fois. <code>setInterval</code> repete une action jusqu'a <code>clearInterval</code>.</p>
@@ -131,7 +131,7 @@ const timerId = setInterval(function () {
 clearInterval(timerId);</code></pre>
         </article>
 
-        <article class="memo-card">
+        <article class="memo-card" id="souris">
           <p class="memo-index">09</p>
           <h3>Souris</h3>
           <p>Sur un evenement de souris, on peut lire la position du pointeur dans la fenetre.</p>
@@ -140,7 +140,7 @@ clearInterval(timerId);</code></pre>
 });</code></pre>
         </article>
 
-        <article class="memo-card">
+        <article class="memo-card" id="scroll">
           <p class="memo-index">10</p>
           <h3>Scroll</h3>
           <p><code>window.scrollY</code> indique de combien la page a defile verticalement.</p>
@@ -150,7 +150,7 @@ clearInterval(timerId);</code></pre>
         </article>
       </section>
 
-      <section class="debug-strip" aria-labelledby="debug-title">
+      <section class="debug-strip" id="debug" aria-labelledby="debug-title">
         <div>
           <p class="eyebrow">Debug</p>
           <h2 id="debug-title">Quand ca bloque, reduire le probleme.</h2>

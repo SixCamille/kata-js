@@ -7,14 +7,36 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <main>
-      <h1>Yeux qui suivent la souris</h1>
-      <section class="face" aria-label="Visage interactif">
-        <div class="eye"><span class="pupil"></span></div>
-        <div class="eye"><span class="pupil"></span></div>
-      </section>
-      <p>Bougez la souris : les pupilles doivent suivre le pointeur.</p>
-    </main>
+    <div class="starter-layout">
+      <main class="stage">
+        <h1>Yeux qui suivent la souris</h1>
+        <section class="face" aria-label="Visage interactif">
+          <div class="eye"><span class="pupil"></span></div>
+          <div class="eye"><span class="pupil"></span></div>
+        </section>
+        <p>Bougez la souris : les pupilles doivent suivre le pointeur.</p>
+      </main>
+
+      <aside class="kata-brief" aria-labelledby="brief-title">
+        <p class="eyebrow">Kata moyen</p>
+        <h2 id="brief-title">Suivre le pointeur</h2>
+        <p>Les pupilles doivent se deplacer legerement vers la position actuelle de la souris.</p>
+
+        <h3>Attendu</h3>
+        <ul>
+          <li>Ecouter l'evenement <code>mousemove</code>.</li>
+          <li>Calculer le centre de chaque oeil.</li>
+          <li>Appliquer un <code>transform</code> limite aux pupilles.</li>
+        </ul>
+
+        <h3>Memos utiles</h3>
+        <nav class="memo-links" aria-label="Memos utiles">
+          <a href="../../../../pense-bete/javascript.html#souris">Souris</a>
+          <a href="../../../../pense-bete/javascript.html#modifier-dom">Modifier le DOM</a>
+          <a href="../../../../pense-bete/javascript.html#fonctions">Fonctions</a>
+        </nav>
+      </aside>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
