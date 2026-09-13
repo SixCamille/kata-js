@@ -43,9 +43,11 @@ katas/
 
 ## Starters
 
-Chaque starter reste un mini projet autonome avec `index.html`, `style.css` et `script.js`.
+Chaque starter reste un mini projet autonome avec `index.html`, `playground.html`, `style.css` et `script.js`.
 
-La page affiche l'interface du kata et une consigne HTML courte sur le cote. Les liens de la consigne pointent vers des blocs precis du pense-bete JavaScript, par exemple `pense-bete/javascript.html#evenements`.
+`index.html` coupe clairement l'ecran en deux : le playground a gauche, la consigne a droite. Le playground est charge dans une iframe depuis `playground.html`, ce qui garde le DOM de l'exercice separe de la consigne.
+
+Les apprenants codent dans `script.js` et gardent donc l'autocompletion, les erreurs et les outils de leur editeur. Les liens de la consigne pointent vers des blocs precis du pense-bete JavaScript, par exemple `pense-bete/javascript.html#evenements`.
 
 ## Regle importante
 

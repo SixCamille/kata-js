@@ -4,48 +4,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kata - Chronometre todo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../../shared/starter-shell.css">
   </head>
   <body>
     <div class="starter-layout">
-      <main class="app">
-        <section class="timer">
-          <p class="label">Temps ecoule</p>
-          <strong class="time">00:00</strong>
-          <button class="timer-button" type="button">Demarrer</button>
-        </section>
-
-        <section class="tasks">
-          <h1>Todo de session</h1>
-          <form>
-            <input name="task" type="text" placeholder="Nouvelle tache">
-            <button type="submit">Ajouter</button>
-          </form>
-          <p class="counter">0 tache terminee</p>
-          <ul></ul>
-        </section>
+      <main class="playground-zone">
+        <iframe class="playground-frame" src="playground.html" title="Playground du kata chrono todo"></iframe>
       </main>
 
       <aside class="kata-brief" aria-labelledby="brief-title">
-        <p class="eyebrow">Kata difficile</p>
-        <h2 id="brief-title">Chrono + todo</h2>
-        <p>Construire deux petits etats qui cooperent : le temps ecoule et la liste des taches.</p>
+        <div class="brief-content">
+          <p class="eyebrow">Kata difficile</p>
+          <h2 id="brief-title">Chrono + todo</h2>
+          <p>Construire deux petits etats qui cooperent : le temps ecoule et la liste des taches.</p>
 
-        <h3>Attendu</h3>
-        <ul>
-          <li>Demarrer et mettre en pause le chronometre.</li>
-          <li>Ajouter des taches via le <code>submit</code>.</li>
-          <li>Stocker les taches dans un tableau et refaire le rendu.</li>
-        </ul>
+          <h3>Attendu</h3>
+          <ul>
+            <li>Demarrer et mettre en pause le chronometre.</li>
+            <li>Ajouter des taches via le <code>submit</code>.</li>
+            <li>Stocker les taches dans un tableau et refaire le rendu.</li>
+          </ul>
 
-        <h3>Memos utiles</h3>
-        <nav class="memo-links" aria-label="Memos utiles">
-          <a href="../../../../pense-bete/javascript.html#temps">Temps</a>
-          <a href="../../../../pense-bete/javascript.html#tableaux">Tableaux</a>
-          <a href="../../../../pense-bete/javascript.html#evenements">Evenements</a>
-        </nav>
+          <h3>Memos utiles</h3>
+          <nav class="memo-links" aria-label="Memos utiles">
+            <a href="../../../../pense-bete/javascript.html#temps">Temps</a>
+            <a href="../../../../pense-bete/javascript.html#tableaux">Tableaux</a>
+            <a href="../../../../pense-bete/javascript.html#evenements">Evenements</a>
+          </nav>
+        </div>
       </aside>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>

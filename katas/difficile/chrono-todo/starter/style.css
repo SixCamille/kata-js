@@ -1,26 +1,19 @@
 body {
   min-height: 100vh;
   margin: 0;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   color: #202633;
   background: #f7f3ea;
 }
 
-.starter-layout {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-}
-
 .app {
-  position: relative;
-  min-width: 0;
-  padding: clamp(48px, 6vw, 72px);
+  width: min(860px, calc(100% - 32px));
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 18px;
-  align-content: center;
-  background: #fffdf8;
 }
 
 .timer,
@@ -30,36 +23,6 @@ body {
   border-radius: 8px;
   background: #fffdf8;
   box-shadow: 8px 8px 0 #202633;
-}
-
-.kata-brief {
-  position: relative;
-  min-width: 0;
-  padding: clamp(48px, 7vw, 82px);
-  border-left: 6px solid #202633;
-  background:
-    linear-gradient(0deg, rgba(242, 193, 78, 0.18), transparent 62%),
-    #fffdf8;
-}
-
-.app::before,
-.kata-brief::before {
-  content: "Playground";
-  position: absolute;
-  top: 22px;
-  left: 22px;
-  padding: 6px 10px;
-  border: 2px solid #202633;
-  border-radius: 999px;
-  background: #62c7c7;
-  font-size: 0.78rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.kata-brief::before {
-  content: "Consigne";
-  background: #f2c14e;
 }
 
 .label,
@@ -109,65 +72,8 @@ li {
   border-bottom: 2px solid #d9dee8;
 }
 
-.eyebrow {
-  margin: 0 0 8px;
-  color: #5f6b7a;
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.kata-brief h2,
-.kata-brief h3 {
-  margin: 0 0 10px;
-}
-
-.kata-brief h3 {
-  margin-top: 18px;
-}
-
-.kata-brief p,
-.kata-brief li {
-  color: #5f6b7a;
-  line-height: 1.5;
-}
-
-.kata-brief ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.memo-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.memo-links a {
-  padding: 7px 10px;
-  border: 2px solid #202633;
-  border-radius: 999px;
-  color: #202633;
-  background: #f2c14e;
-  font-size: 0.85rem;
-  font-weight: 800;
-  text-decoration: none;
-}
-
 @media (max-width: 980px) {
-  .starter-layout,
   .app {
     grid-template-columns: 1fr;
-  }
-
-  .app,
-  .kata-brief {
-    min-height: 50vh;
-    padding: 76px 22px 28px;
-  }
-
-  .kata-brief {
-    border-left: 0;
-    border-top: 6px solid #202633;
   }
 }
