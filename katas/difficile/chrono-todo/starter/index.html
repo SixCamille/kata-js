@@ -3,57 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lab - Chronometre todo</title>
-    <link rel="stylesheet" href="../../../../shared/code-lab.css">
+    <title>Kata - Chronometre todo</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <main class="lab-shell" data-code-lab data-storage-key="kata-js-chrono-todo">
-      <header class="lab-header">
-        <div>
-          <p class="eyebrow">Kata difficile</p>
-          <h1>Chrono todo</h1>
-        </div>
-        <a class="lab-link" href="../consigne.md">Consigne</a>
-      </header>
-
-      <div class="lab-grid">
-        <section class="lab-preview" aria-label="Preview du kata">
-          <div class="lab-window" aria-hidden="true">
-            <span class="lab-dot red"></span>
-            <span class="lab-dot yellow"></span>
-            <span class="lab-dot green"></span>
-          </div>
-          <iframe title="Preview du kata" data-code-lab-preview></iframe>
-        </section>
-
-        <section class="lab-workbench" aria-label="Code du kata">
-          <div class="lab-toolbar" role="tablist" aria-label="Fichiers du kata">
-            <button class="lab-tab active" type="button" data-code-lab-tab="js">JS</button>
-            <button class="lab-tab" type="button" data-code-lab-tab="html">HTML</button>
-            <button class="lab-tab" type="button" data-code-lab-tab="css">CSS</button>
-          </div>
-
-          <div class="lab-panel active" data-code-lab-panel="js">
-            <textarea class="lab-editor" data-code-lab-editor spellcheck="false" aria-label="Code JavaScript a tester"></textarea>
-            <div class="lab-actions">
-              <button class="lab-button primary" type="button" data-code-lab-run>Lancer</button>
-              <button class="lab-button warning" type="button" data-code-lab-reset>Reinitialiser</button>
-            </div>
-            <p class="lab-status" data-code-lab-status></p>
-          </div>
-
-          <div class="lab-panel" data-code-lab-panel="html">
-            <pre><code data-code-lab-output="html"></code></pre>
-          </div>
-
-          <div class="lab-panel" data-code-lab-panel="css">
-            <pre><code data-code-lab-output="css"></code></pre>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <template data-code-lab-html>
     <main class="app">
       <section class="timer">
         <p class="label">Temps ecoule</p>
@@ -71,92 +24,6 @@
         <ul></ul>
       </section>
     </main>
-    </template>
-
-    <template data-code-lab-css>
-body {
-  min-height: 100vh;
-  margin: 0;
-  display: grid;
-  place-items: center;
-  font-family: Arial, sans-serif;
-  color: #202633;
-  background: #f7f3ea;
-}
-
-.app {
-  width: min(860px, calc(100% - 32px));
-  display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
-  gap: 18px;
-}
-
-.timer,
-.tasks {
-  padding: 22px;
-  border: 2px solid #202633;
-  border-radius: 8px;
-  background: #fffdf8;
-  box-shadow: 8px 8px 0 #202633;
-}
-
-.label,
-.counter {
-  color: #5f6b7a;
-  font-weight: 700;
-}
-
-.time {
-  display: block;
-  margin: 12px 0;
-  font-size: 3rem;
-}
-
-button {
-  min-height: 42px;
-  padding: 0 14px;
-  border: 2px solid #202633;
-  border-radius: 6px;
-  background: #62c7c7;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-form {
-  display: flex;
-  gap: 8px;
-}
-
-input {
-  min-width: 0;
-  flex: 1;
-  height: 42px;
-  padding: 0 10px;
-  border: 2px solid #202633;
-  border-radius: 6px;
-}
-
-ul {
-  margin: 18px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  padding: 10px 0;
-  border-bottom: 2px solid #d9dee8;
-}
-
-@media (max-width: 720px) {
-  .app {
-    grid-template-columns: 1fr;
-  }
-}
-    </template>
-
-    <script type="text/plain" data-code-lab-js>
-// A vous de coder.
-    </script>
-    <script src="../../../../shared/code-lab.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -16,7 +16,7 @@ Aucun serveur, aucune installation et aucune dependance ne sont necessaires.
 2. Observer le kata d'exemple.
 3. Choisir un niveau dans le picker.
 4. Tirer un kata au hasard.
-5. Ouvrir le starter, lire le HTML/CSS fourni et coder le JavaScript dans le mini lab.
+5. Ouvrir le starter et coder uniquement le JavaScript demande.
 
 ## Structure
 
@@ -34,25 +34,11 @@ picker/
   styles.css
   data.js
   app.js
-shared/
-  code-lab.css
-  code-lab.js
 katas/
   facile/
   moyen/
   difficile/
 ```
-
-## Starters
-
-Chaque starter est un mini lab autonome, inspire d'un CodePen simplifie :
-
-- une preview sandboxee dans une iframe ;
-- un onglet HTML en lecture seule ;
-- un onglet CSS en lecture seule ;
-- un onglet JS modifiable, relance avec le bouton `Lancer`.
-
-Le tout fonctionne en ouvrant les fichiers directement dans le navigateur : aucun serveur et aucune dependance ne sont necessaires.
 
 ## Regle importante
 
