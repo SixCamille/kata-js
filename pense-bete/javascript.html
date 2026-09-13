@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notions JavaScript - KATA JS</title>
+    <link rel="stylesheet" href="../picker/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Pense-bete</p>
+        <h1>Notions JavaScript</h1>
+      </div>
+      <nav class="topnav" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../exemple/carte-interactive.html">Exemple</a>
+        <a href="../picker/index.html">Picker</a>
+      </nav>
+    </header>
+
+    <main class="memo-layout">
+      <section class="memo-hero" aria-labelledby="memo-title">
+        <div>
+          <p class="eyebrow">DOM / evenements / etat</p>
+          <h2 id="memo-title">Les reflexes utiles avant de coder un kata.</h2>
+          <p>
+            Ce memo aide a retrouver rapidement une syntaxe, un vocabulaire et une methode. Il ne remplace pas le raisonnement : il sert de table de controle pendant les 20 minutes.
+          </p>
+        </div>
+        <aside class="memo-panel" aria-label="Methode conseillee">
+          <h3>Routine de depart</h3>
+          <ol>
+            <li>Identifier les elements HTML utiles.</li>
+            <li>Nommer l'etat qui peut changer.</li>
+            <li>Ecrire une fonction courte par action.</li>
+            <li>Tester dans la console a chaque etape.</li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="memo-grid" aria-label="Notions JavaScript">
+        <article class="memo-card">
+          <p class="memo-index">01</p>
+          <h3>Variables</h3>
+          <p><code>const</code> sert pour une reference que l'on ne reassigne pas. <code>let</code> sert pour une valeur qui peut changer.</p>
+          <pre><code>const button = document.querySelector("button");
+let count = 0;</code></pre>
+        </article>
+
+        <article class="memo-card">
+          <p class="memo-index">02</p>
+          <h3>Conditions</h3>
+          <p>Une condition permet de choisir un comportement selon l'etat actuel.</p>
+          <pre><code>if (count &gt; 5) {
+  message.textContent = "Bravo";
+} else {
+  message.textContent = "Continue";
+}</code></pre>
+        </article>
+
+        <article class="memo-card">
+          <p class="memo-index">03</p>
+          <h3>Fonctions</h3>
+          <p>Une fonction regroupe une action que l'on veut nommer, declencher ou reutiliser.</p>
+          <pre><code>function updateMessage(text) {
+  message.textContent = text;
+}</code></pre>
+        </article>
+
+        <article class="memo-card">
+          <p class="memo-index">04</p>
+          <h3>Tableaux</h3>
+          <p>Un tableau stocke plusieurs valeurs dans un ordre. On le parcourt souvent avec <code>forEach</code>.</p>
+          <pre><code>const colors = ["red", "blue", "green"];
+colors.push("gold");
+
+colors.forEach(function (color) {
+  console.log(color);
+});</code></pre>
+        </article>
+
+        <article class="memo-card">
+          <p class="memo-index">05</p>
+          <h3>Selectionner dans le DOM</h3>
+          <p><code>querySelector</code> recupere le premier element qui correspond au selecteur CSS. <code>querySelectorAll</code> recupere une liste.</p>
+          <pre><code>const title = document.querySelector("h1");
+const card = document.querySelector(".card");
+const buttons = document.querySelectorAll("button");</code></pre>
+        </article>
+
+        <article class="memo-card">
+          <p class="memo-index">06</p>
+          <h3>Modifier un element</h3>
+          <p>Le DOM peut changer son texte, ses classes ou certains styles en reaction a l'utilisateur.</p>
+          <pre><code>title.textContent = "Nouveau titre";
+card.classList.add("active");
+card.classList.remove("hidden");
+card.style.transform = "translateX(20px)";</code></pre>
+        </article>
+
+        <article class="memo-card">
+          <p class="memo-index">07</p>
+          <h3>Ecouter un evenement</h3>
+          <p><code>addEventListener</code> relie une action utilisateur ou navigateur a une fonction.</p>
+          <pre><code>button.addEventListener("click", function () {
+  count = count + 1;
+});</code></pre>
+          <ul class="chip-list" aria-label="Evenements frequents">
+            <li>click</li>
+            <li>input</li>
+            <li>submit</li>
+            <li>mousemove</li>
+            <li>keydown</li>
+            <li>scroll</li>
+          </ul>
+        </article>
+
+        <article class="memo-card">
+          <p class="memo-index">08</p>
+          <h3>Temps</h3>
+          <p><code>setTimeout</code> lance une action une seule fois. <code>setInterval</code> repete une action jusqu'a <code>clearInterval</code>.</p>
+          <pre><code>setTimeout(function () {
+  message.textContent = "Temps ecoule";
+}, 1000);
+
+const timerId = setInterval(function () {
+  count = count + 1;
+}, 1000);
+
+clearInterval(timerId);</code></pre>
+        </article>
+
+        <article class="memo-card">
+          <p class="memo-index">09</p>
+          <h3>Souris</h3>
+          <p>Sur un evenement de souris, on peut lire la position du pointeur dans la fenetre.</p>
+          <pre><code>document.addEventListener("mousemove", function (event) {
+  console.log(event.clientX, event.clientY);
+});</code></pre>
+        </article>
+
+        <article class="memo-card">
+          <p class="memo-index">10</p>
+          <h3>Scroll</h3>
+          <p><code>window.scrollY</code> indique de combien la page a defile verticalement.</p>
+          <pre><code>window.addEventListener("scroll", function () {
+  console.log(window.scrollY);
+});</code></pre>
+        </article>
+      </section>
+
+      <section class="debug-strip" aria-labelledby="debug-title">
+        <div>
+          <p class="eyebrow">Debug</p>
+          <h2 id="debug-title">Quand ca bloque, reduire le probleme.</h2>
+        </div>
+        <ul>
+          <li>Lire la console.</li>
+          <li>Verifier que le fichier JS est bien charge.</li>
+          <li>Tester un <code>console.log</code> dans chaque evenement.</li>
+          <li>Inspecter les classes dans les DevTools.</li>
+          <li>Nommer les variables selon leur role.</li>
+          <li>Avancer petit a petit.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

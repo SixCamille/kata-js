@@ -12,7 +12,7 @@ Aucun serveur, aucune installation et aucune dependance ne sont necessaires.
 
 ## Parcours propose
 
-1. Lire le pense-bete JavaScript.
+1. Lire le pense-bete JavaScript en HTML.
 2. Observer le kata d'exemple.
 3. Choisir un niveau dans le picker.
 4. Tirer un kata au hasard.
@@ -26,7 +26,7 @@ README.md
 AGENTS.md
 BRIEF-EPSI-KATA.md
 pense-bete/
-  javascript.md
+  javascript.html
 exemple/
   carte-interactive.html
 picker/
