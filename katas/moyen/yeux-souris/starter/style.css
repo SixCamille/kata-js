@@ -1,0 +1,39 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, sans-serif;
+  color: #202633;
+  background: #f7f3ea;
+}
+
+main {
+  text-align: center;
+}
+
+.face {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 28px auto;
+}
+
+.eye {
+  display: grid;
+  place-items: center;
+  width: 118px;
+  height: 118px;
+  border: 2px solid #202633;
+  border-radius: 50%;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 #202633;
+}
+
+.pupil {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #5778c9;
+  transition: transform 80ms linear;
+}

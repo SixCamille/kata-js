@@ -1,0 +1,8 @@
+{
+  "title": "Chronometre de todo list",
+  "level": "difficile",
+  "concepts": ["formulaire", "tableau", "setInterval", "rendu DOM", "etat compose"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

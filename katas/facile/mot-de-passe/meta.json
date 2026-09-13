@@ -1,0 +1,8 @@
+{
+  "title": "Afficher / masquer un mot de passe",
+  "level": "facile",
+  "concepts": ["DOM", "input", "condition", "etat booleen"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

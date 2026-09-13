@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Picker - KATA JS</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">EPSI B2 FI</p>
+        <h1>Picker de kata</h1>
+      </div>
+      <nav class="topnav" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../pense-bete/javascript.md">Pense-bete</a>
+        <a href="../exemple/carte-interactive.html">Exemple</a>
+      </nav>
+    </header>
+
+    <main class="picker-layout">
+      <section class="controls" aria-labelledby="level-title">
+        <p class="eyebrow">Evaluation 20 minutes</p>
+        <h2 id="level-title">Choisir un niveau</h2>
+        <div class="segmented" role="group" aria-label="Niveau du kata">
+          <button class="level-button active" type="button" data-level="facile">Facile</button>
+          <button class="level-button" type="button" data-level="moyen">Moyen</button>
+          <button class="level-button" type="button" data-level="difficile">Difficile</button>
+        </div>
+        <button class="button primary draw-button" type="button">Tirer un kata</button>
+      </section>
+
+      <section class="result" aria-live="polite">
+        <div class="result-main">
+          <p class="eyebrow" id="kata-level">Facile</p>
+          <h2 id="kata-title">Afficher / masquer un mot de passe</h2>
+          <p id="kata-summary">Manipuler un input, un bouton et un etat booleen.</p>
+          <div class="concepts" id="kata-concepts"></div>
+          <div class="actions">
+            <a class="button" id="starter-link" href="../katas/facile/mot-de-passe/starter/index.html">Ouvrir le starter</a>
+            <a class="button" id="consigne-link" href="../katas/facile/mot-de-passe/consigne.md">Lire la consigne</a>
+            <a class="button" id="resources-link" href="../katas/facile/mot-de-passe/ressources.md">Ressources</a>
+          </div>
+        </div>
+        <div class="visual" id="kata-visual" aria-label="Apercu du kata"></div>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

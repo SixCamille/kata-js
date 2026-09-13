@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exemple - Carte interactive</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, sans-serif;
+        color: #1d2433;
+        background: #eef2f7;
+      }
+
+      main {
+        width: min(520px, calc(100% - 32px));
+      }
+
+      .card {
+        padding: 28px;
+        border: 2px solid #1d2433;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 8px 8px 0 #9bc53d;
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .card.active {
+        transform: translateY(-8px);
+        box-shadow: 14px 14px 0 #f2c14e;
+      }
+
+      button {
+        min-height: 44px;
+        padding: 0 18px;
+        border: 2px solid #1d2433;
+        border-radius: 6px;
+        color: #1d2433;
+        background: #6dd3ce;
+        font-weight: 700;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <h1>Carte interactive</h1>
+        <p>Au clic, la carte change d'etat visuel et le texte du bouton se met a jour.</p>
+        <button type="button">Activer</button>
+      </article>
+    </main>
+
+    <script>
+      const card = document.querySelector(".card");
+      const button = document.querySelector("button");
+      let isActive = false;
+
+      button.addEventListener("click", function () {
+        isActive = !isActive;
+        card.classList.toggle("active", isActive);
+
+        if (isActive) {
+          button.textContent = "Desactiver";
+        } else {
+          button.textContent = "Activer";
+        }
+      });
+    </script>
+  </body>
+</html>
