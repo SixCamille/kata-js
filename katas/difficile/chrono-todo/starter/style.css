@@ -1,25 +1,26 @@
 body {
   min-height: 100vh;
   margin: 0;
-  display: grid;
-  place-items: center;
   font-family: Arial, sans-serif;
   color: #202633;
   background: #f7f3ea;
 }
 
 .starter-layout {
-  width: min(1180px, calc(100% - 32px));
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: minmax(560px, 1fr) minmax(260px, 360px);
-  gap: 22px;
-  align-items: stretch;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 .app {
+  position: relative;
+  min-width: 0;
+  padding: clamp(48px, 6vw, 72px);
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 18px;
+  align-content: center;
+  background: #fffdf8;
 }
 
 .timer,
@@ -32,11 +33,33 @@ body {
 }
 
 .kata-brief {
-  padding: 22px;
+  position: relative;
+  min-width: 0;
+  padding: clamp(48px, 7vw, 82px);
+  border-left: 6px solid #202633;
+  background:
+    linear-gradient(0deg, rgba(242, 193, 78, 0.18), transparent 62%),
+    #fffdf8;
+}
+
+.app::before,
+.kata-brief::before {
+  content: "Playground";
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  padding: 6px 10px;
   border: 2px solid #202633;
-  border-radius: 8px;
-  background: #fffdf8;
-  box-shadow: 8px 8px 0 #202633;
+  border-radius: 999px;
+  background: #62c7c7;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.kata-brief::before {
+  content: "Consigne";
+  background: #f2c14e;
 }
 
 .label,
@@ -135,5 +158,16 @@ li {
   .starter-layout,
   .app {
     grid-template-columns: 1fr;
+  }
+
+  .app,
+  .kata-brief {
+    min-height: 50vh;
+    padding: 76px 22px 28px;
+  }
+
+  .kata-brief {
+    border-left: 0;
+    border-top: 6px solid #202633;
   }
 }
