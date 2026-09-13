@@ -3,36 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kata - Mot de passe</title>
-    <link rel="stylesheet" href="../../../../shared/starter-shell.css">
+    <title>Playground - Mot de passe</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="starter-layout">
-      <main class="playground-zone">
-        <iframe class="playground-frame" src="playground.html" title="Playground du kata mot de passe"></iframe>
-      </main>
-
-      <aside class="kata-brief" aria-labelledby="brief-title">
-        <div class="brief-content">
-          <p class="eyebrow">Kata facile</p>
-          <h2 id="brief-title">Afficher / masquer</h2>
-          <p>Au clic, le bouton doit alterner entre l'affichage et le masquage du mot de passe.</p>
-
-          <h3>Attendu</h3>
-          <ul>
-            <li>Changer le type de l'input entre <code>password</code> et <code>text</code>.</li>
-            <li>Mettre a jour le texte du bouton.</li>
-            <li>Memoriser l'etat avec un booleen.</li>
-          </ul>
-
-          <h3>Memos utiles</h3>
-          <nav class="memo-links" aria-label="Memos utiles">
-            <a href="../../../../pense-bete/javascript.html#selection-dom">Selection DOM</a>
-            <a href="../../../../pense-bete/javascript.html#evenements">Evenements</a>
-            <a href="../../../../pense-bete/javascript.html#conditions">Conditions</a>
-          </nav>
-        </div>
-      </aside>
-    </div>
+    <main class="panel">
+      <h1>Connexion</h1>
+      <label for="password">Mot de passe</label>
+      <div class="field-row">
+        <input id="password" type="password" value="JavaScript42">
+        <button type="button">Afficher</button>
+      </div>
+      <p class="hint">Le bouton doit afficher ou masquer le mot de passe.</p>
+    </main>
+    <script src="script.js"></script>
   </body>
 </html>

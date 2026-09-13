@@ -16,8 +16,8 @@ Aucun serveur, aucune installation et aucune dependance ne sont necessaires.
 2. Observer le kata d'exemple.
 3. Choisir un niveau dans le picker.
 4. Tirer un kata au hasard.
-5. Ouvrir le starter : la consigne est visible sur le cote, avec des liens vers les notions utiles.
-6. Coder dans `script.js` pour garder l'autocompletion, les erreurs et les outils de l'editeur.
+5. Ouvrir la page du kata : la consigne est visible sur le cote, avec des liens vers les notions utiles.
+6. Coder dans le `starter/script.js` pour garder l'autocompletion, les erreurs et les outils de l'editeur.
 
 ## Structure
 
@@ -43,11 +43,11 @@ katas/
 
 ## Starters
 
-Chaque starter reste un mini projet autonome avec `index.html`, `playground.html`, `style.css` et `script.js`.
+Chaque kata possede une page `index.html` qui coupe clairement l'ecran en deux : le playground a gauche, la consigne a droite.
 
-`index.html` coupe clairement l'ecran en deux : le playground a gauche, la consigne a droite. Le playground est charge dans une iframe depuis `playground.html`, ce qui garde le DOM de l'exercice separe de la consigne.
+Le dossier `starter/` reste un mini projet autonome avec `index.html`, `style.css` et `script.js`. Il est charge dans une iframe depuis la page du kata, ce qui garde le DOM de l'exercice separe de la consigne.
 
-Les apprenants codent dans `script.js` et gardent donc l'autocompletion, les erreurs et les outils de leur editeur. Les liens de la consigne pointent vers des blocs precis du pense-bete JavaScript, par exemple `pense-bete/javascript.html#evenements`.
+Les apprenants codent dans `starter/script.js` et gardent donc l'autocompletion, les erreurs et les outils de leur editeur. Les liens de la consigne pointent vers des blocs precis du pense-bete JavaScript, par exemple `pense-bete/javascript.html#evenements`.
 
 ## Regle importante
 
