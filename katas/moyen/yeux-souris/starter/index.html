@@ -3,10 +3,57 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kata - Yeux souris</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Lab - Yeux souris</title>
+    <link rel="stylesheet" href="../../../../shared/code-lab.css">
   </head>
   <body>
+    <main class="lab-shell" data-code-lab data-storage-key="kata-js-eyes">
+      <header class="lab-header">
+        <div>
+          <p class="eyebrow">Kata moyen</p>
+          <h1>Yeux souris</h1>
+        </div>
+        <a class="lab-link" href="../consigne.md">Consigne</a>
+      </header>
+
+      <div class="lab-grid">
+        <section class="lab-preview" aria-label="Preview du kata">
+          <div class="lab-window" aria-hidden="true">
+            <span class="lab-dot red"></span>
+            <span class="lab-dot yellow"></span>
+            <span class="lab-dot green"></span>
+          </div>
+          <iframe title="Preview du kata" data-code-lab-preview></iframe>
+        </section>
+
+        <section class="lab-workbench" aria-label="Code du kata">
+          <div class="lab-toolbar" role="tablist" aria-label="Fichiers du kata">
+            <button class="lab-tab active" type="button" data-code-lab-tab="js">JS</button>
+            <button class="lab-tab" type="button" data-code-lab-tab="html">HTML</button>
+            <button class="lab-tab" type="button" data-code-lab-tab="css">CSS</button>
+          </div>
+
+          <div class="lab-panel active" data-code-lab-panel="js">
+            <textarea class="lab-editor" data-code-lab-editor spellcheck="false" aria-label="Code JavaScript a tester"></textarea>
+            <div class="lab-actions">
+              <button class="lab-button primary" type="button" data-code-lab-run>Lancer</button>
+              <button class="lab-button warning" type="button" data-code-lab-reset>Reinitialiser</button>
+            </div>
+            <p class="lab-status" data-code-lab-status></p>
+          </div>
+
+          <div class="lab-panel" data-code-lab-panel="html">
+            <pre><code data-code-lab-output="html"></code></pre>
+          </div>
+
+          <div class="lab-panel" data-code-lab-panel="css">
+            <pre><code data-code-lab-output="css"></code></pre>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <template data-code-lab-html>
     <main>
       <h1>Yeux qui suivent la souris</h1>
       <section class="face" aria-label="Visage interactif">
@@ -15,6 +62,53 @@
       </section>
       <p>Bougez la souris : les pupilles doivent suivre le pointeur.</p>
     </main>
-    <script src="script.js"></script>
+    </template>
+
+    <template data-code-lab-css>
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, sans-serif;
+  color: #202633;
+  background: #f7f3ea;
+}
+
+main {
+  text-align: center;
+}
+
+.face {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 28px auto;
+}
+
+.eye {
+  display: grid;
+  place-items: center;
+  width: 118px;
+  height: 118px;
+  border: 2px solid #202633;
+  border-radius: 50%;
+  background: #fffdf8;
+  box-shadow: 6px 6px 0 #202633;
+}
+
+.pupil {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #5778c9;
+  transition: transform 80ms linear;
+}
+    </template>
+
+    <script type="text/plain" data-code-lab-js>
+// A vous de coder.
+    </script>
+    <script src="../../../../shared/code-lab.js"></script>
   </body>
 </html>
