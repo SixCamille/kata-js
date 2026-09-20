@@ -3,23 +3,24 @@ body {
   margin: 0;
   display: grid;
   place-items: center;
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-  color: #202633;
-  background: #f7f3ea;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f4f6f8;
 }
 
 .panel {
   width: min(440px, calc(100% - 32px));
-  padding: 26px;
-  border: 2px solid #202633;
-  border-radius: 8px;
-  background: #fffdf8;
-  box-shadow: 10px 10px 0 #202633;
+  padding: 28px;
+  border: 1px solid #d8dee6;
+  border-radius: 4px;
+  background: #ffffff;
 }
 
 h1 {
-  margin-top: 0;
+  margin: 0 0 22px;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 label {
@@ -38,20 +39,25 @@ input {
   flex: 1;
   height: 44px;
   padding: 0 10px;
-  border: 2px solid #202633;
-  border-radius: 6px;
+  border: 1px solid #b8c0cc;
+  border-radius: 4px;
+  color: #172033;
+  background: #ffffff;
 }
 
 button {
   min-height: 44px;
   padding: 0 14px;
-  border: 2px solid #202633;
-  border-radius: 6px;
-  background: #62c7c7;
-  font-weight: 800;
+  border: 1px solid #1d5fd0;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #2563eb;
+  font-weight: 700;
   cursor: pointer;
 }
 
 .hint {
-  color: #5f6b7a;
+  margin: 16px 0 0;
+  color: #647084;
+  line-height: 1.5;
 }

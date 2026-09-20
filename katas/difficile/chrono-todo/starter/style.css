@@ -3,10 +3,10 @@ body {
   margin: 0;
   display: grid;
   place-items: center;
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-  color: #202633;
-  background: #f7f3ea;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f4f6f8;
 }
 
 .app {
@@ -19,16 +19,19 @@ body {
 .timer,
 .tasks {
   padding: 22px;
-  border: 2px solid #202633;
-  border-radius: 8px;
-  background: #fffdf8;
-  box-shadow: 8px 8px 0 #202633;
+  border: 1px solid #d8dee6;
+  border-radius: 4px;
+  background: #ffffff;
 }
 
 .label,
 .counter {
-  color: #5f6b7a;
+  color: #647084;
   font-weight: 700;
+}
+
+.label {
+  margin: 0;
 }
 
 .time {
@@ -37,13 +40,20 @@ body {
   font-size: 3rem;
 }
 
+.tasks h1 {
+  margin: 0 0 18px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
 button {
   min-height: 42px;
   padding: 0 14px;
-  border: 2px solid #202633;
-  border-radius: 6px;
-  background: #62c7c7;
-  font-weight: 800;
+  border: 1px solid #1d5fd0;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #2563eb;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -57,8 +67,10 @@ input {
   flex: 1;
   height: 42px;
   padding: 0 10px;
-  border: 2px solid #202633;
-  border-radius: 6px;
+  border: 1px solid #b8c0cc;
+  border-radius: 4px;
+  color: #172033;
+  background: #ffffff;
 }
 
 ul {
@@ -69,7 +81,7 @@ ul {
 
 li {
   padding: 10px 0;
-  border-bottom: 2px solid #d9dee8;
+  border-bottom: 1px solid #e1e6ee;
 }
 
 @media (max-width: 980px) {
