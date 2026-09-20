@@ -117,6 +117,35 @@ a {
   background: var(--level-difficile);
 }
 
+.topnav a.active-nav {
+  border-color: var(--active-nav-color, var(--blue));
+  box-shadow: 0 0 0 3px var(--active-nav-color, var(--blue)), 4px 4px 0 var(--shadow);
+}
+
+.topnav a.active-nav[href*="facile/index.html"] {
+  --active-nav-color: var(--level-facile);
+}
+
+.topnav a.active-nav[href*="moyen/index.html"] {
+  --active-nav-color: var(--level-moyen);
+}
+
+.topnav a.active-nav[href*="difficile/index.html"] {
+  --active-nav-color: var(--level-difficile);
+}
+
+.topbar.level-facile .topnav a.active-nav {
+  --active-nav-color: var(--level-facile);
+}
+
+.topbar.level-moyen .topnav a.active-nav {
+  --active-nav-color: var(--level-moyen);
+}
+
+.topbar.level-difficile .topnav a.active-nav {
+  --active-nav-color: var(--level-difficile);
+}
+
 .button.primary {
   background: var(--cyan);
 }
