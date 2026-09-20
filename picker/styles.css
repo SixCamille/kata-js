@@ -118,8 +118,7 @@ a {
 }
 
 .topnav a.active-nav {
-  border-color: var(--active-nav-color, var(--blue));
-  box-shadow: 0 0 0 3px var(--active-nav-color, var(--blue)), 4px 4px 0 var(--shadow);
+  box-shadow: 4px 4px 0 var(--active-nav-color, var(--blue));
 }
 
 .topnav a.active-nav[href*="facile/index.html"] {
