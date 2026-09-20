@@ -6,6 +6,9 @@
   --line: #202633;
   --cyan: #62c7c7;
   --yellow: #f2c14e;
+  --level-facile: #a8cf45;
+  --level-moyen: #f2c14e;
+  --level-difficile: #ec6f66;
 }
 
 * {
@@ -18,6 +21,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--ink);
   background: var(--paper);
+}
+
+.level-facile {
+  --level-color: var(--level-facile);
+  --level-soft: rgba(168, 207, 69, 0.22);
+}
+
+.level-moyen {
+  --level-color: var(--level-moyen);
+  --level-soft: rgba(242, 193, 78, 0.26);
+}
+
+.level-difficile {
+  --level-color: var(--level-difficile);
+  --level-soft: rgba(236, 111, 102, 0.2);
 }
 
 .starter-layout {
@@ -61,13 +79,13 @@ body {
 .kata-brief {
   border-left: 6px solid var(--line);
   background:
-    linear-gradient(0deg, rgba(242, 193, 78, 0.18), transparent 62%),
+    linear-gradient(0deg, var(--level-soft, rgba(242, 193, 78, 0.18)), transparent 62%),
     var(--panel);
 }
 
 .kata-brief::before {
   content: "Consigne";
-  border-left-color: var(--yellow);
+  border-left-color: var(--level-color, var(--yellow));
 }
 
 .playground-frame {
@@ -104,6 +122,25 @@ body {
 
 .kata-nav a:last-child {
   background: var(--cyan);
+}
+
+.kata-nav a[href="../index.html"] {
+  background: var(--level-color);
+}
+
+.level-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin: 0 0 12px;
+  padding: 0 10px;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  background: var(--level-color);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .eyebrow {

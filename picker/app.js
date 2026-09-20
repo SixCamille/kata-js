@@ -14,6 +14,7 @@ let selectedLevel = "facile";
 function renderKata(kata) {
   title.textContent = kata.title;
   level.textContent = kata.level;
+  level.className = "level-tag level-" + kata.level;
   summary.textContent = kata.summary;
   starterLink.href = kata.starter;
   consigneLink.href = kata.consigne;

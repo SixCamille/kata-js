@@ -11,6 +11,9 @@
   --coral: #ec6f66;
   --blue: #5778c9;
   --pink: #f49ac2;
+  --level-facile: #a8cf45;
+  --level-moyen: #f2c14e;
+  --level-difficile: #ec6f66;
 }
 
 * {
@@ -43,6 +46,14 @@ a {
     linear-gradient(90deg, rgba(244, 154, 194, 0.28), transparent 46%),
     var(--panel);
   box-shadow: 0 6px 0 var(--shadow);
+}
+
+.topbar.level-facile,
+.topbar.level-moyen,
+.topbar.level-difficile {
+  background:
+    linear-gradient(90deg, var(--level-soft), transparent 50%),
+    var(--panel);
 }
 
 .topbar h1 {
@@ -94,8 +105,35 @@ a {
   box-shadow: 6px 6px 0 var(--shadow);
 }
 
+.topnav a[href*="facile/index.html"] {
+  background: var(--level-facile);
+}
+
+.topnav a[href*="moyen/index.html"] {
+  background: var(--level-moyen);
+}
+
+.topnav a[href*="difficile/index.html"] {
+  background: var(--level-difficile);
+}
+
 .button.primary {
   background: var(--cyan);
+}
+
+.level-facile {
+  --level-color: var(--level-facile);
+  --level-soft: rgba(168, 207, 69, 0.24);
+}
+
+.level-moyen {
+  --level-color: var(--level-moyen);
+  --level-soft: rgba(242, 193, 78, 0.28);
+}
+
+.level-difficile {
+  --level-color: var(--level-difficile);
+  --level-soft: rgba(236, 111, 102, 0.22);
 }
 
 .home-layout,
@@ -105,12 +143,29 @@ a {
   padding: 36px 0;
 }
 
+.home-layout {
+  width: min(1220px, calc(100% - 32px));
+}
+
 .intro,
 .result {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
   gap: 28px;
   align-items: stretch;
+}
+
+.compact-hero {
+  grid-template-columns: 1fr;
+  margin-bottom: 24px;
+}
+
+.compact-hero.level-facile .intro-copy,
+.compact-hero.level-moyen .intro-copy,
+.compact-hero.level-difficile .intro-copy {
+  background:
+    linear-gradient(90deg, var(--level-soft), transparent 58%),
+    var(--panel);
 }
 
 .intro-copy,
@@ -249,6 +304,79 @@ a {
   font-size: 1.25rem;
 }
 
+.kata-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.kata-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(0deg, var(--level-soft), transparent 48%),
+    var(--panel);
+  box-shadow: 8px 8px 0 rgba(32, 38, 51, 0.16);
+}
+
+.kata-preview {
+  position: relative;
+  display: block;
+  height: 280px;
+  border-bottom: 2px solid var(--line);
+  background: white;
+  overflow: hidden;
+}
+
+.kata-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+}
+
+.level-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin: 0 0 12px;
+  padding: 0 10px;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  background: var(--level-color);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.kata-preview .level-tag {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  box-shadow: 3px 3px 0 var(--line);
+}
+
+.kata-card-content {
+  padding: 18px;
+}
+
+.kata-card-content h2 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  line-height: 1.05;
+}
+
+.kata-card-content p {
+  min-height: 48px;
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 .picker-layout {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
@@ -275,7 +403,19 @@ a {
 }
 
 .level-button.active {
-  background: var(--yellow);
+  background: var(--level-color, var(--yellow));
+}
+
+.level-button[data-level="facile"] {
+  --level-color: var(--level-facile);
+}
+
+.level-button[data-level="moyen"] {
+  --level-color: var(--level-moyen);
+}
+
+.level-button[data-level="difficile"] {
+  --level-color: var(--level-difficile);
 }
 
 .memo-layout {
@@ -605,6 +745,7 @@ pre code {
   .result,
   .picker-layout,
   .course-strip,
+  .kata-gallery,
   .memo-hero,
   .memo-grid,
   .debug-strip {
