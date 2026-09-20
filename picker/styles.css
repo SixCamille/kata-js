@@ -423,20 +423,33 @@ pre code {
 .chip-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 7px;
   margin: 16px 0 0;
   padding: 0;
   list-style: none;
 }
 
 .chip-list li {
-  padding: 6px 9px;
-  border: 2px solid var(--line);
+  position: relative;
+  padding: 5px 9px 5px 14px;
+  border: 1px solid #c9d2df;
+  border-radius: 4px;
+  background: #eef4f6;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.chip-list li::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
   border-radius: 999px;
   background: var(--cyan);
-  color: var(--ink);
-  font-size: 0.82rem;
-  font-weight: 900;
 }
 
 .debug-strip {
@@ -470,17 +483,31 @@ pre code {
 .concepts {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 7px;
   margin: 18px 0;
 }
 
 .concepts span {
-  padding: 7px 10px;
-  border: 2px solid var(--line);
-  border-radius: 999px;
-  background: #ffffff;
-  font-size: 0.85rem;
+  position: relative;
+  padding: 5px 9px 5px 14px;
+  border: 1px solid #c9d2df;
+  border-radius: 4px;
+  background: #eef4f6;
+  color: var(--muted);
+  font-size: 0.78rem;
   font-weight: 800;
+  line-height: 1.2;
+}
+
+.concepts span::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--blue);
 }
 
 .visual {
