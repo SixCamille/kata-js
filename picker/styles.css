@@ -331,10 +331,12 @@ a {
 }
 
 .kata-preview iframe {
-  width: 100%;
-  height: 100%;
+  width: 125%;
+  height: 125%;
   border: 0;
   pointer-events: none;
+  transform: scale(0.8);
+  transform-origin: top left;
 }
 
 .level-tag {
@@ -350,14 +352,6 @@ a {
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
-}
-
-.kata-preview .level-tag {
-  position: absolute;
-  z-index: 2;
-  top: 12px;
-  left: 12px;
-  box-shadow: 3px 3px 0 var(--line);
 }
 
 .kata-card-content {
