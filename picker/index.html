@@ -24,29 +24,17 @@
     <main class="picker-layout">
       <section class="controls" aria-labelledby="level-title">
         <p class="eyebrow">Evaluation 20 minutes</p>
-        <h2 id="level-title">Choisir un niveau</h2>
+        <h2 id="level-title">Filtrer les katas</h2>
         <div class="segmented" role="group" aria-label="Niveau du kata">
-          <button class="level-button active" type="button" data-level="facile">Facile</button>
+          <button class="level-button active" type="button" data-level="tous">Tous niveaux</button>
+          <button class="level-button" type="button" data-level="facile">Facile</button>
           <button class="level-button" type="button" data-level="moyen">Moyen</button>
           <button class="level-button" type="button" data-level="difficile">Difficile</button>
         </div>
         <button class="button primary draw-button" type="button">Tirer un kata</button>
       </section>
 
-      <section class="result" aria-live="polite">
-        <div class="result-main">
-          <p class="level-tag level-facile" id="kata-level">Facile</p>
-          <h2 id="kata-title">Afficher / masquer un mot de passe</h2>
-          <p id="kata-summary">Manipuler un input, un bouton et un etat booleen.</p>
-          <div class="concepts" id="kata-concepts"></div>
-          <div class="actions">
-            <a class="button" id="starter-link" href="../katas/facile/mot-de-passe/index.html">Ouvrir le kata</a>
-            <a class="button" id="consigne-link" href="../katas/facile/mot-de-passe/consigne.md">Lire la consigne</a>
-            <a class="button" id="resources-link" href="../katas/facile/mot-de-passe/ressources.md">Ressources</a>
-          </div>
-        </div>
-        <div class="visual" id="kata-visual" aria-label="Apercu du kata"></div>
-      </section>
+      <section class="kata-gallery picker-gallery" id="kata-list" aria-live="polite" aria-label="Katas disponibles"></section>
     </main>
 
     <script src="data.js"></script>
