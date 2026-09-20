@@ -40,7 +40,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 22px clamp(16px, 5vw, 56px);
+  padding: 12px clamp(16px, 5vw, 56px);
   border-bottom: 2px solid var(--line);
   background:
     linear-gradient(90deg, rgba(244, 154, 194, 0.28), transparent 46%),
@@ -58,8 +58,8 @@ a {
 
 .topbar h1 {
   margin: 0;
-  font-size: clamp(2rem, 5vw, 4.6rem);
-  line-height: 0.9;
+  font-size: clamp(1.65rem, 4vw, 3.2rem);
+  line-height: 1;
   letter-spacing: 0;
   text-shadow: 3px 3px 0 var(--yellow);
 }
@@ -77,7 +77,7 @@ a {
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .topnav a,
@@ -85,8 +85,8 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 42px;
-  padding: 0 14px;
+  min-height: 34px;
+  padding: 0 11px;
   border: 2px solid var(--line);
   border-radius: 6px;
   color: var(--ink);
