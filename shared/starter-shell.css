@@ -82,6 +82,28 @@ body {
   margin: 0 auto;
 }
 
+.kata-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+}
+
+.kata-nav a {
+  padding: 8px 12px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--panel);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.kata-nav a:last-child {
+  background: var(--cyan);
+}
+
 .eyebrow {
   margin: 0 0 8px;
   color: var(--muted);
