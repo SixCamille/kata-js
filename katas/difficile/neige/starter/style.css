@@ -4,7 +4,7 @@ body {
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   color: #172033;
-  background: linear-gradient(#dbeafe, #ffffff);
+  background: linear-gradient(#162440, #2a5078);
 }
 
 .sky {
@@ -52,10 +52,8 @@ h1 {
 .flake-sample.medium { font-size: 1.55rem; }
 .flake-sample.large { font-size: 2rem; }
 
-.flake {
-  top: -24px;
-  font-size: 1.2rem;
-  animation: fall 4s linear forwards;
+.flake-frozen {
+  animation: none;
 }
 
 @keyframes fall {
