@@ -15,6 +15,7 @@ Deplacer un panier pour recuperer des objets qui tombent.
 
 - Deplacer le panier horizontalement.
 - Faire tomber des objets depuis le haut.
+- La balle de départ pop aléatoirement en haut du parent, pas toujours à la même position.
 - Detecter les objets attrapes.
 - Augmenter le score.
 
