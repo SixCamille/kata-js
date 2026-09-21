@@ -36,6 +36,19 @@
       <section class="picker-result" id="kata-result" aria-live="polite" aria-label="Kata tire au sort"></section>
     </main>
 
+    <div class="memo-modal" id="memo-modal" role="dialog" aria-modal="true" aria-labelledby="memo-title" hidden>
+      <div class="memo-modal-panel">
+        <div class="memo-modal-header">
+          <div>
+            <p class="eyebrow">Aide ciblee</p>
+            <h2 id="memo-title">Memo utile</h2>
+          </div>
+          <button class="button memo-close" type="button" aria-label="Fermer le memo">Fermer</button>
+        </div>
+        <div class="memo-modal-body" id="memo-body"></div>
+      </div>
+    </div>
+
     <script src="data.js"></script>
     <script src="app.js"></script>
   </body>

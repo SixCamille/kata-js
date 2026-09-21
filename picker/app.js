@@ -1,6 +1,10 @@
 const levelButtons = document.querySelectorAll(".level-button");
 const drawButton = document.querySelector(".draw-button");
 const kataResult = document.querySelector("#kata-result");
+const memoModal = document.querySelector("#memo-modal");
+const memoTitle = document.querySelector("#memo-title");
+const memoBody = document.querySelector("#memo-body");
+const closeMemoButton = document.querySelector(".memo-close");
 
 let selectedLevel = "tous";
 let pickedKata = null;
@@ -17,6 +21,56 @@ function getVisibleKatas() {
 
 function getPreviewPath(kata) {
   return kata.starter.replace("index.html", "starter/index.html");
+}
+
+function createMemoSection(title, items) {
+  const section = document.createElement("section");
+  section.className = "memo-modal-section";
+
+  const heading = document.createElement("h3");
+  heading.textContent = title;
+  section.append(heading);
+
+  items.forEach(function (item) {
+    const article = document.createElement("article");
+    article.className = "memo-modal-card";
+
+    const itemTitle = document.createElement("h4");
+    itemTitle.textContent = item.title;
+
+    const text = document.createElement("p");
+    text.textContent = item.text;
+
+    article.append(itemTitle, text);
+
+    if (item.code) {
+      const pre = document.createElement("pre");
+      const code = document.createElement("code");
+      code.textContent = item.code;
+      pre.append(code);
+      article.append(pre);
+    }
+
+    section.append(article);
+  });
+
+  return section;
+}
+
+function openMemo(kata) {
+  memoTitle.textContent = "Memo utile - " + kata.title;
+  memoBody.innerHTML = "";
+  memoBody.append(
+    createMemoSection("Rappels du pense-bete", kata.memo),
+    createMemoSection("Specifique a ce kata", kata.specificMemo)
+  );
+
+  memoModal.hidden = false;
+  closeMemoButton.focus();
+}
+
+function closeMemo() {
+  memoModal.hidden = true;
 }
 
 function createKataCard(kata) {
@@ -65,7 +119,15 @@ function createKataCard(kata) {
   starterLink.href = kata.starter;
   starterLink.textContent = "Ouvrir le kata";
 
-  actions.append(starterLink);
+  const memoButton = document.createElement("button");
+  memoButton.className = "button";
+  memoButton.type = "button";
+  memoButton.textContent = "Memo utile";
+  memoButton.addEventListener("click", function () {
+    openMemo(kata);
+  });
+
+  actions.append(starterLink, memoButton);
   content.append(level, title, summary, concepts, actions);
   card.append(previewLink, content);
 
@@ -125,5 +187,18 @@ levelButtons.forEach(function (button) {
 });
 
 drawButton.addEventListener("click", drawKata);
+closeMemoButton.addEventListener("click", closeMemo);
+
+memoModal.addEventListener("click", function (event) {
+  if (event.target === memoModal) {
+    closeMemo();
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && !memoModal.hidden) {
+    closeMemo();
+  }
+});
 
 renderResult();
