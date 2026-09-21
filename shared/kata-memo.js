@@ -70,41 +70,48 @@ isVisible = !isVisible;`
         label: "CSS",
         sections: [
           {
-            title: "Afficher une face",
+            title: "Superposer deux faces",
             items: [
               {
-                title: "Cacher le verso au depart",
-                text: "Au chargement, seule la face recto doit etre visible. Le verso peut etre cache avec display.",
-                code: `.back {
-  display: none;
+                title: "Mettre les faces en calques",
+                text: "Les deux faces peuvent occuper exactement la meme place dans la carte.",
+                code: `.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.front,
+.back {
+  position: absolute;
+  inset: 0;
 }`
               },
               {
-                title: "Utiliser la meme mise en page",
-                text: "Les deux faces peuvent partager les memes dimensions et le meme centrage pour ne pas faire bouger la carte.",
-                code: `.front,
-.back {
-  display: grid;
-  place-items: center;
+                title: "Placer le recto au-dessus",
+                text: "Le recto est le calque visible au depart. Le verso reste dessous, deja pret.",
+                code: `.front {
+  z-index: 1;
+  width: 100%;
 }`
               }
             ]
           },
           {
-            title: "Inverser avec une classe",
+            title: "Animer une largeur",
             items: [
               {
-                title: "Masquer le recto",
-                text: "Quand la classe d'etat est presente, le recto disparait.",
-                code: `.card.is-flipped .front {
-  display: none;
+                title: "Preparer la transition",
+                text: "La transition indique au navigateur d'animer les changements de largeur.",
+                code: `.front {
+  overflow: hidden;
+  transition: width 280ms ease;
 }`
               },
               {
-                title: "Afficher le verso",
-                text: "La meme classe permet d'afficher le verso a la place.",
-                code: `.card.is-flipped .back {
-  display: grid;
+                title: "Reveler le verso",
+                text: "Quand la classe d'etat est ajoutee, le recto devient de plus en plus etroit et laisse voir le verso.",
+                code: `.card.is-flipped .front {
+  width: 0;
 }`
               }
             ]
