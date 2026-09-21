@@ -156,6 +156,7 @@ body {
   min-height: 520px;
   border: 0;
   background: var(--panel);
+  overflow: hidden;
 }
 
 .brief-content {
