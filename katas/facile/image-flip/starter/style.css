@@ -6,16 +6,21 @@ body {
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   color: #172033;
-  background: #f4f6f8;
+  background:
+    linear-gradient(90deg, rgba(32, 38, 51, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(32, 38, 51, 0.08) 1px, transparent 1px),
+    #f4f6f8;
+  background-size: 28px 28px;
 }
 
 main {
   text-align: center;
+  perspective: 900px;
 }
 
 .card {
   position: relative;
-  width: 220px;
+  width: 230px;
   height: 150px;
   border: 0;
   padding: 0;
@@ -37,19 +42,29 @@ main {
   place-items: center;
   border: 2px solid #202633;
   border-radius: 6px;
-  background: #ffffff;
-  font-size: 2.6rem;
-  font-weight: 900;
+  padding: 18px;
   backface-visibility: hidden;
+  box-shadow: 8px 8px 0 rgba(32, 38, 51, 0.14);
 }
 
 .front {
-  background: #a8cf45;
+  background:
+    linear-gradient(135deg, rgba(98, 199, 199, 0.24), transparent 46%),
+    #ffffff;
 }
 
 .back {
-  background: #62c7c7;
+  background:
+    linear-gradient(135deg, rgba(168, 207, 69, 0.26), transparent 46%),
+    #ffffff;
   transform: rotateY(180deg);
+}
+
+.card-kicker {
+  color: #647084;
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 p {
