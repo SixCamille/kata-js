@@ -401,37 +401,33 @@ a {
   line-height: 1.05;
 }
 
-.kata-card-content p {
-  min-height: 48px;
-  margin: 0 0 16px;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
 .kata-card-content .kata-progress-summary {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  min-height: 0;
-  margin: -8px 0 14px;
-  padding: 3px 7px;
-  border: 1px solid #c9d2df;
-  border-left: 4px solid #8fb8d8;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.58);
+  min-height: 34px;
+  margin: 0 0 14px;
+  padding: 8px 10px;
+  border: 1px solid #b8c4d2;
+  border-left: 6px solid #8fb8d8;
+  border-radius: 6px;
+  background: #f2f7fb;
   color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 800;
-  line-height: 1.2;
+  font-size: 0.7rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .kata-progress-summary[data-status="reussi"] {
+  border-color: #b8c4d2;
   border-left-color: #70b58d;
-  background: rgba(168, 207, 69, 0.12);
+  background: #eff8f1;
 }
 
 .kata-progress-summary[data-status="en cours"] {
+  border-color: #b8c4d2;
   border-left-color: #d894ba;
-  background: rgba(244, 154, 194, 0.14);
+  background: #fbf1f7;
 }
 
 .picker-layout {
@@ -685,36 +681,6 @@ pre code {
 
 .draw-button {
   width: 100%;
-}
-
-.concepts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: 18px 0;
-}
-
-.concepts span {
-  position: relative;
-  padding: 5px 9px 5px 14px;
-  border: 1px solid #c9d2df;
-  border-radius: 4px;
-  background: #eef4f6;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-.concepts span::before {
-  content: "";
-  position: absolute;
-  left: 6px;
-  top: 6px;
-  bottom: 6px;
-  width: 3px;
-  border-radius: 999px;
-  background: var(--blue);
 }
 
 .visual {

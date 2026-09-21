@@ -11,23 +11,9 @@ const KataCards = (function () {
     return withRoot(kata.starter.replace("index.html", "starter/index.html"), root);
   }
 
-  function createConceptTags(concepts) {
-    const wrapper = document.createElement("div");
-    wrapper.className = "concepts";
-
-    concepts.forEach(function (concept) {
-      const tag = document.createElement("span");
-      tag.textContent = concept;
-      wrapper.append(tag);
-    });
-
-    return wrapper;
-  }
-
   function createKataCard(kata, options) {
     const settings = options || {};
     const root = settings.root || ".";
-    const showConcepts = Boolean(settings.showConcepts);
 
     const card = document.createElement("article");
     card.className = "kata-card level-" + kata.level + (settings.picked ? " picked" : "");
@@ -54,9 +40,6 @@ const KataCards = (function () {
     const title = document.createElement("h2");
     title.textContent = kata.title;
 
-    const summary = document.createElement("p");
-    summary.textContent = kata.summary;
-
     const progressSummary = typeof KataProgress !== "undefined" && kata.id
       ? KataProgress.createSummary(kata.id)
       : null;
@@ -70,14 +53,10 @@ const KataCards = (function () {
     starterLink.textContent = "Ouvrir le kata";
 
     actions.append(starterLink);
-    content.append(level, title, summary);
+    content.append(level, title);
 
     if (progressSummary) {
       content.append(progressSummary);
-    }
-
-    if (showConcepts) {
-      content.append(createConceptTags(kata.concepts));
     }
 
     content.append(actions);

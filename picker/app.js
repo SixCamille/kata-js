@@ -46,8 +46,7 @@ function renderResult() {
 
   kataResult.append(KataCards.createKataCard(pickedKata, {
     root: "..",
-    picked: true,
-    showConcepts: true
+    picked: true
   }));
 }
 
