@@ -265,8 +265,40 @@ body {
 
 .kata-timer .memo-button {
   padding: 6px 8px;
+  border-color: #4f7896;
+  background: #cfe2ef;
   font-size: 0.78rem;
   box-shadow: 2px 2px 0 var(--line);
+}
+
+.kata-timer [data-progress-finish] {
+  border-color: #4f8f68;
+  background: #cdebd8;
+}
+
+.kata-timer .memo-button.secondary {
+  border-color: #9cadbd;
+  background: #f7fafc;
+}
+
+.kata-timer[data-status="en cours"] .memo-button {
+  border-color: #b76895;
+  background: #f3cfe2;
+}
+
+.kata-timer[data-status="en cours"] [data-progress-finish] {
+  border-color: #4f8f68;
+  background: #cdebd8;
+}
+
+.kata-timer[data-status="reussi"] .memo-button {
+  border-color: #4f8f68;
+  background: #d8efdf;
+}
+
+.kata-timer[data-status="reussi"] .memo-button.secondary {
+  border-color: #9cadbd;
+  background: #f7fafc;
 }
 
 .memo-button {
