@@ -6,7 +6,7 @@
     <title>Kata - Chronometre todo</title>
     <link rel="stylesheet" href="../../../shared/starter-shell.css">
   </head>
-  <body class="level-difficile">
+  <body class="level-difficile" data-kata="chrono-todo">
     <div class="starter-layout">
       <main class="playground-zone">
         <iframe class="playground-frame" src="starter/index.html" title="Playground du kata chrono todo"></iframe>
@@ -15,8 +15,11 @@
       <aside class="kata-brief" aria-labelledby="brief-title">
         <div class="brief-content">
           <a class="brief-logo" href="../../../index.html">KATA JS</a>
-          <nav class="kata-nav" aria-label="Navigation du kata">
-            <a href="../index.html">Niveau difficile</a>
+          <nav class="kata-nav" aria-label="Navigation principale">
+            <a href="../../facile/index.html">Facile</a>
+            <a href="../../moyen/index.html">Moyen</a>
+            <a class="active-nav" href="../../difficile/index.html">Difficile</a>
+            <a href="../../../pense-bete/javascript.html">Pense-bete</a>
             <a href="../../../picker/index.html">Picker</a>
             <a href="starter/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le playground</a>
           </nav>
@@ -33,63 +36,10 @@
           </ul>
 
           <h3>Memos utiles</h3>
-          <button class="memo-button" type="button" data-open-memo>Ouvrir le memo cible</button>
+          <button class="memo-button" type="button" data-open-memo>Memo utile</button>
         </div>
       </aside>
     </div>
-
-    <dialog class="kata-memo-dialog" id="kata-memo" aria-labelledby="memo-title">
-      <div class="kata-memo-panel">
-        <header class="kata-memo-header">
-          <div>
-            <p class="eyebrow">Aide ciblee</p>
-            <h2 id="memo-title">Chrono + todo</h2>
-          </div>
-          <button class="memo-button" type="button" data-close-memo>Fermer</button>
-        </header>
-
-        <section class="kata-memo-section" aria-labelledby="memo-main-title">
-          <h3 id="memo-main-title">Notions du pense-bete</h3>
-          <article>
-            <h4>Temps</h4>
-            <p><code>setInterval</code> repete une action jusqu'a <code>clearInterval</code>.</p>
-            <pre><code>const timerId = setInterval(function () {
-  seconds = seconds + 1;
-}, 1000);
-
-clearInterval(timerId);</code></pre>
-          </article>
-          <article>
-            <h4>Tableaux</h4>
-            <p>Un tableau stocke plusieurs valeurs dans un ordre et peut servir de source pour le rendu.</p>
-            <pre><code>const tasks = [];
-tasks.push({ label: "Relire la consigne", done: false });</code></pre>
-          </article>
-        </section>
-
-        <section class="kata-memo-section" aria-labelledby="memo-specific-title">
-          <h3 id="memo-specific-title">Specifique au kata</h3>
-          <article>
-            <h4>Submit d'un formulaire</h4>
-            <p>Sur un submit, empeche le rechargement pour garder l'application sur la page.</p>
-            <pre><code>form.addEventListener("submit", function (event) {
-  event.preventDefault();
-});</code></pre>
-          </article>
-          <article>
-            <h4>Vider puis reconstruire</h4>
-            <p>Refaire le rendu depuis le tableau aide a synchroniser l'ecran avec l'etat courant.</p>
-            <pre><code>list.innerHTML = "";
-
-tasks.forEach(function (task) {
-  const item = document.createElement("li");
-  item.textContent = task.label;
-  list.append(item);
-});</code></pre>
-          </article>
-        </section>
-      </div>
-    </dialog>
 
     <script src="../../../shared/kata-memo.js"></script>
   </body>

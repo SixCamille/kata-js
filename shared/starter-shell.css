@@ -135,7 +135,7 @@ body {
   background: var(--cyan);
 }
 
-.kata-nav a[href="../index.html"] {
+.kata-nav a.active-nav {
   background: var(--level-color);
 }
 
@@ -182,13 +182,6 @@ body {
   padding-left: 20px;
 }
 
-.memo-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.memo-links a,
 .memo-button {
   padding: 8px 10px;
   border: 2px solid var(--line);
@@ -199,9 +192,6 @@ body {
   font-weight: 800;
   text-decoration: none;
   box-shadow: 3px 3px 0 var(--line);
-}
-
-.memo-button {
   cursor: pointer;
 }
 
