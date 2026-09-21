@@ -15,7 +15,7 @@ Creer regulierement des flocons qui apparaissent en haut de l'ecran et descenden
 ## Travail attendu
 
 - Creer un flocon a intervalle regulier.
-- Choisir aleatoirement un caractere de flocon parmi `.`, `*` et `+`, comme dans l'exemple en bas de la demo.
+- Choisir aleatoirement un caractere de flocon parmi `.`, `*` et `+`, avec des tailles differentes comme dans l'exemple en bas de la demo.
 - Lui donner une position horizontale aleatoire.
 - Varier sa taille.
 - Lui appliquer une animation de chute.
