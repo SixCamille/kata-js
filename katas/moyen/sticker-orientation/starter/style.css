@@ -1,0 +1,48 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f4f6f8;
+}
+
+.stage {
+  position: relative;
+  width: min(720px, calc(100% - 32px));
+  height: min(460px, calc(100vh - 32px));
+  overflow: hidden;
+  border: 2px dashed #8f9bad;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+p {
+  margin: 18px;
+  color: #647084;
+  font-weight: 700;
+}
+
+.sticker {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  font-size: 38px;
+  line-height: 1;
+  filter:
+    drop-shadow(0 3px 0 #ffffff)
+    drop-shadow(3px 0 0 #ffffff)
+    drop-shadow(0 -3px 0 #ffffff)
+    drop-shadow(-3px 0 0 #ffffff)
+    drop-shadow(0 8px 12px rgba(23, 32, 51, 0.24));
+  transform: translate(-50%, -50%) rotate(var(--rotation, -12deg));
+}
+
+.starter-sticker {
+  left: 50%;
+  top: 50%;
+}

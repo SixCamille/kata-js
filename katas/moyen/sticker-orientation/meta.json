@@ -1,0 +1,8 @@
+{
+  "title": "Sticker emoji oriente",
+  "level": "moyen",
+  "concepts": ["click", "coordonnees", "creation d'element", "Math.random", "transform"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}
