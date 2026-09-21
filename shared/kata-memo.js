@@ -130,7 +130,46 @@ tasks.forEach(function (task) {
   }
 };
 
-const kataMemo = KATA_MEMOS[document.body.dataset.kata];
+function createDefaultMemo() {
+  return {
+    title: "Memo de demarrage",
+    sections: [
+      {
+        title: "Methode de live coding",
+        items: [
+          {
+            title: "Identifier les elements utiles",
+            text: "Commence par selectionner la zone, le bouton ou les elements que ton script doit manipuler.",
+            code: `const zone = document.querySelector(".zone");
+const button = document.querySelector("button");`
+          },
+          {
+            title: "Reagir a une action",
+            text: "Un kata visuel part souvent d'un evenement utilisateur, puis modifie le DOM ou le style.",
+            code: `button.addEventListener("click", function () {
+  // mettre a jour l'ecran ici
+});`
+          }
+        ]
+      },
+      {
+        title: "Points a verifier",
+        items: [
+          {
+            title: "Etat et rendu",
+            text: "Si l'ecran depend d'une valeur, garde cette valeur dans une variable puis rends l'affichage a partir d'elle."
+          },
+          {
+            title: "Console",
+            text: "Utilise console.log pour verifier les valeurs lues dans les evenements avant d'ecrire toute la logique."
+          }
+        ]
+      }
+    ]
+  };
+}
+
+const kataMemo = KATA_MEMOS[document.body.dataset.kata] || createDefaultMemo();
 const openMemoButton = document.querySelector("[data-open-memo]");
 
 function createElement(tagName, className, text) {
