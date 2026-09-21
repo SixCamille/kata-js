@@ -1,6 +1,6 @@
 {
   "title": "Voiture au clic",
-  "level": "moyen",
+  "level": "facile",
   "concepts": ["click", "classList", "animation CSS", "etat"],
   "duration": 20,
   "hasStarter": true,
