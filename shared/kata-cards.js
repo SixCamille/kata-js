@@ -52,12 +52,12 @@ const KataCards = (function () {
     starterLink.href = withRoot(kata.starter, root);
     starterLink.textContent = "Ouvrir le kata";
 
+    if (progressSummary) {
+      actions.append(progressSummary);
+    }
+
     actions.append(starterLink);
     content.append(level, title);
-
-    if (progressSummary) {
-      content.append(progressSummary);
-    }
 
     content.append(actions);
     card.append(previewLink, content);

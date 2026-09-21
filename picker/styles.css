@@ -402,17 +402,17 @@ a {
 }
 
 .kata-card-content .kata-progress-summary {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  min-height: 34px;
-  margin: 0 0 14px;
-  padding: 8px 10px;
+  min-height: 24px;
+  margin: 0;
+  padding: 4px 7px;
   border: 1px solid #b8c4d2;
-  border-left: 6px solid #8fb8d8;
-  border-radius: 6px;
+  border-left: 4px solid #8fb8d8;
+  border-radius: 4px;
   background: #f2f7fb;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.64rem;
   font-weight: 900;
   line-height: 1;
   text-transform: uppercase;
