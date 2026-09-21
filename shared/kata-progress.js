@@ -97,10 +97,14 @@ const KataProgress = (function () {
     const status = getStatus(progress);
 
     if (!progress.startedAt) {
-      return status;
+      return "Non commence";
     }
 
-    return status + " - " + formatElapsed(getElapsedMs(progress));
+    if (progress.finishedAt) {
+      return "Reussi - " + formatElapsed(getElapsedMs(progress));
+    }
+
+    return "En cours - " + formatElapsed(getElapsedMs(progress));
   }
 
   function createSummary(kataId) {
@@ -111,7 +115,7 @@ const KataProgress = (function () {
     function render() {
       const progress = read(kataId);
       summary.dataset.status = getStatus(progress);
-      summary.textContent = "Suivi : " + getCardLabel(kataId);
+      summary.textContent = getCardLabel(kataId);
 
       if (progress.startedAt && !progress.finishedAt && !timerId) {
         timerId = window.setInterval(render, 1000);

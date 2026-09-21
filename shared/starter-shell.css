@@ -219,40 +219,54 @@ body {
 }
 
 .kata-timer {
-  padding: 14px;
-  border: 2px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.62);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 14px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid #b8c4d2;
+  border-left: 6px solid #8fb8d8;
+  border-radius: 6px;
+  background: #f2f7fb;
 }
 
 .kata-timer[data-status="reussi"] {
-  background: linear-gradient(90deg, rgba(168, 207, 69, 0.34), rgba(255, 255, 255, 0.62));
+  border-left-color: #70b58d;
+  background: #eff8f1;
 }
 
 .kata-timer[data-status="en cours"] {
-  background: linear-gradient(90deg, rgba(242, 193, 78, 0.34), rgba(255, 255, 255, 0.62));
+  border-left-color: #d894ba;
+  background: #fbf1f7;
 }
 
 .kata-timer-display {
-  margin-bottom: 4px;
+  grid-row: span 2;
   font-family: Consolas, "Courier New", monospace;
-  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-size: 1.6rem;
   font-weight: 900;
   line-height: 1;
 }
 
 .kata-timer-status {
-  margin: 0 0 12px;
+  margin: 0;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 900;
+  line-height: 1;
   text-transform: uppercase;
 }
 
 .kata-timer-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
+}
+
+.kata-timer .memo-button {
+  padding: 6px 8px;
+  font-size: 0.78rem;
+  box-shadow: 2px 2px 0 var(--line);
 }
 
 .memo-button {

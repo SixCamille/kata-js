@@ -409,23 +409,29 @@ a {
 }
 
 .kata-card-content .kata-progress-summary {
+  display: inline-flex;
+  align-items: center;
   min-height: 0;
-  margin-top: -6px;
-  padding: 8px 10px;
-  border: 2px solid var(--line);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.68);
-  color: var(--ink);
-  font-size: 0.82rem;
-  font-weight: 900;
+  margin: -8px 0 14px;
+  padding: 3px 7px;
+  border: 1px solid #c9d2df;
+  border-left: 4px solid #8fb8d8;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
 .kata-progress-summary[data-status="reussi"] {
-  background: var(--lime);
+  border-left-color: #70b58d;
+  background: rgba(168, 207, 69, 0.12);
 }
 
 .kata-progress-summary[data-status="en cours"] {
-  background: var(--yellow);
+  border-left-color: #d894ba;
+  background: rgba(244, 154, 194, 0.14);
 }
 
 .picker-layout {
