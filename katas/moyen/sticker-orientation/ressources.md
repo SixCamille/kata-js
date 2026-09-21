@@ -22,6 +22,12 @@ Calculer un angle aleatoire :
 const angle = Math.floor(Math.random() * 61) - 30;
 ```
 
+Calculer une taille aleatoire entre 42 et 76 pixels :
+
+```js
+const taille = Math.floor(Math.random() * 35) + 42;
+```
+
 `filter: drop-shadow(...)` suit les pixels visibles de l'emoji. C'est plus adapte qu'une `box-shadow` quand on veut un contour qui colle a la forme.
 
 Exemple de style possible pour composer contour, ombre, centrage et rotation :
@@ -29,6 +35,9 @@ Exemple de style possible pour composer contour, ombre, centrage et rotation :
 ```css
 .sticker {
   position: absolute;
+  width: var(--taille);
+  height: var(--taille);
+  font-size: calc(var(--taille) * 0.66);
   filter:
     drop-shadow(0 4px 0 white)
     drop-shadow(4px 0 0 white)
@@ -44,3 +53,4 @@ Exemple de style possible pour composer contour, ombre, centrage et rotation :
 ```
 
 En JavaScript, `--rotation` peut recevoir une valeur comme `"12deg"`.
+`--taille` peut recevoir une valeur comme `"58px"`.

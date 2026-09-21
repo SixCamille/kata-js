@@ -29,9 +29,9 @@ p {
   position: absolute;
   display: grid;
   place-items: center;
-  width: 58px;
-  height: 58px;
-  font-size: 38px;
+  width: var(--taille, 58px);
+  height: var(--taille, 58px);
+  font-size: calc(var(--taille, 58px) * 0.66);
   line-height: 1;
   filter:
     drop-shadow(0 4px 0 #ffffff)
@@ -46,7 +46,30 @@ p {
   transform: translate(-50%, -50%) rotate(var(--rotation, -12deg));
 }
 
-.starter-sticker {
-  left: 50%;
-  top: 50%;
+.sticker-star {
+  left: 38%;
+  top: 43%;
+  --taille: 64px;
+  --rotation: -14deg;
+}
+
+.sticker-fire {
+  left: 55%;
+  top: 36%;
+  --taille: 48px;
+  --rotation: 18deg;
+}
+
+.sticker-target {
+  left: 47%;
+  top: 58%;
+  --taille: 74px;
+  --rotation: 7deg;
+}
+
+.sticker-light {
+  left: 63%;
+  top: 55%;
+  --taille: 54px;
+  --rotation: -25deg;
 }

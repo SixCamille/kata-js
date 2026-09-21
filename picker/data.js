@@ -103,8 +103,8 @@ const KATAS = [
     id: "sticker-orientation",
     title: "Sticker emoji oriente",
     level: "moyen",
-    summary: "Creer un sticker emoji au clic avec une orientation aleatoire.",
-    concepts: ["click", "coordonnees", "Math.random", "transform"],
+    summary: "Creer un sticker emoji au clic avec une taille et une orientation aleatoires.",
+    concepts: ["click", "coordonnees", "Math.random", "transform", "variables CSS"],
     starter: "katas/moyen/sticker-orientation/index.html",
     consigne: "katas/moyen/sticker-orientation/consigne.md",
     resources: "katas/moyen/sticker-orientation/ressources.md"
