@@ -2,20 +2,19 @@
 
 ## Objectif
 
-Retourner une carte image au clic, puis revenir a l'etat initial au clic suivant.
+Alterner entre le recto et le verso d'une carte au clic, puis revenir a l'etat initial au clic suivant.
 
 ## Notions de cours
 
 - Un clic peut ajouter ou retirer une classe CSS.
 - `classList.toggle` permet d'alterner un etat visuel.
-- Le retournement peut etre gere par une transformation CSS.
+- Une classe CSS peut afficher une face et masquer l'autre.
 
 ## Travail attendu
 
 Au clic sur la carte :
 
-- retourner visuellement la carte ;
-- afficher l'autre face ;
+- afficher le verso de la carte ;
 - permettre de revenir a la premiere face au clic suivant.
 
 ## Contraintes

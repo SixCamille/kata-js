@@ -70,41 +70,41 @@ isVisible = !isVisible;`
         label: "CSS",
         sections: [
           {
-            title: "Effet 3D",
+            title: "Afficher une face",
             items: [
               {
-                title: "Perspective",
-                text: "Le parent peut donner de la profondeur. Plus la valeur est petite, plus l'effet est marque.",
-                code: `main {
-  perspective: 900px;
+                title: "Cacher le verso au depart",
+                text: "Au chargement, seule la face recto doit etre visible. Le verso peut etre cache avec display.",
+                code: `.back {
+  display: none;
 }`
               },
               {
-                title: "Espace 3D",
-                text: "La carte qui tourne doit conserver ses faces dans un espace 3D.",
-                code: `.card {
-  transform-style: preserve-3d;
-  transition: transform 320ms ease;
+                title: "Utiliser la meme mise en page",
+                text: "Les deux faces peuvent partager les memes dimensions et le meme centrage pour ne pas faire bouger la carte.",
+                code: `.front,
+.back {
+  display: grid;
+  place-items: center;
 }`
               }
             ]
           },
           {
-            title: "Faces de la carte",
+            title: "Inverser avec une classe",
             items: [
               {
-                title: "Masquer l'envers",
-                text: "Chaque face peut cacher son envers pendant la rotation.",
-                code: `.front,
-.back {
-  backface-visibility: hidden;
+                title: "Masquer le recto",
+                text: "Quand la classe d'etat est presente, le recto disparait.",
+                code: `.card.is-flipped .front {
+  display: none;
 }`
               },
               {
-                title: "Preparer le verso",
-                text: "Le verso commence deja retourne. Quand la carte pivote, il se retrouve lisible.",
-                code: `.back {
-  transform: rotateY(180deg);
+                title: "Afficher le verso",
+                text: "La meme classe permet d'afficher le verso a la place.",
+                code: `.card.is-flipped .back {
+  display: grid;
 }`
               }
             ]

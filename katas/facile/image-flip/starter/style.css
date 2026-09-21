@@ -15,7 +15,6 @@ body {
 
 main {
   text-align: center;
-  perspective: 900px;
 }
 
 .card {
@@ -26,24 +25,17 @@ main {
   padding: 0;
   background: transparent;
   cursor: pointer;
-  transform-style: preserve-3d;
-  transition: transform 320ms ease;
-}
-
-.card.is-flipped {
-  transform: rotateY(180deg);
 }
 
 .front,
 .back {
-  position: absolute;
-  inset: 0;
   display: grid;
   place-items: center;
+  width: 100%;
+  height: 100%;
   border: 2px solid #202633;
   border-radius: 6px;
   padding: 18px;
-  backface-visibility: hidden;
   box-shadow: 8px 8px 0 rgba(32, 38, 51, 0.14);
 }
 
@@ -54,10 +46,18 @@ main {
 }
 
 .back {
+  display: none;
   background:
     linear-gradient(135deg, rgba(168, 207, 69, 0.26), transparent 46%),
     #ffffff;
-  transform: rotateY(180deg);
+}
+
+.card.is-flipped .front {
+  display: none;
+}
+
+.card.is-flipped .back {
+  display: grid;
 }
 
 .card-kicker {
