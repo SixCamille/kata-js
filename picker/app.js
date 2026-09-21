@@ -65,12 +65,7 @@ function createKataCard(kata) {
   starterLink.href = kata.starter;
   starterLink.textContent = "Ouvrir le kata";
 
-  const resourcesLink = document.createElement("a");
-  resourcesLink.className = "button";
-  resourcesLink.href = kata.resources;
-  resourcesLink.textContent = "Ressources";
-
-  actions.append(starterLink, resourcesLink);
+  actions.append(starterLink);
   content.append(level, title, summary, concepts, actions);
   card.append(previewLink, content);
 
@@ -85,7 +80,7 @@ function renderPlaceholder() {
   placeholder.innerHTML = `
     <p class="eyebrow">Aucun kata tire</p>
     <h2>Choisis un niveau, puis tire un kata.</h2>
-    <p>Le resultat apparaitra ici avec son apercu iframe et les liens utiles.</p>
+    <p>Le resultat apparaitra ici avec son apercu iframe et le lien vers le kata.</p>
   `;
 
   kataResult.append(placeholder);
