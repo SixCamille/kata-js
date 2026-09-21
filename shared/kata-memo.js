@@ -326,6 +326,12 @@ popup.classList.remove("is-open");`
 }, 300);`
               },
               {
+                title: "Caractere de flocon",
+                text: "Un flocon peut etre un simple texte choisi dans une petite liste.",
+                code: `const shapes = [".", "*", "+"];
+flake.textContent = shapes[randomIndex];`
+              },
+              {
                 title: "Nettoyer apres animation",
                 text: "Quand l'animation est finie, le flocon peut etre retire du DOM.",
                 code: `flake.addEventListener("animationend", function () {
@@ -349,6 +355,14 @@ popup.classList.remove("is-open");`
                 code: `.flake {
   position: fixed;
   top: -24px;
+}`
+              },
+              {
+                title: "Taille variable",
+                text: "Changer font-size suffit pour obtenir des flocons textuels de tailles differentes.",
+                code: `.flake {
+  font-size: 1.4rem;
+  color: #ffffff;
 }`
               },
               {
@@ -493,65 +507,6 @@ let y = 0;`
   position: absolute;
   left: 0;
   top: 0;
-}`
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "papillon-anime": {
-    title: "Papillon anime",
-    tabs: [
-      {
-        id: "js",
-        label: "JS",
-        sections: [
-          {
-            title: "Declencher l'animation",
-            items: [
-              {
-                title: "Classe d'etat",
-                text: "JavaScript peut ajouter une classe, puis laisser CSS animer le mouvement.",
-                code: `butterfly.classList.add("is-flying");`
-              },
-              {
-                title: "Relancer plus tard",
-                text: "setTimeout peut retirer la classe une fois l'animation terminee.",
-                code: `setTimeout(function () {
-  butterfly.classList.remove("is-flying");
-}, 3000);`
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: "css",
-        label: "CSS",
-        sections: [
-          {
-            title: "Animations CSS",
-            items: [
-              {
-                title: "Animation de vol",
-                text: "Une classe peut declencher un @keyframes de deplacement.",
-                code: `.butterfly.is-flying {
-  animation: fly 3s ease-in-out forwards;
-}
-
-@keyframes fly {
-  to {
-    transform: translateX(560px) translateY(-120px);
-  }
-}`
-              },
-              {
-                title: "Battement des ailes",
-                text: "Une animation courte et infinie peut faire vivre les ailes pendant le vol.",
-                code: `.wing {
-  animation: flap 260ms ease-in-out infinite alternate;
 }`
               }
             ]

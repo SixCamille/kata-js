@@ -45,15 +45,6 @@ const KATAS = [
     consigne: "katas/facile/popup-simple/consigne.md"
   },
   {
-    id: "neige",
-    title: "Neige dans la fenetre",
-    level: "moyen",
-    summary: "Generer regulierement des flocons qui tombent et disparaissent.",
-    concepts: ["setInterval", "createElement", "Math.random", "animation"],
-    starter: "katas/moyen/neige/index.html",
-    consigne: "katas/moyen/neige/consigne.md"
-  },
-  {
     id: "yeux-souris",
     title: "Yeux qui suivent la souris",
     level: "moyen",
@@ -72,15 +63,6 @@ const KATAS = [
     consigne: "katas/moyen/rond-rebond/consigne.md"
   },
   {
-    id: "papillon-anime",
-    title: "Papillon anime",
-    level: "moyen",
-    summary: "Declencher une traversee animee avec battement d'ailes.",
-    concepts: ["click", "classList", "animation", "setTimeout"],
-    starter: "katas/moyen/papillon-anime/index.html",
-    consigne: "katas/moyen/papillon-anime/consigne.md"
-  },
-  {
     id: "voiture-clic",
     title: "Voiture au clic",
     level: "moyen",
@@ -97,6 +79,15 @@ const KATAS = [
     concepts: ["click", "coordonnees", "Math.random", "transform", "variables CSS"],
     starter: "katas/moyen/sticker-orientation/index.html",
     consigne: "katas/moyen/sticker-orientation/consigne.md"
+  },
+  {
+    id: "neige",
+    title: "Neige dans la fenetre",
+    level: "difficile",
+    summary: "Generer regulierement des flocons qui tombent et disparaissent.",
+    concepts: ["setInterval", "createElement", "Math.random", "animation"],
+    starter: "katas/difficile/neige/index.html",
+    consigne: "katas/difficile/neige/consigne.md"
   },
   {
     id: "balles-mouvement",

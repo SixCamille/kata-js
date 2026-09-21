@@ -9,12 +9,15 @@ Creer regulierement des flocons qui apparaissent en haut de l'ecran et descenden
 - `setInterval` permet de repeter une action.
 - `Math.random()` permet de varier la position et la taille.
 - Un element cree en JavaScript peut recevoir une classe CSS.
+- Un flocon peut etre un simple caractere texte : `.`, `*` ou `+`.
 - Un flocon peut etre supprime apres son animation.
 
 ## Travail attendu
 
 - Creer un flocon a intervalle regulier.
+- Choisir aleatoirement un caractere de flocon parmi `.`, `*` et `+`, comme dans l'exemple en bas de la demo.
 - Lui donner une position horizontale aleatoire.
+- Varier sa taille.
 - Lui appliquer une animation de chute.
 - Nettoyer les anciens flocons.
 

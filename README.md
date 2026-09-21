@@ -56,7 +56,7 @@ Les katas evaluables ne contiennent pas de correction. Le seul fichier corrige e
 ## Katas inclus
 
 - Facile : sticker au clic, afficher / masquer un mot de passe, image qui flip, menu ouvrant / fermant, popup simple.
-- Moyen : neige dans la fenetre, yeux qui suivent la souris, rond qui rebondit, papillon anime, voiture au clic.
-- Difficile : plusieurs balles en mouvement, petit personnage au clavier, jeu d'esquive simple, attraper les objets, drag & drop avec zones.
+- Moyen : yeux qui suivent la souris, rond qui rebondit, voiture au clic.
+- Difficile : neige dans la fenetre, plusieurs balles en mouvement, petit personnage au clavier, jeu d'esquive simple, attraper les objets, drag & drop avec zones.
 
 Le kata difficile `chrono-todo` reste egalement disponible comme exercice combine existant.

@@ -176,7 +176,6 @@ Tout kata utilisé en évaluation doit être raisonnablement faisable en 20 minu
 - neige ;
 - yeux qui suivent la souris ;
 - rond qui rebondit ;
-- papillon animé ;
 - voiture au clic ;
 - bouton qui fuit ;
 - fond lié au scroll ;
