@@ -138,20 +138,24 @@ isVisible = !isVisible;`
         label: "CSS",
         sections: [
           {
-            title: "Afficher ou cacher",
+            title: "Ouvrir avec une transition",
             items: [
               {
-                title: "Etat ferme",
-                text: "Le menu peut etre cache par defaut.",
+                title: "Etat ferme mais animable",
+                text: "display ne s'anime pas. Pour un effet plus joli, le menu reste dans la page mais sa hauteur et son opacite sont reduites.",
                 code: `.menu {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 240ms ease, opacity 180ms ease;
 }`
               },
               {
                 title: "Etat ouvert",
-                text: "Une classe d'etat sur le menu permet de changer uniquement l'affichage.",
+                text: "La classe d'etat augmente la hauteur et remet l'opacite. Le navigateur anime le passage entre les deux.",
                 code: `.menu.is-open {
-  display: grid;
+  max-height: 180px;
+  opacity: 1;
 }`
               }
             ]

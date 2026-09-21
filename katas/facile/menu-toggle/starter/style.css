@@ -27,15 +27,20 @@ body {
 }
 
 .menu {
-  display: none;
+  display: grid;
+  gap: 10px;
+  max-height: 0;
+  overflow: hidden;
   padding: 12px 18px;
   border-bottom: 1px solid #d8dee6;
   background: #ffffff;
+  opacity: 0;
+  transition: max-height 240ms ease, opacity 180ms ease;
 }
 
 .menu.is-open {
-  display: grid;
-  gap: 10px;
+  max-height: 180px;
+  opacity: 1;
 }
 
 .menu a {
