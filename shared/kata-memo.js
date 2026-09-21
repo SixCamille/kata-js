@@ -41,6 +41,78 @@ isVisible = !isVisible;`
       }
     ]
   },
+  "image-flip": {
+    title: "Image qui flip",
+    tabs: [
+      {
+        id: "js",
+        label: "JS",
+        sections: [
+          {
+            title: "Declencher le changement",
+            items: [
+              {
+                title: "Selectionner la carte",
+                text: "La carte est un bouton. Tu peux donc la selectionner puis ecouter son clic.",
+                code: `const card = document.querySelector(".card");`
+              },
+              {
+                title: "Alterner une classe",
+                text: "L'objectif JS est de changer un etat visuel. La classe sert de pont entre le clic et le CSS.",
+                code: `card.classList.toggle("is-flipped");`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "Effet 3D",
+            items: [
+              {
+                title: "Perspective",
+                text: "Le parent peut donner de la profondeur. Plus la valeur est petite, plus l'effet est marque.",
+                code: `main {
+  perspective: 900px;
+}`
+              },
+              {
+                title: "Espace 3D",
+                text: "La carte qui tourne doit conserver ses faces dans un espace 3D.",
+                code: `.card {
+  transform-style: preserve-3d;
+  transition: transform 320ms ease;
+}`
+              }
+            ]
+          },
+          {
+            title: "Faces de la carte",
+            items: [
+              {
+                title: "Masquer l'envers",
+                text: "Chaque face peut cacher son envers pendant la rotation.",
+                code: `.front,
+.back {
+  backface-visibility: hidden;
+}`
+              },
+              {
+                title: "Preparer le verso",
+                text: "Le verso commence deja retourne. Quand la carte pivote, il se retrouve lisible.",
+                code: `.back {
+  transform: rotateY(180deg);
+}`
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "yeux-souris": {
     title: "Suivre le pointeur",
     sections: [
@@ -186,24 +258,22 @@ function createElement(tagName, className, text) {
   return element;
 }
 
-function createMemoDialog(memo) {
-  const dialog = createElement("dialog", "kata-memo-dialog");
-  dialog.id = "kata-memo";
-  dialog.setAttribute("aria-labelledby", "memo-title");
+function getMemoTabs(memo) {
+  if (memo.tabs && memo.tabs.length) {
+    return memo.tabs;
+  }
 
-  const panel = createElement("div", "kata-memo-panel");
-  const header = createElement("header", "kata-memo-header");
-  const title = createElement("h2", null, memo.title);
-  title.id = "memo-title";
+  return [
+    {
+      id: "js",
+      label: "JS",
+      sections: memo.sections
+    }
+  ];
+}
 
-  const closeButton = createElement("button", "memo-button", "Fermer");
-  closeButton.type = "button";
-  closeButton.dataset.closeMemo = "";
-
-  header.append(title, closeButton);
-  panel.append(header);
-
-  memo.sections.forEach(function (sectionData) {
+function appendMemoSections(parent, sections) {
+  sections.forEach(function (sectionData) {
     const section = createElement("section", "kata-memo-section");
     section.append(createElement("h3", null, sectionData.title));
 
@@ -225,7 +295,68 @@ function createMemoDialog(memo) {
       section.append(article);
     });
 
-    panel.append(section);
+    parent.append(section);
+  });
+}
+
+function createMemoDialog(memo) {
+  const dialog = createElement("dialog", "kata-memo-dialog");
+  dialog.id = "kata-memo";
+  dialog.setAttribute("aria-labelledby", "memo-title");
+
+  const panel = createElement("div", "kata-memo-panel");
+  const header = createElement("header", "kata-memo-header");
+  const titleGroup = createElement("div", "kata-memo-title-group");
+  const title = createElement("h2", null, memo.title);
+  title.id = "memo-title";
+  const tabs = getMemoTabs(memo);
+  const hasTabs = tabs.length > 1;
+
+  const closeButton = createElement("button", "memo-button", "Fermer");
+  closeButton.type = "button";
+  closeButton.dataset.closeMemo = "";
+
+  titleGroup.append(title);
+  panel.append(header);
+
+  if (hasTabs) {
+    const tabList = createElement("div", "kata-memo-tabs");
+    tabList.setAttribute("role", "tablist");
+    tabList.setAttribute("aria-label", "Type de memo");
+
+    tabs.forEach(function (tabData, index) {
+      const tabButton = createElement("button", "kata-memo-tab", tabData.label);
+      const tabId = "memo-tab-" + tabData.id;
+      const panelId = "memo-panel-" + tabData.id;
+
+      tabButton.type = "button";
+      tabButton.id = tabId;
+      tabButton.dataset.memoTab = tabData.id;
+      tabButton.setAttribute("role", "tab");
+      tabButton.setAttribute("aria-controls", panelId);
+      tabButton.setAttribute("aria-selected", index === 0 ? "true" : "false");
+
+      tabList.append(tabButton);
+    });
+
+    titleGroup.append(tabList);
+  }
+
+  header.append(titleGroup, closeButton);
+
+  tabs.forEach(function (tabData, index) {
+    const tabPanel = createElement("div", "kata-memo-tab-panel");
+    tabPanel.id = "memo-panel-" + tabData.id;
+    tabPanel.dataset.memoPanel = tabData.id;
+
+    if (hasTabs) {
+      tabPanel.setAttribute("role", "tabpanel");
+      tabPanel.setAttribute("aria-labelledby", "memo-tab-" + tabData.id);
+      tabPanel.hidden = index !== 0;
+    }
+
+    appendMemoSections(tabPanel, tabData.sections);
+    panel.append(tabPanel);
   });
 
   dialog.append(panel);
@@ -237,6 +368,24 @@ function createMemoDialog(memo) {
 if (kataMemo && openMemoButton) {
   const memoDialog = createMemoDialog(kataMemo);
   const closeMemoButton = memoDialog.querySelector("[data-close-memo]");
+  const tabButtons = memoDialog.querySelectorAll("[data-memo-tab]");
+  const tabPanels = memoDialog.querySelectorAll("[data-memo-panel]");
+
+  function selectMemoTab(tabId) {
+    tabButtons.forEach(function (button) {
+      button.setAttribute("aria-selected", button.dataset.memoTab === tabId ? "true" : "false");
+    });
+
+    tabPanels.forEach(function (panel) {
+      panel.hidden = panel.dataset.memoPanel !== tabId;
+    });
+  }
+
+  tabButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      selectMemoTab(button.dataset.memoTab);
+    });
+  });
 
   openMemoButton.addEventListener("click", function () {
     memoDialog.showModal();

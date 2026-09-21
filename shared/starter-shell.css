@@ -364,6 +364,40 @@ body {
   line-height: 1;
 }
 
+.kata-memo-title-group {
+  display: grid;
+  gap: 12px;
+}
+
+.kata-memo-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.kata-memo-tab {
+  min-height: 30px;
+  padding: 0 12px;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  background: var(--panel);
+  font-size: 0.82rem;
+  font-weight: 900;
+  box-shadow: 3px 3px 0 var(--line);
+  cursor: pointer;
+}
+
+.kata-memo-tab[aria-selected="true"] {
+  background: var(--yellow);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--line);
+}
+
+.kata-memo-tab-panel[hidden] {
+  display: none;
+}
+
 .kata-memo-section {
   padding: 18px;
 }

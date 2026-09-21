@@ -16,7 +16,7 @@ Aucun serveur, aucune installation et aucune dependance ne sont necessaires.
 2. Observer le kata d'exemple.
 3. Choisir un niveau dans le picker.
 4. Tirer un kata au hasard.
-5. Ouvrir la page du kata : la consigne est visible sur le cote, avec des liens vers les notions utiles.
+5. Ouvrir la page du kata : la consigne est visible sur le cote, avec un bouton memo pour les rappels utiles.
 6. Coder dans le `starter/script.js` pour garder l'autocompletion, les erreurs et les outils de l'editeur.
 
 ## Structure
@@ -47,7 +47,7 @@ Chaque kata possede une page `index.html` qui coupe clairement l'ecran en deux :
 
 Le dossier `starter/` reste un mini projet autonome avec `index.html`, `style.css` et `script.js`. Il est charge dans une iframe depuis la page du kata, ce qui garde le DOM de l'exercice separe de la consigne.
 
-Les apprenants codent dans `starter/script.js` et gardent donc l'autocompletion, les erreurs et les outils de leur editeur. Les liens de la consigne pointent vers des blocs precis du pense-bete JavaScript, par exemple `pense-bete/javascript.html#evenements`.
+Les apprenants codent dans `starter/script.js` et gardent donc l'autocompletion, les erreurs et les outils de leur editeur. Le bouton memo donne les rappels utiles au kata, avec des onglets separes quand un exercice combine JavaScript et CSS.
 
 ## Regle importante
 

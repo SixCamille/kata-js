@@ -6,8 +6,7 @@ const KATAS = [
     summary: "Creer un element au clic et le placer aux coordonnees du pointeur.",
     concepts: ["click", "coordonnees", "createElement", "style"],
     starter: "katas/facile/sticker-clic/index.html",
-    consigne: "katas/facile/sticker-clic/consigne.md",
-    resources: "katas/facile/sticker-clic/ressources.md"
+    consigne: "katas/facile/sticker-clic/consigne.md"
   },
   {
     id: "mot-de-passe",
@@ -16,8 +15,7 @@ const KATAS = [
     summary: "Manipuler un input, un bouton et un etat booleen.",
     concepts: ["querySelector", "type d'input", "condition", "etat"],
     starter: "katas/facile/mot-de-passe/index.html",
-    consigne: "katas/facile/mot-de-passe/consigne.md",
-    resources: "katas/facile/mot-de-passe/ressources.md"
+    consigne: "katas/facile/mot-de-passe/consigne.md"
   },
   {
     id: "image-flip",
@@ -26,8 +24,7 @@ const KATAS = [
     summary: "Alterner une classe pour retourner une carte au clic.",
     concepts: ["click", "classList", "toggle", "transform"],
     starter: "katas/facile/image-flip/index.html",
-    consigne: "katas/facile/image-flip/consigne.md",
-    resources: "katas/facile/image-flip/ressources.md"
+    consigne: "katas/facile/image-flip/consigne.md"
   },
   {
     id: "menu-toggle",
@@ -36,8 +33,7 @@ const KATAS = [
     summary: "Afficher ou masquer un menu depuis un bouton.",
     concepts: ["click", "classList", "aria-expanded", "etat"],
     starter: "katas/facile/menu-toggle/index.html",
-    consigne: "katas/facile/menu-toggle/consigne.md",
-    resources: "katas/facile/menu-toggle/ressources.md"
+    consigne: "katas/facile/menu-toggle/consigne.md"
   },
   {
     id: "popup-simple",
@@ -46,8 +42,7 @@ const KATAS = [
     summary: "Ouvrir une modale et la fermer avec une croix.",
     concepts: ["click", "classList", "modale", "etat"],
     starter: "katas/facile/popup-simple/index.html",
-    consigne: "katas/facile/popup-simple/consigne.md",
-    resources: "katas/facile/popup-simple/ressources.md"
+    consigne: "katas/facile/popup-simple/consigne.md"
   },
   {
     id: "neige",
@@ -56,8 +51,7 @@ const KATAS = [
     summary: "Generer regulierement des flocons qui tombent et disparaissent.",
     concepts: ["setInterval", "createElement", "Math.random", "animation"],
     starter: "katas/moyen/neige/index.html",
-    consigne: "katas/moyen/neige/consigne.md",
-    resources: "katas/moyen/neige/ressources.md"
+    consigne: "katas/moyen/neige/consigne.md"
   },
   {
     id: "yeux-souris",
@@ -66,8 +60,7 @@ const KATAS = [
     summary: "Utiliser la position de la souris pour orienter deux pupilles.",
     concepts: ["mousemove", "clientX", "clientY", "transform"],
     starter: "katas/moyen/yeux-souris/index.html",
-    consigne: "katas/moyen/yeux-souris/consigne.md",
-    resources: "katas/moyen/yeux-souris/ressources.md"
+    consigne: "katas/moyen/yeux-souris/consigne.md"
   },
   {
     id: "rond-rebond",
@@ -76,8 +69,7 @@ const KATAS = [
     summary: "Animer un rond et inverser sa direction sur les bords.",
     concepts: ["setInterval", "position", "conditions", "directions"],
     starter: "katas/moyen/rond-rebond/index.html",
-    consigne: "katas/moyen/rond-rebond/consigne.md",
-    resources: "katas/moyen/rond-rebond/ressources.md"
+    consigne: "katas/moyen/rond-rebond/consigne.md"
   },
   {
     id: "papillon-anime",
@@ -86,8 +78,7 @@ const KATAS = [
     summary: "Declencher une traversee animee avec battement d'ailes.",
     concepts: ["click", "classList", "animation", "setTimeout"],
     starter: "katas/moyen/papillon-anime/index.html",
-    consigne: "katas/moyen/papillon-anime/consigne.md",
-    resources: "katas/moyen/papillon-anime/ressources.md"
+    consigne: "katas/moyen/papillon-anime/consigne.md"
   },
   {
     id: "voiture-clic",
@@ -96,8 +87,7 @@ const KATAS = [
     summary: "Lancer une voiture au clic puis reinitialiser l'animation.",
     concepts: ["click", "classList", "animation", "etat"],
     starter: "katas/moyen/voiture-clic/index.html",
-    consigne: "katas/moyen/voiture-clic/consigne.md",
-    resources: "katas/moyen/voiture-clic/ressources.md"
+    consigne: "katas/moyen/voiture-clic/consigne.md"
   },
   {
     id: "sticker-orientation",
@@ -106,8 +96,7 @@ const KATAS = [
     summary: "Creer un sticker emoji au clic avec une taille et une orientation aleatoires.",
     concepts: ["click", "coordonnees", "Math.random", "transform", "variables CSS"],
     starter: "katas/moyen/sticker-orientation/index.html",
-    consigne: "katas/moyen/sticker-orientation/consigne.md",
-    resources: "katas/moyen/sticker-orientation/ressources.md"
+    consigne: "katas/moyen/sticker-orientation/consigne.md"
   },
   {
     id: "balles-mouvement",
@@ -116,8 +105,7 @@ const KATAS = [
     summary: "Animer plusieurs balles independantes avec rebonds.",
     concepts: ["tableau", "objets", "boucle", "collision"],
     starter: "katas/difficile/balles-mouvement/index.html",
-    consigne: "katas/difficile/balles-mouvement/consigne.md",
-    resources: "katas/difficile/balles-mouvement/ressources.md"
+    consigne: "katas/difficile/balles-mouvement/consigne.md"
   },
   {
     id: "personnage-clavier",
@@ -126,8 +114,7 @@ const KATAS = [
     summary: "Deplacer un personnage aux fleches sans sortir de la zone.",
     concepts: ["keydown", "event.key", "position", "limites"],
     starter: "katas/difficile/personnage-clavier/index.html",
-    consigne: "katas/difficile/personnage-clavier/consigne.md",
-    resources: "katas/difficile/personnage-clavier/ressources.md"
+    consigne: "katas/difficile/personnage-clavier/consigne.md"
   },
   {
     id: "esquive-simple",
@@ -136,8 +123,7 @@ const KATAS = [
     summary: "Deplacer un joueur et detecter les collisions avec des obstacles.",
     concepts: ["keydown", "setInterval", "collision", "etat de jeu"],
     starter: "katas/difficile/esquive-simple/index.html",
-    consigne: "katas/difficile/esquive-simple/consigne.md",
-    resources: "katas/difficile/esquive-simple/ressources.md"
+    consigne: "katas/difficile/esquive-simple/consigne.md"
   },
   {
     id: "attraper-objets",
@@ -146,8 +132,7 @@ const KATAS = [
     summary: "Deplacer un panier, attraper des objets et mettre a jour un score.",
     concepts: ["mousemove", "setInterval", "collision", "score"],
     starter: "katas/difficile/attraper-objets/index.html",
-    consigne: "katas/difficile/attraper-objets/consigne.md",
-    resources: "katas/difficile/attraper-objets/ressources.md"
+    consigne: "katas/difficile/attraper-objets/consigne.md"
   },
   {
     id: "drag-drop-zones",
@@ -156,8 +141,7 @@ const KATAS = [
     summary: "Deposer une carte dans une zone acceptee ou refusee.",
     concepts: ["dragstart", "dragover", "drop", "etat"],
     starter: "katas/difficile/drag-drop-zones/index.html",
-    consigne: "katas/difficile/drag-drop-zones/consigne.md",
-    resources: "katas/difficile/drag-drop-zones/ressources.md"
+    consigne: "katas/difficile/drag-drop-zones/consigne.md"
   },
   {
     id: "chrono-todo",
@@ -166,7 +150,6 @@ const KATAS = [
     summary: "Combiner formulaire, liste, et chronometre simple.",
     concepts: ["submit", "tableau", "setInterval", "etat compose"],
     starter: "katas/difficile/chrono-todo/index.html",
-    consigne: "katas/difficile/chrono-todo/consigne.md",
-    resources: "katas/difficile/chrono-todo/ressources.md"
+    consigne: "katas/difficile/chrono-todo/consigne.md"
   }
 ];

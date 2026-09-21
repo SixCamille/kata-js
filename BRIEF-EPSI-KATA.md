@@ -80,15 +80,12 @@ Chaque kata doit suivre une convention homogène :
 katas/<niveau>/<slug>/
   meta.json
   consigne.md
-  ressources.md
   preview.png ou preview.gif
   starter/
     index.html
     style.css
     script.js
 ```
-
-`ressources.md` est optionnel et ne doit être présent que lorsqu'une API ou une syntaxe spécifique mérite d'être rappelée.
 
 Le starter est utile lorsque le HTML/CSS de départ ne fait pas partie de ce que l'on souhaite évaluer. Le JavaScript doit rester à produire par l'apprenant.
 
@@ -118,7 +115,7 @@ Créer une petite interface en HTML/CSS/JS vanilla permettant de :
 - afficher le titre ;
 - afficher le rendu de référence ;
 - afficher la consigne ;
-- afficher les ressources spécifiques lorsqu'elles existent ;
+- donner accès au mémo intégré lorsqu'il existe ;
 - donner accès au starter.
 
 ## Pense-bête JavaScript
@@ -148,7 +145,7 @@ Le pense-bête général doit couvrir :
 - `console.log` ;
 - réflexes de debug.
 
-## Ressources spécifiques
+## Mémos spécifiques
 
 Certains katas peuvent fournir des rappels ciblés lorsqu'il serait artificiel d'exiger l'API par coeur.
 
@@ -158,7 +155,7 @@ Exemples :
 - `event.clientX`, `event.clientY` pour une interaction souris ;
 - `window.scrollY` pour un kata lié au scroll.
 
-Ces ressources doivent aider sur l'API ou la syntaxe spécifique sans donner la solution.
+Ces mémos doivent aider sur l'API ou la syntaxe spécifique sans donner la solution. Lorsqu'un kata combine JavaScript et CSS, le mémo peut proposer des onglets séparés, par exemple `JS` et `CSS`.
 
 ## Calibrage des niveaux
 
@@ -168,7 +165,7 @@ Moyen : plusieurs étapes ou une interaction liée à la souris, au scroll ou au
 
 Difficile : plusieurs mécanismes combinés, mais toujours réalisable en 20 minutes par un élève à l'aise.
 
-Tout kata utilisé en évaluation doit être raisonnablement faisable en 20 minutes avec le pense-bête général et les ressources spécifiques éventuelles. Si une notion avancée ou une recherche Internet est indispensable, il faut simplifier ou sortir le kata du pool d'évaluation.
+Tout kata utilisé en évaluation doit être raisonnablement faisable en 20 minutes avec le pense-bête général et les mémos spécifiques éventuels. Si une notion avancée ou une recherche Internet est indispensable, il faut simplifier ou sortir le kata du pool d'évaluation.
 
 ## Banque initiale à intégrer
 
