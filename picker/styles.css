@@ -379,14 +379,14 @@ a {
 .level-tag {
   display: inline-flex;
   align-items: center;
-  min-height: 30px;
-  margin: 0 0 12px;
-  padding: 0 10px;
-  border: 2px solid var(--line);
-  border-radius: 6px;
-  background: var(--level-color);
-  color: var(--ink);
-  font-size: 0.78rem;
+  min-height: 22px;
+  margin: 0 0 10px;
+  padding: 2px 7px;
+  border: 1px dashed var(--level-color);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.54);
+  color: var(--muted);
+  font-size: 0.68rem;
   font-weight: 900;
   text-transform: uppercase;
 }
