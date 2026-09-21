@@ -49,6 +49,7 @@ button {
   right: 10px;
   top: 10px;
   min-height: 32px;
-  width: 32px;
-  padding: 0;
+  padding: 0 10px;
+  border-color: #c94841;
+  background: #ec6f66;
 }
