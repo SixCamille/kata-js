@@ -1,0 +1,54 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f4f6f8;
+}
+
+main {
+  text-align: center;
+}
+
+button {
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid #1d5fd0;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #2563eb;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  padding: 20px;
+  background: rgba(23, 32, 51, 0.54);
+}
+
+.modal.is-open {
+  display: grid;
+}
+
+.modal-box {
+  position: relative;
+  width: min(360px, 100%);
+  padding: 26px;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.close-modal {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  min-height: 32px;
+  width: 32px;
+  padding: 0;
+}

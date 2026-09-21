@@ -1,0 +1,38 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: linear-gradient(#dbeafe, #ffffff);
+}
+
+.sky {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  padding: 16px 20px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.flake {
+  position: fixed;
+  top: -24px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(23, 32, 51, 0.08);
+  animation: fall 4s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(calc(100vh + 40px));
+  }
+}

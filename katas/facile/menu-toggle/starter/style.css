@@ -1,0 +1,45 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f4f6f8;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+  border-bottom: 1px solid #d8dee6;
+  background: #ffffff;
+}
+
+.menu-button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid #1d5fd0;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #2563eb;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  padding: 12px 18px;
+  border-bottom: 1px solid #d8dee6;
+  background: #ffffff;
+}
+
+.menu.is-open {
+  display: grid;
+  gap: 10px;
+}
+
+.menu a {
+  color: #172033;
+  font-weight: 700;
+  text-decoration: none;
+}

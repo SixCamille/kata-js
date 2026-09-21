@@ -1,0 +1,8 @@
+{
+  "title": "Rond qui rebondit",
+  "level": "moyen",
+  "concepts": ["setInterval", "position", "conditions", "directions"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

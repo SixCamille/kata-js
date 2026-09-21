@@ -1,0 +1,8 @@
+{
+  "title": "Sticker au clic",
+  "level": "facile",
+  "concepts": ["click", "coordonnees", "creation d'element", "style"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

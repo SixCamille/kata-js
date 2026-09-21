@@ -1,0 +1,8 @@
+{
+  "title": "Petit personnage au clavier",
+  "level": "difficile",
+  "concepts": ["keydown", "position", "conditions", "limites"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

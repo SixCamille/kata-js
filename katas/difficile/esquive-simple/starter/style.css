@@ -1,0 +1,7 @@
+body { min-height: 100vh; margin: 0; display: grid; place-items: center; overflow: hidden; font-family: Arial, Helvetica, sans-serif; background: #f4f6f8; }
+.arena { position: relative; width: min(520px, calc(100% - 32px)); height: min(520px, calc(100vh - 32px)); overflow: hidden; border: 2px solid #202633; border-radius: 6px; background: #fff; }
+.message { margin: 12px; font-weight: 700; color: #647084; }
+.player { position: absolute; left: 230px; bottom: 20px; width: 54px; height: 54px; border-radius: 10px; background: #5778c9; }
+.obstacle { position: absolute; top: 70px; width: 46px; height: 46px; border-radius: 50%; background: #ec6f66; }
+.obstacle-one { left: 110px; }
+.obstacle-two { left: 340px; top: 160px; }

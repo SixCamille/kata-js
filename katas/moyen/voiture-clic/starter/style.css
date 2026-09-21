@@ -1,0 +1,81 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+}
+
+.scene {
+  width: min(720px, calc(100% - 32px));
+}
+
+.start {
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid #1d5fd0;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #2563eb;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.road {
+  position: relative;
+  height: 140px;
+  margin-top: 28px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #202633;
+}
+
+.road::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 68px;
+  border-top: 4px dashed #ffffff;
+}
+
+.car {
+  position: absolute;
+  left: 18px;
+  bottom: 34px;
+  width: 88px;
+  height: 42px;
+  border-radius: 12px 18px 8px 8px;
+  background: #ec6f66;
+}
+
+.car::before,
+.car::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #111827;
+}
+
+.car::before {
+  left: 12px;
+}
+
+.car::after {
+  right: 12px;
+}
+
+.car.is-driving {
+  animation: drive 2.5s ease-in-out forwards;
+}
+
+@keyframes drive {
+  to {
+    transform: translateX(620px);
+  }
+}

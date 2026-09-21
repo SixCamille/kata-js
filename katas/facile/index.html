@@ -10,22 +10,21 @@
     <div data-site-nav data-root="../.." data-title="Katas faciles" data-active="facile"></div>
 
     <main class="home-layout">
-      <section class="kata-gallery" aria-label="Katas faciles">
-        <article class="kata-card level-facile">
-          <a class="kata-preview" href="mot-de-passe/index.html" aria-label="Ouvrir le kata Afficher / masquer un mot de passe">
-            <iframe src="mot-de-passe/starter/index.html" title="Apercu du kata Afficher / masquer un mot de passe" tabindex="-1" scrolling="no"></iframe>
-          </a>
-          <div class="kata-card-content">
-            <span class="level-tag">Facile</span>
-            <h2>Afficher / masquer un mot de passe</h2>
-            <p>Manipuler un input, un bouton et un etat booleen.</p>
-            <div data-kata-progress-summary="mot-de-passe"></div>
-            <a class="button" href="mot-de-passe/index.html">Ouvrir le kata</a>
-          </div>
-        </article>
-      </section>
+      <section class="kata-gallery" data-level-gallery="facile" aria-label="Katas faciles"></section>
     </main>
+    <script src="../../picker/data.js"></script>
     <script src="../../shared/kata-progress.js"></script>
+    <script src="../../shared/kata-cards.js"></script>
+    <script>
+      const gallery = document.querySelector("[data-level-gallery]");
+      const level = gallery.dataset.levelGallery;
+
+      KATAS.filter(function (kata) {
+        return kata.level === level;
+      }).forEach(function (kata) {
+        gallery.append(KataCards.createKataCard(kata, { root: "../.." }));
+      });
+    </script>
     <script src="../../shared/site-nav.js"></script>
   </body>
 </html>

@@ -1,0 +1,8 @@
+body { min-height: 100vh; margin: 0; display: grid; place-items: center; font-family: Arial, Helvetica, sans-serif; color: #172033; background: #f4f6f8; }
+.board { width: min(680px, calc(100% - 32px)); padding: 24px; border: 1px solid #d8dee6; border-radius: 6px; background: #fff; }
+.card { display: grid; place-items: center; width: 90px; height: 90px; margin: 0 auto 24px; border: 2px solid #202633; border-radius: 6px; background: #f2c14e; font-size: 2rem; font-weight: 900; cursor: grab; }
+.zones { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.drop-zone { min-height: 150px; display: grid; place-items: center; border: 2px dashed #8f9bad; border-radius: 6px; color: #647084; font-weight: 800; }
+.drop-zone.is-valid { border-color: #27ae60; background: #ecfdf5; }
+.drop-zone.is-invalid { border-color: #c0392b; background: #fef2f2; }
+.message { margin: 18px 0 0; font-weight: 800; }

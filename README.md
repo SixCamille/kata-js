@@ -53,10 +53,10 @@ Les apprenants codent dans `starter/script.js` et gardent donc l'autocompletion,
 
 Les katas evaluables ne contiennent pas de correction. Le seul fichier corrige est le kata d'exemple, destine a montrer une methode de travail.
 
-## Katas inclus dans cette premiere proposition
+## Katas inclus
 
-- Facile : afficher / masquer un mot de passe.
-- Moyen : faire suivre la souris par des yeux.
-- Difficile : combiner chronometre et todo list.
+- Facile : sticker au clic, afficher / masquer un mot de passe, image qui flip, menu ouvrant / fermant, popup simple.
+- Moyen : neige dans la fenetre, yeux qui suivent la souris, rond qui rebondit, papillon anime, voiture au clic.
+- Difficile : plusieurs balles en mouvement, petit personnage au clavier, jeu d'esquive simple, attraper les objets, drag & drop avec zones.
 
-Ces katas servent de format de reference avant d'etendre la banque.
+Le kata difficile `chrono-todo` reste egalement disponible comme exercice combine existant.

@@ -1,0 +1,8 @@
+{
+  "title": "Neige dans la fenetre",
+  "level": "moyen",
+  "concepts": ["setInterval", "creation d'element", "random", "animation CSS"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

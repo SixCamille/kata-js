@@ -1,0 +1,8 @@
+{
+  "title": "Jeu d'esquive simple",
+  "level": "difficile",
+  "concepts": ["keydown", "setInterval", "collision", "etat de jeu"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

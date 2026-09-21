@@ -1,0 +1,8 @@
+{
+  "title": "Menu ouvrant / fermant",
+  "level": "facile",
+  "concepts": ["click", "classList", "aria-expanded", "condition"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

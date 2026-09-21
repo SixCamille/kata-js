@@ -1,0 +1,8 @@
+{
+  "title": "Drag & drop avec zones",
+  "level": "difficile",
+  "concepts": ["dragstart", "dragover", "drop", "etat"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

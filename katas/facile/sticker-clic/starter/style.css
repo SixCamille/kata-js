@@ -1,0 +1,39 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f4f6f8;
+}
+
+.stage {
+  position: relative;
+  width: min(720px, calc(100% - 32px));
+  height: min(460px, calc(100vh - 32px));
+  overflow: hidden;
+  border: 2px dashed #8f9bad;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+p {
+  margin: 18px;
+  color: #647084;
+  font-weight: 700;
+}
+
+.sticker {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 2px solid #202633;
+  border-radius: 50%;
+  background: #f2c14e;
+  font-weight: 900;
+  transform: translate(-50%, -50%);
+}

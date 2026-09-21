@@ -1,0 +1,8 @@
+{
+  "title": "Attraper les objets",
+  "level": "difficile",
+  "concepts": ["mousemove", "setInterval", "collision", "score"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

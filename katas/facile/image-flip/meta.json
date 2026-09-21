@@ -1,0 +1,8 @@
+{
+  "title": "Image qui flip",
+  "level": "facile",
+  "concepts": ["click", "classList", "transform", "etat"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Popup simple",
+  "level": "facile",
+  "concepts": ["click", "classList", "modale", "bouton fermer"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

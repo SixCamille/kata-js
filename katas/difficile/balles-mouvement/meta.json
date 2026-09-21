@@ -1,0 +1,8 @@
+{
+  "title": "Plusieurs balles en mouvement",
+  "level": "difficile",
+  "concepts": ["tableau", "objets", "boucle", "collision bords"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}
