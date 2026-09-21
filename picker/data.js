@@ -101,11 +101,11 @@ const KATAS = [
   {
     id: "personnage-clavier",
     title: "Petit personnage au clavier",
-    level: "difficile",
-    summary: "Deplacer un personnage aux fleches sans sortir de la zone.",
-    concepts: ["keydown", "event.key", "position", "limites"],
-    starter: "katas/difficile/personnage-clavier/index.html",
-    consigne: "katas/difficile/personnage-clavier/consigne.md"
+level: "moyen",
+     summary: "Deplacer un personnage aux fleches sans sortir de la zone.",
+     concepts: ["keydown", "event.key", "position", "limites"],
+     starter: "katas/moyen/personnage-clavier/index.html",
+     consigne: "katas/moyen/personnage-clavier/consigne.md"
   },
   {
     id: "esquive-simple",
