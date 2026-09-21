@@ -491,8 +491,7 @@ a {
 }
 
 .memo-hero > div,
-.memo-panel,
-.debug-strip {
+.memo-panel {
   border: 2px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
@@ -506,8 +505,7 @@ a {
     var(--panel);
 }
 
-.memo-hero h2,
-.debug-strip h2 {
+.memo-hero h2 {
   margin: 0 0 14px;
   font-size: clamp(2rem, 5vw, 4.4rem);
   line-height: 0.95;
@@ -516,8 +514,7 @@ a {
 
 .memo-hero p,
 .memo-card p,
-.memo-panel li,
-.debug-strip li {
+.memo-panel li {
   color: var(--muted);
   line-height: 1.55;
 }
@@ -648,30 +645,6 @@ pre code {
   width: 3px;
   border-radius: 999px;
   background: var(--cyan);
-}
-
-.debug-strip {
-  display: grid;
-  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
-  gap: 24px;
-  align-items: start;
-  margin-top: 28px;
-  padding: clamp(22px, 4vw, 34px);
-  background:
-    linear-gradient(90deg, rgba(242, 193, 78, 0.34), transparent 52%),
-    var(--panel);
-}
-
-.debug-strip ul {
-  columns: 2;
-  gap: 28px;
-  margin: 0;
-  padding-left: 20px;
-}
-
-.debug-strip li {
-  break-inside: avoid;
-  margin-bottom: 8px;
 }
 
 .draw-button {
@@ -805,8 +778,7 @@ pre code {
   .course-strip,
   .kata-gallery,
   .memo-hero,
-  .memo-grid,
-  .debug-strip {
+  .memo-grid {
     grid-template-columns: 1fr;
   }
 
@@ -814,7 +786,4 @@ pre code {
     align-items: flex-start;
   }
 
-  .debug-strip ul {
-    columns: 1;
-  }
 }
