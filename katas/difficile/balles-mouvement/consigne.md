@@ -17,6 +17,7 @@ Animer plusieurs balles independantes qui rebondissent contre les bords d'une zo
 - Deplacer chaque balle regulierement.
 - Inverser la direction lorsqu'une balle touche un bord.
 - Mettre a jour la position visuelle de chaque element.
+- A chaque clic dans l'arene, ajouter une nouvelle balle.
 
 ## Contraintes
 

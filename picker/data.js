@@ -65,11 +65,11 @@ const KATAS = [
   {
     id: "voiture-clic",
     title: "Voiture au clic",
-    level: "moyen",
+    level: "facile",
     summary: "Lancer une voiture au clic puis reinitialiser l'animation.",
     concepts: ["click", "classList", "animation", "etat"],
-    starter: "katas/moyen/voiture-clic/index.html",
-    consigne: "katas/moyen/voiture-clic/consigne.md"
+    starter: "katas/facile/voiture-clic/index.html",
+    consigne: "katas/facile/voiture-clic/consigne.md"
   },
   {
     id: "sticker-orientation",
