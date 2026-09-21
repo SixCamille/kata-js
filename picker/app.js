@@ -15,63 +15,6 @@ function getVisibleKatas() {
   });
 }
 
-function getPreviewPath(kata) {
-  return kata.starter.replace("index.html", "starter/index.html");
-}
-
-function createKataCard(kata) {
-  const card = document.createElement("article");
-  card.className = "kata-card level-" + kata.level + " picked";
-
-  const previewLink = document.createElement("a");
-  previewLink.className = "kata-preview";
-  previewLink.href = kata.starter;
-  previewLink.setAttribute("aria-label", "Ouvrir le kata " + kata.title);
-
-  const preview = document.createElement("iframe");
-  preview.src = getPreviewPath(kata);
-  preview.title = "Apercu du kata " + kata.title;
-  preview.tabIndex = -1;
-  preview.setAttribute("scrolling", "no");
-  previewLink.append(preview);
-
-  const content = document.createElement("div");
-  content.className = "kata-card-content";
-
-  const level = document.createElement("span");
-  level.className = "level-tag";
-  level.textContent = kata.level;
-
-  const title = document.createElement("h2");
-  title.textContent = kata.title;
-
-  const summary = document.createElement("p");
-  summary.textContent = kata.summary;
-
-  const concepts = document.createElement("div");
-  concepts.className = "concepts";
-
-  kata.concepts.forEach(function (concept) {
-    const tag = document.createElement("span");
-    tag.textContent = concept;
-    concepts.append(tag);
-  });
-
-  const actions = document.createElement("div");
-  actions.className = "actions";
-
-  const starterLink = document.createElement("a");
-  starterLink.className = "button";
-  starterLink.href = kata.starter;
-  starterLink.textContent = "Ouvrir le kata";
-
-  actions.append(starterLink);
-  content.append(level, title, summary, concepts, actions);
-  card.append(previewLink, content);
-
-  return card;
-}
-
 function renderPlaceholder() {
   kataResult.innerHTML = "";
 
@@ -100,7 +43,11 @@ function renderResult() {
     return;
   }
 
-  kataResult.append(createKataCard(pickedKata));
+  kataResult.append(KataCards.createKataCard(pickedKata, {
+    root: "..",
+    picked: true,
+    showConcepts: true
+  }));
 }
 
 function drawKata() {

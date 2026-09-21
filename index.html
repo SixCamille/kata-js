@@ -10,44 +10,11 @@
     <div data-site-nav data-root="." data-title="KATA JS"></div>
 
     <main class="home-layout">
-      <section class="kata-gallery" aria-label="Liste des katas">
-        <article class="kata-card level-facile">
-          <a class="kata-preview" href="katas/facile/mot-de-passe/index.html" aria-label="Ouvrir le kata Afficher / masquer un mot de passe">
-            <iframe src="katas/facile/mot-de-passe/starter/index.html" title="Apercu du kata Afficher / masquer un mot de passe" tabindex="-1" scrolling="no"></iframe>
-          </a>
-          <div class="kata-card-content">
-            <span class="level-tag">Facile</span>
-            <h2>Afficher / masquer un mot de passe</h2>
-            <p>Manipuler un input, un bouton et un etat booleen.</p>
-            <a class="button" href="katas/facile/mot-de-passe/index.html">Ouvrir le kata</a>
-          </div>
-        </article>
-
-        <article class="kata-card level-moyen">
-          <a class="kata-preview" href="katas/moyen/yeux-souris/index.html" aria-label="Ouvrir le kata Yeux qui suivent la souris">
-            <iframe src="katas/moyen/yeux-souris/starter/index.html" title="Apercu du kata Yeux qui suivent la souris" tabindex="-1" scrolling="no"></iframe>
-          </a>
-          <div class="kata-card-content">
-            <span class="level-tag">Moyen</span>
-            <h2>Yeux qui suivent la souris</h2>
-            <p>Utiliser la position de la souris pour orienter deux pupilles.</p>
-            <a class="button" href="katas/moyen/yeux-souris/index.html">Ouvrir le kata</a>
-          </div>
-        </article>
-
-        <article class="kata-card level-difficile">
-          <a class="kata-preview" href="katas/difficile/chrono-todo/index.html" aria-label="Ouvrir le kata Chronometre de todo list">
-            <iframe src="katas/difficile/chrono-todo/starter/index.html" title="Apercu du kata Chronometre de todo list" tabindex="-1" scrolling="no"></iframe>
-          </a>
-          <div class="kata-card-content">
-            <span class="level-tag">Difficile</span>
-            <h2>Chronometre de todo list</h2>
-            <p>Combiner formulaire, liste, et chronometre simple.</p>
-            <a class="button" href="katas/difficile/chrono-todo/index.html">Ouvrir le kata</a>
-          </div>
-        </article>
-      </section>
+      <section class="kata-gallery" data-kata-gallery aria-label="Liste des katas"></section>
     </main>
+    <script src="picker/data.js"></script>
+    <script src="shared/kata-cards.js"></script>
+    <script src="shared/kata-gallery.js"></script>
     <script src="shared/site-nav.js"></script>
   </body>
 </html>
