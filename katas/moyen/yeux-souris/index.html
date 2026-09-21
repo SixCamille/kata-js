@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="../../../shared/starter-shell.css">
   </head>
   <body class="level-moyen" data-kata="yeux-souris">
+    <header class="topbar level-moyen">
+      <div>
+        <h1><a href="../../../index.html">KATA JS</a></h1>
+      </div>
+      <nav class="topnav" aria-label="Navigation principale">
+        <a href="../../facile/index.html">Facile</a>
+        <a class="active-nav" href="../../moyen/index.html">Moyen</a>
+        <a href="../../difficile/index.html">Difficile</a>
+        <a href="../../../pense-bete/javascript.html">Pense-bete</a>
+        <a href="../../../picker/index.html">Picker</a>
+      </nav>
+    </header>
+
     <div class="starter-layout">
       <main class="playground-zone">
         <iframe class="playground-frame" src="starter/index.html" title="Playground du kata yeux souris"></iframe>
@@ -14,16 +27,6 @@
 
       <aside class="kata-brief" aria-labelledby="brief-title">
         <div class="brief-content">
-          <a class="brief-logo" href="../../../index.html">KATA JS</a>
-          <nav class="kata-nav" aria-label="Navigation principale">
-            <a href="../../facile/index.html">Facile</a>
-            <a class="active-nav" href="../../moyen/index.html">Moyen</a>
-            <a href="../../difficile/index.html">Difficile</a>
-            <a href="../../../pense-bete/javascript.html">Pense-bete</a>
-            <a href="../../../picker/index.html">Picker</a>
-            <a href="starter/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le playground</a>
-          </nav>
-
           <p class="level-tag">Kata moyen</p>
           <h2 id="brief-title">Suivre le pointeur</h2>
           <p>Les pupilles doivent se deplacer legerement vers la position actuelle de la souris.</p>
@@ -35,8 +38,11 @@
             <li>Appliquer un <code>transform</code> limite aux pupilles.</li>
           </ul>
 
-          <h3>Memos utiles</h3>
-          <button class="memo-button" type="button" data-open-memo>Memo utile</button>
+          <hr>
+          <div class="brief-actions">
+            <button class="memo-button" type="button" data-open-memo>Ouvrir le memo</button>
+            <a class="memo-button" href="starter/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le playground</a>
+          </div>
         </div>
       </aside>
     </div>
