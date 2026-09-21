@@ -101,6 +101,17 @@ body {
   margin: 0 auto;
 }
 
+.brief-logo {
+  display: inline-block;
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--yellow);
+}
+
 .kata-nav {
   display: flex;
   flex-wrap: wrap;

@@ -64,6 +64,11 @@ a {
   text-shadow: 3px 3px 0 var(--yellow);
 }
 
+.topbar h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .eyebrow {
   margin: 0 0 8px;
   color: var(--muted);
