@@ -188,7 +188,8 @@ body {
   gap: 8px;
 }
 
-.memo-links a {
+.memo-links a,
+.memo-button {
   padding: 8px 10px;
   border: 2px solid var(--line);
   border-radius: 6px;
@@ -198,6 +199,97 @@ body {
   font-weight: 800;
   text-decoration: none;
   box-shadow: 3px 3px 0 var(--line);
+}
+
+.memo-button {
+  cursor: pointer;
+}
+
+.kata-memo-dialog {
+  width: min(860px, calc(100% - 28px));
+  max-height: calc(100vh - 28px);
+  padding: 0;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--panel);
+  box-shadow: 10px 10px 0 var(--line);
+}
+
+.kata-memo-dialog::backdrop {
+  background: rgba(32, 38, 51, 0.48);
+}
+
+.kata-memo-panel {
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+}
+
+.kata-memo-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  border-bottom: 2px solid var(--line);
+  background:
+    linear-gradient(90deg, var(--level-soft), transparent 62%),
+    var(--panel);
+}
+
+.kata-memo-header h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 4vw, 2.4rem);
+  line-height: 1;
+}
+
+.kata-memo-section {
+  padding: 18px;
+}
+
+.kata-memo-section + .kata-memo-section {
+  border-top: 2px solid var(--line);
+}
+
+.kata-memo-section h3 {
+  margin: 0 0 12px;
+}
+
+.kata-memo-section article {
+  padding: 16px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.kata-memo-section article + article {
+  margin-top: 12px;
+}
+
+.kata-memo-section h4 {
+  margin: 0 0 8px;
+}
+
+.kata-memo-section p {
+  margin: 0 0 12px;
+}
+
+.kata-memo-section pre {
+  max-width: 100%;
+  margin: 0;
+  overflow-x: auto;
+  padding: 14px;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  background: #1f2633;
+  color: #f8f0d8;
+}
+
+.kata-memo-section code {
+  font-family: Consolas, "Courier New", monospace;
 }
 
 @media (max-width: 760px) {
@@ -217,5 +309,10 @@ body {
 
   .playground-frame {
     min-height: 430px;
+  }
+
+  .kata-memo-header {
+    align-items: stretch;
+    flex-direction: column;
   }
 }

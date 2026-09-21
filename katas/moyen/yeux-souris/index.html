@@ -33,13 +33,55 @@
           </ul>
 
           <h3>Memos utiles</h3>
-          <nav class="memo-links" aria-label="Memos utiles">
-            <a href="../../../pense-bete/javascript.html#souris">Souris</a>
-            <a href="../../../pense-bete/javascript.html#modifier-dom">Modifier le DOM</a>
-            <a href="../../../pense-bete/javascript.html#fonctions">Fonctions</a>
-          </nav>
+          <button class="memo-button" type="button" data-open-memo>Ouvrir le memo cible</button>
         </div>
       </aside>
     </div>
+
+    <dialog class="kata-memo-dialog" id="kata-memo" aria-labelledby="memo-title">
+      <div class="kata-memo-panel">
+        <header class="kata-memo-header">
+          <div>
+            <p class="eyebrow">Aide ciblee</p>
+            <h2 id="memo-title">Suivre le pointeur</h2>
+          </div>
+          <button class="memo-button" type="button" data-close-memo>Fermer</button>
+        </header>
+
+        <section class="kata-memo-section" aria-labelledby="memo-main-title">
+          <h3 id="memo-main-title">Notions du pense-bete</h3>
+          <article>
+            <h4>Souris</h4>
+            <p>Sur un evenement de souris, on peut lire la position du pointeur dans la fenetre.</p>
+            <pre><code>document.addEventListener("mousemove", function (event) {
+  console.log(event.clientX, event.clientY);
+});</code></pre>
+          </article>
+          <article>
+            <h4>Modifier un element</h4>
+            <p>Le DOM peut modifier le style d'un element en reaction a l'utilisateur.</p>
+            <pre><code>pupil.style.transform = "translate(8px, -4px)";</code></pre>
+          </article>
+        </section>
+
+        <section class="kata-memo-section" aria-labelledby="memo-specific-title">
+          <h3 id="memo-specific-title">Specifique au kata</h3>
+          <article>
+            <h4>Position d'un element</h4>
+            <p>La boite d'un element permet de calculer son centre dans la fenetre.</p>
+            <pre><code>const rect = element.getBoundingClientRect();
+const centerX = rect.left + rect.width / 2;
+const centerY = rect.top + rect.height / 2;</code></pre>
+          </article>
+          <article>
+            <h4>Limiter une valeur</h4>
+            <p>Limiter le deplacement evite que la pupille sorte trop loin de l'oeil.</p>
+            <pre><code>const limited = Math.max(-12, Math.min(12, value));</code></pre>
+          </article>
+        </section>
+      </div>
+    </dialog>
+
+    <script src="../../../shared/kata-memo.js"></script>
   </body>
 </html>

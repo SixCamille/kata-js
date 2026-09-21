@@ -33,13 +33,58 @@
           </ul>
 
           <h3>Memos utiles</h3>
-          <nav class="memo-links" aria-label="Memos utiles">
-            <a href="../../../pense-bete/javascript.html#selection-dom">Selection DOM</a>
-            <a href="../../../pense-bete/javascript.html#evenements">Evenements</a>
-            <a href="../../../pense-bete/javascript.html#conditions">Conditions</a>
-          </nav>
+          <button class="memo-button" type="button" data-open-memo>Ouvrir le memo cible</button>
         </div>
       </aside>
     </div>
+
+    <dialog class="kata-memo-dialog" id="kata-memo" aria-labelledby="memo-title">
+      <div class="kata-memo-panel">
+        <header class="kata-memo-header">
+          <div>
+            <p class="eyebrow">Aide ciblee</p>
+            <h2 id="memo-title">Afficher / masquer</h2>
+          </div>
+          <button class="memo-button" type="button" data-close-memo>Fermer</button>
+        </header>
+
+        <section class="kata-memo-section" aria-labelledby="memo-main-title">
+          <h3 id="memo-main-title">Notions du pense-bete</h3>
+          <article>
+            <h4>Selection DOM</h4>
+            <p><code>querySelector</code> recupere le premier element qui correspond au selecteur CSS.</p>
+            <pre><code>const field = document.querySelector("input");
+const button = document.querySelector("button");</code></pre>
+          </article>
+          <article>
+            <h4>Evenements et conditions</h4>
+            <p>Un clic declenche une fonction. Une condition choisit quoi faire selon l'etat actuel.</p>
+            <pre><code>button.addEventListener("click", function () {
+  if (isVisible) {
+    // cas visible
+  }
+});</code></pre>
+          </article>
+        </section>
+
+        <section class="kata-memo-section" aria-labelledby="memo-specific-title">
+          <h3 id="memo-specific-title">Specifique au kata</h3>
+          <article>
+            <h4>Type d'un input</h4>
+            <p>Le champ peut alterner entre un affichage masque et un affichage lisible.</p>
+            <pre><code>field.type = "text";
+field.type = "password";</code></pre>
+          </article>
+          <article>
+            <h4>Etat booleen</h4>
+            <p>Un booleen memorise si le mot de passe est actuellement visible.</p>
+            <pre><code>let isVisible = false;
+isVisible = !isVisible;</code></pre>
+          </article>
+        </section>
+      </div>
+    </dialog>
+
+    <script src="../../../shared/kata-memo.js"></script>
   </body>
 </html>

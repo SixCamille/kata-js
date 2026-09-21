@@ -33,13 +33,64 @@
           </ul>
 
           <h3>Memos utiles</h3>
-          <nav class="memo-links" aria-label="Memos utiles">
-            <a href="../../../pense-bete/javascript.html#temps">Temps</a>
-            <a href="../../../pense-bete/javascript.html#tableaux">Tableaux</a>
-            <a href="../../../pense-bete/javascript.html#evenements">Evenements</a>
-          </nav>
+          <button class="memo-button" type="button" data-open-memo>Ouvrir le memo cible</button>
         </div>
       </aside>
     </div>
+
+    <dialog class="kata-memo-dialog" id="kata-memo" aria-labelledby="memo-title">
+      <div class="kata-memo-panel">
+        <header class="kata-memo-header">
+          <div>
+            <p class="eyebrow">Aide ciblee</p>
+            <h2 id="memo-title">Chrono + todo</h2>
+          </div>
+          <button class="memo-button" type="button" data-close-memo>Fermer</button>
+        </header>
+
+        <section class="kata-memo-section" aria-labelledby="memo-main-title">
+          <h3 id="memo-main-title">Notions du pense-bete</h3>
+          <article>
+            <h4>Temps</h4>
+            <p><code>setInterval</code> repete une action jusqu'a <code>clearInterval</code>.</p>
+            <pre><code>const timerId = setInterval(function () {
+  seconds = seconds + 1;
+}, 1000);
+
+clearInterval(timerId);</code></pre>
+          </article>
+          <article>
+            <h4>Tableaux</h4>
+            <p>Un tableau stocke plusieurs valeurs dans un ordre et peut servir de source pour le rendu.</p>
+            <pre><code>const tasks = [];
+tasks.push({ label: "Relire la consigne", done: false });</code></pre>
+          </article>
+        </section>
+
+        <section class="kata-memo-section" aria-labelledby="memo-specific-title">
+          <h3 id="memo-specific-title">Specifique au kata</h3>
+          <article>
+            <h4>Submit d'un formulaire</h4>
+            <p>Sur un submit, empeche le rechargement pour garder l'application sur la page.</p>
+            <pre><code>form.addEventListener("submit", function (event) {
+  event.preventDefault();
+});</code></pre>
+          </article>
+          <article>
+            <h4>Vider puis reconstruire</h4>
+            <p>Refaire le rendu depuis le tableau aide a synchroniser l'ecran avec l'etat courant.</p>
+            <pre><code>list.innerHTML = "";
+
+tasks.forEach(function (task) {
+  const item = document.createElement("li");
+  item.textContent = task.label;
+  list.append(item);
+});</code></pre>
+          </article>
+        </section>
+      </div>
+    </dialog>
+
+    <script src="../../../shared/kata-memo.js"></script>
   </body>
 </html>
