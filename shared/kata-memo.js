@@ -220,7 +220,7 @@ popup.classList.remove("is-open");`
 }
 
 .popup.is-open {
-  display: grid;
+  display: block;
 }`
               }
             ]
