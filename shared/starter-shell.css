@@ -218,6 +218,43 @@ body {
   gap: 8px;
 }
 
+.kata-timer {
+  padding: 14px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.kata-timer[data-status="reussi"] {
+  background: linear-gradient(90deg, rgba(168, 207, 69, 0.34), rgba(255, 255, 255, 0.62));
+}
+
+.kata-timer[data-status="en cours"] {
+  background: linear-gradient(90deg, rgba(242, 193, 78, 0.34), rgba(255, 255, 255, 0.62));
+}
+
+.kata-timer-display {
+  margin-bottom: 4px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.kata-timer-status {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.kata-timer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .memo-button {
   padding: 8px 10px;
   border: 2px solid var(--line);
@@ -229,6 +266,15 @@ body {
   text-decoration: none;
   box-shadow: 3px 3px 0 var(--line);
   cursor: pointer;
+}
+
+.memo-button.secondary {
+  background: var(--panel);
+}
+
+.memo-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
 }
 
 .kata-memo-dialog {

@@ -408,6 +408,26 @@ a {
   line-height: 1.5;
 }
 
+.kata-card-content .kata-progress-summary {
+  min-height: 0;
+  margin-top: -6px;
+  padding: 8px 10px;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.kata-progress-summary[data-status="reussi"] {
+  background: var(--lime);
+}
+
+.kata-progress-summary[data-status="en cours"] {
+  background: var(--yellow);
+}
+
 .picker-layout {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -474,6 +494,16 @@ a {
 
 .level-button[data-level="difficile"] {
   --level-color: var(--level-difficile);
+}
+
+.progress-counter {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  background: rgba(168, 207, 69, 0.24);
+  color: var(--ink);
+  font-weight: 900;
 }
 
 .memo-layout {

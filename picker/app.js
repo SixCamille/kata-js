@@ -1,6 +1,7 @@
 const levelButtons = document.querySelectorAll(".level-button");
 const drawButton = document.querySelector(".draw-button");
 const kataResult = document.querySelector("#kata-result");
+const progressCounter = document.querySelector("[data-progress-counter]");
 
 let selectedLevel = "tous";
 let pickedKata = null;
@@ -50,6 +51,18 @@ function renderResult() {
   }));
 }
 
+function renderProgressCounter() {
+  if (!progressCounter || typeof KataProgress === "undefined") {
+    return;
+  }
+
+  const completedCount = KATAS.filter(function (kata) {
+    return KataProgress.read(kata.id).finishedAt;
+  }).length;
+
+  progressCounter.textContent = completedCount + " kata(s) reussi(s) sur " + KATAS.length;
+}
+
 function drawKata() {
   const availableKatas = getVisibleKatas();
 
@@ -72,5 +85,8 @@ levelButtons.forEach(function (button) {
 });
 
 drawButton.addEventListener("click", drawKata);
+window.addEventListener("kata-progress-change", renderProgressCounter);
+window.addEventListener("storage", renderProgressCounter);
 
 renderResult();
+renderProgressCounter();

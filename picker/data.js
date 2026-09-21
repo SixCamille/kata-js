@@ -1,5 +1,6 @@
 const KATAS = [
   {
+    id: "mot-de-passe",
     title: "Afficher / masquer un mot de passe",
     level: "facile",
     summary: "Manipuler un input, un bouton et un etat booleen.",
@@ -18,6 +19,7 @@ const KATAS = [
     `
   },
   {
+    id: "yeux-souris",
     title: "Yeux qui suivent la souris",
     level: "moyen",
     summary: "Utiliser la position de la souris pour orienter deux pupilles.",
@@ -33,6 +35,7 @@ const KATAS = [
     `
   },
   {
+    id: "chrono-todo",
     title: "Chronometre de todo list",
     level: "difficile",
     summary: "Combiner formulaire, liste, et chronometre simple.",

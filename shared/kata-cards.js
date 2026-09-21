@@ -57,6 +57,10 @@ const KataCards = (function () {
     const summary = document.createElement("p");
     summary.textContent = kata.summary;
 
+    const progressSummary = typeof KataProgress !== "undefined" && kata.id
+      ? KataProgress.createSummary(kata.id)
+      : null;
+
     const actions = document.createElement("div");
     actions.className = "actions";
 
@@ -67,6 +71,10 @@ const KataCards = (function () {
 
     actions.append(starterLink);
     content.append(level, title, summary);
+
+    if (progressSummary) {
+      content.append(progressSummary);
+    }
 
     if (showConcepts) {
       content.append(createConceptTags(kata.concepts));
