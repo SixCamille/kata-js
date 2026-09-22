@@ -67,6 +67,66 @@ zone.append(sticker);`
       }
     ]
   },
+  "theme-switch": {
+    title: "Theme clair / sombre",
+    tabs: [
+      {
+        id: "js",
+        label: "JS",
+        sections: [
+          {
+            title: "Piloter le theme",
+            items: [
+              {
+                title: "Classe sur la page",
+                text: "Le JavaScript peut ajouter ou retirer une classe sur body. Le CSS se charge ensuite de changer l'apparence.",
+                code: `document.body.classList.toggle("dark");`
+              },
+              {
+                title: "Etat du bouton",
+                text: "Le texte du bouton et aria-pressed doivent rester synchronises avec le theme courant.",
+                code: `button.textContent = "Passer en clair";
+button.setAttribute("aria-pressed", "true");`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "Variables CSS",
+            items: [
+              {
+                title: "Nommer une couleur",
+                text: "Une variable CSS commence par deux tirets. Elle permet de donner un nom a une valeur reutilisable.",
+                code: `:root {
+  --page-bg: #edf2f7;
+}`
+              },
+              {
+                title: "Utiliser la variable",
+                text: "var(...) recupere la valeur de la variable. Si la variable change, tous les styles qui l'utilisent changent aussi.",
+                code: `body {
+  background: var(--page-bg);
+}`
+              },
+              {
+                title: "Changer un theme",
+                text: "Pour un theme, on peut garder les memes proprietes CSS et remplacer seulement les variables dans une classe d'etat.",
+                code: `body.dark {
+  --page-bg: #111827;
+  --page-text: #f8fafc;
+}`
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "mot-de-passe": {
     title: "Afficher / masquer",
     sections: [
