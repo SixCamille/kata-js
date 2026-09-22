@@ -1,35 +1,42 @@
+:root {
+  --page-text: #172033;
+  --page-bg: #edf2f7;
+  --panel-border: #ccd6e4;
+  --panel-bg: #ffffff;
+  --accent: #2563eb;
+  --button-text: #ffffff;
+}
+
+body.dark {
+  --page-text: #f8fafc;
+  --page-bg: #111827;
+  --panel-border: #374151;
+  --panel-bg: #1f2937;
+  --accent: #60a5fa;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
   display: grid;
   place-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: #172033;
-  background: #edf2f7;
-}
-
-body.dark {
-  color: #f8fafc;
-  background: #111827;
+  color: var(--page-text);
+  background: var(--page-bg);
 }
 
 .panel {
   width: min(420px, calc(100vw - 32px));
   padding: 28px;
-  border: 1px solid #ccd6e4;
+  border: 1px solid var(--panel-border);
   border-radius: 6px;
-  background: #ffffff;
+  background: var(--panel-bg);
   box-shadow: 0 18px 50px rgba(31, 41, 55, 0.14);
-}
-
-.dark .panel {
-  border-color: #374151;
-  background: #1f2937;
 }
 
 .eyebrow {
   margin: 0 0 8px;
-  color: #2563eb;
+  color: var(--accent);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -45,8 +52,8 @@ button {
   padding: 0 16px;
   border: 0;
   border-radius: 4px;
-  color: #ffffff;
-  background: #2563eb;
+  color: var(--button-text);
+  background: var(--accent);
   font-weight: 700;
   cursor: pointer;
 }

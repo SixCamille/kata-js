@@ -1,7 +1,7 @@
 {
   "title": "Theme clair / sombre",
   "level": "facile",
-  "concepts": ["click", "classe CSS", "etat booleen", "accessibilite"],
+  "concepts": ["click", "classe CSS", "variables CSS", "etat booleen", "accessibilite"],
   "duration": 20,
   "hasStarter": true,
   "hasResources": true
