@@ -1,0 +1,73 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #e0f2fe;
+}
+
+.phone {
+  width: min(390px, calc(100vw - 32px));
+  height: min(620px, calc(100vh - 32px));
+  display: grid;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+  border: 8px solid #172033;
+  border-radius: 28px;
+  background: #f8fafc;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  overflow: auto;
+}
+
+.bubble {
+  max-width: 78%;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  line-height: 1.4;
+}
+
+.bot {
+  align-self: flex-start;
+  background: #e2e8f0;
+}
+
+.user {
+  align-self: flex-end;
+  color: #ffffff;
+  background: #2563eb;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #d6deea;
+  background: #ffffff;
+}
+
+input {
+  min-width: 0;
+  flex: 1;
+  height: 42px;
+  padding: 0 10px;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+}
+
+button {
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #2563eb;
+  font-weight: 700;
+  cursor: pointer;
+}

@@ -1,0 +1,45 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f1f5f9;
+}
+
+.panel {
+  width: min(420px, calc(100vw - 32px));
+  padding: 28px;
+  border: 1px solid #d6deea;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+button {
+  min-height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #2563eb;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toasts {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  display: grid;
+  gap: 10px;
+}
+
+.toast {
+  min-width: 220px;
+  padding: 14px 16px;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #1f2937;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.22);
+}

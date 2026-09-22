@@ -1,0 +1,8 @@
+{
+  "title": "Progression du scroll",
+  "level": "moyen",
+  "concepts": ["scroll", "window.scrollY", "hauteur de page", "style.width"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

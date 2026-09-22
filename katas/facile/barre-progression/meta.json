@@ -1,0 +1,8 @@
+{
+  "title": "Barre de progression",
+  "level": "facile",
+  "concepts": ["click", "nombre", "style.width", "limites"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

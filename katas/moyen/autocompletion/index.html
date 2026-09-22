@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kata - Autocompletion</title>
+    <link rel="stylesheet" href="../../../shared/starter-shell.css">
+  </head>
+  <body class="level-moyen" data-kata="autocompletion">
+    <div data-site-nav data-root="../../.." data-title="KATA JS" data-active="moyen"></div>
+    <div class="starter-layout">
+      <main class="playground-zone">
+        <iframe class="playground-frame" src="starter/index.html" title="Playground du kata autocompletion"></iframe>
+      </main>
+      <aside class="kata-brief" aria-labelledby="brief-title">
+        <div class="brief-content">
+          <p class="level-tag">Kata moyen</p>
+          <h2 id="brief-title">Autocompletion</h2>
+          <p>Une liste de suggestions doit se filtrer pendant la saisie.</p>
+          <h3>Attendu</h3>
+          <ul>
+            <li>Stocker les suggestions dans un tableau.</li>
+            <li>Ecouter l'evenement <code>input</code>.</li>
+            <li>Filtrer selon le texte saisi.</li>
+            <li>Reconstruire la liste de resultats.</li>
+          </ul>
+          <hr>
+          <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>
+          <hr>
+          <div class="brief-actions">
+            <button class="memo-button" type="button" data-open-memo>Ouvrir le memo</button>
+            <a class="memo-button" href="starter/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le playground</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="../../../shared/site-nav.js"></script>
+    <script src="../../../shared/kata-memo.js"></script>
+    <script src="../../../shared/kata-progress.js"></script>
+  </body>
+</html>

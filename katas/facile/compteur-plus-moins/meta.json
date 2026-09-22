@@ -1,0 +1,8 @@
+{
+  "title": "Compteur + / -",
+  "level": "facile",
+  "concepts": ["click", "variable", "textContent", "conditions"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

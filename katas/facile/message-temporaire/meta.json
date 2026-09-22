@@ -1,0 +1,8 @@
+{
+  "title": "Message temporaire",
+  "level": "facile",
+  "concepts": ["click", "classe CSS", "setTimeout", "notification"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

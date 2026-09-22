@@ -1,0 +1,8 @@
+{
+  "title": "Autocompletion",
+  "level": "moyen",
+  "concepts": ["input", "tableau", "filter", "rendu DOM"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

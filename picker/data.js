@@ -126,5 +126,85 @@ const KATAS = [
     summary: "Combiner formulaire, liste, et chronometre simple.",
     concepts: ["submit", "tableau", "setInterval", "etat compose"],
     starter: "katas/difficile/chrono-todo/index.html"
+  },
+  {
+    id: "theme-switch",
+    title: "Theme clair / sombre",
+    level: "facile",
+    summary: "Basculer l'apparence d'une page avec un bouton et une classe.",
+    concepts: ["click", "classList", "toggle", "etat"],
+    starter: "katas/facile/theme-switch/index.html"
+  },
+  {
+    id: "compteur-plus-moins",
+    title: "Compteur + / -",
+    level: "facile",
+    summary: "Mettre a jour une valeur affichee avec deux boutons.",
+    concepts: ["click", "variable", "textContent", "conditions"],
+    starter: "katas/facile/compteur-plus-moins/index.html"
+  },
+  {
+    id: "barre-progression",
+    title: "Barre de progression",
+    level: "facile",
+    summary: "Faire avancer ou reculer une barre par paliers.",
+    concepts: ["click", "nombre", "style.width", "limites"],
+    starter: "katas/facile/barre-progression/index.html"
+  },
+  {
+    id: "message-temporaire",
+    title: "Message temporaire",
+    level: "facile",
+    summary: "Afficher une notification puis la masquer automatiquement.",
+    concepts: ["click", "classList", "setTimeout", "etat"],
+    starter: "katas/facile/message-temporaire/index.html"
+  },
+  {
+    id: "bouton-fuit",
+    title: "Bouton qui fuit",
+    level: "moyen",
+    summary: "Deplacer un bouton quand le pointeur s'en approche.",
+    concepts: ["mousemove", "getBoundingClientRect", "Math.random", "style"],
+    starter: "katas/moyen/bouton-fuit/index.html"
+  },
+  {
+    id: "progression-scroll",
+    title: "Progression du scroll",
+    level: "moyen",
+    summary: "Afficher une barre qui suit l'avancement dans la page.",
+    concepts: ["scroll", "window.scrollY", "hauteur", "style.width"],
+    starter: "katas/moyen/progression-scroll/index.html"
+  },
+  {
+    id: "toast-empile",
+    title: "Toasts empiles",
+    level: "moyen",
+    summary: "Creer plusieurs notifications qui s'empilent puis disparaissent.",
+    concepts: ["click", "createElement", "setTimeout", "tableau"],
+    starter: "katas/moyen/toast-empile/index.html"
+  },
+  {
+    id: "autocompletion",
+    title: "Autocompletion",
+    level: "moyen",
+    summary: "Filtrer des suggestions pendant la saisie dans un champ.",
+    concepts: ["input", "tableau", "filter", "rendu"],
+    starter: "katas/moyen/autocompletion/index.html"
+  },
+  {
+    id: "fenetre-deplacable",
+    title: "Fenetre deplacable",
+    level: "difficile",
+    summary: "Deplacer une fausse fenetre avec la souris et gerer son etat.",
+    concepts: ["mousedown", "mousemove", "mouseup", "position"],
+    starter: "katas/difficile/fenetre-deplacable/index.html"
+  },
+  {
+    id: "chat-simule",
+    title: "Chat simule",
+    level: "difficile",
+    summary: "Envoyer un message puis afficher une reponse automatique apres un delai.",
+    concepts: ["submit", "createElement", "setTimeout", "etat"],
+    starter: "katas/difficile/chat-simule/index.html"
   }
 ];

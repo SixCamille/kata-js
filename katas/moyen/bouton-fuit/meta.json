@@ -1,0 +1,8 @@
+{
+  "title": "Bouton qui fuit",
+  "level": "moyen",
+  "concepts": ["mousemove", "coordonnees", "getBoundingClientRect", "Math.random"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

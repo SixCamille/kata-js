@@ -1,0 +1,57 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #eef4ff;
+}
+
+.panel {
+  width: min(430px, calc(100vw - 32px));
+  padding: 28px;
+  border: 1px solid #d6deea;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+h1 {
+  margin: 0 0 22px;
+  font-size: 1.5rem;
+}
+
+.progress {
+  height: 18px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.bar {
+  width: 0%;
+  height: 100%;
+  background: #16a34a;
+  transition: width 0.2s ease;
+}
+
+.percent {
+  margin: 14px 0 18px;
+  font-weight: 800;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  min-height: 42px;
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #2563eb;
+  font-weight: 700;
+  cursor: pointer;
+}

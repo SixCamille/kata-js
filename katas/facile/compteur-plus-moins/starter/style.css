@@ -1,0 +1,52 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #f1f5f9;
+}
+
+.counter-card {
+  width: min(360px, calc(100vw - 32px));
+  padding: 28px;
+  border: 1px solid #d6deea;
+  border-radius: 6px;
+  text-align: center;
+  background: #ffffff;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: 1.4rem;
+}
+
+.value {
+  margin: 0 0 20px;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+button {
+  width: 56px;
+  height: 44px;
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #2563eb;
+  font-size: 1.4rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.hint {
+  margin: 18px 0 0;
+  color: #64748b;
+}

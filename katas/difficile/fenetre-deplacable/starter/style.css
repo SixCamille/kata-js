@@ -1,0 +1,52 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #dbeafe;
+}
+
+.desktop {
+  position: relative;
+  min-height: 100vh;
+}
+
+.window {
+  position: absolute;
+  left: 80px;
+  top: 70px;
+  width: min(360px, calc(100vw - 32px));
+  border: 1px solid #475569;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.25);
+}
+
+.titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 0 12px;
+  color: #ffffff;
+  background: #1f2937;
+  cursor: grab;
+}
+
+.titlebar button {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 4px;
+  background: #ef4444;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.window p {
+  margin: 0;
+  padding: 22px;
+  line-height: 1.5;
+}
