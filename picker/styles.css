@@ -401,6 +401,32 @@ a {
   line-height: 1.05;
 }
 
+.kata-summary {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.kata-concepts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.kata-concepts li {
+  padding: 3px 7px;
+  border: 1px solid rgba(32, 38, 51, 0.22);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.52);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
 .kata-card-content .kata-progress-summary {
   display: inline-flex;
   align-items: center;

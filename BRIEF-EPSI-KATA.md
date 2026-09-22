@@ -79,13 +79,14 @@ Chaque kata doit suivre une convention homogène :
 ```text
 katas/<niveau>/<slug>/
   meta.json
-  consigne.md
-  preview.png ou preview.gif
+  index.html
   starter/
     index.html
     style.css
     script.js
 ```
+
+La page `index.html` du kata affiche la consigne, les attendus et les liens utiles autour du starter.
 
 Le starter est utile lorsque le HTML/CSS de départ ne fait pas partie de ce que l'on souhaite évaluer. Le JavaScript doit rester à produire par l'apprenant.
 
@@ -114,7 +115,6 @@ Créer une petite interface en HTML/CSS/JS vanilla permettant de :
 - tirer aléatoirement un kata de cette catégorie ;
 - afficher le titre ;
 - afficher le rendu de référence ;
-- afficher la consigne ;
 - donner accès au mémo intégré lorsqu'il existe ;
 - donner accès au starter.
 

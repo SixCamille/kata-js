@@ -40,6 +40,18 @@ const KataCards = (function () {
     const title = document.createElement("h2");
     title.textContent = kata.title;
 
+    const summary = document.createElement("p");
+    summary.className = "kata-summary";
+    summary.textContent = kata.summary;
+
+    const concepts = document.createElement("ul");
+    concepts.className = "kata-concepts";
+    kata.concepts.forEach(function (concept) {
+      const item = document.createElement("li");
+      item.textContent = concept;
+      concepts.append(item);
+    });
+
     const progressSummary = typeof KataProgress !== "undefined" && kata.id
       ? KataProgress.createSummary(kata.id)
       : null;
@@ -57,7 +69,7 @@ const KataCards = (function () {
     }
 
     actions.append(starterLink);
-    content.append(level, title);
+    content.append(level, title, summary, concepts);
 
     content.append(actions);
     card.append(previewLink, content);
