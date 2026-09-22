@@ -98,7 +98,7 @@ Le starter est utile lorsque le HTML/CSS de départ ne fait pas partie de ce que
 {
   "title": "Titre du kata",
   "level": "facile",
-  "concepts": ["DOM", "evenements"],
+  "concepts": ["DOM", "événements"],
   "duration": 20,
   "hasStarter": true,
   "hasResources": false

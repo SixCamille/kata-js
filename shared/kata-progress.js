@@ -155,7 +155,7 @@ const KataProgress = (function () {
       <div class="kata-timer-display" aria-live="polite">00:00</div>
       <p class="kata-timer-status">Non commence</p>
       <div class="kata-timer-actions">
-        <button class="memo-button" type="button" data-progress-start>Debut</button>
+        <button class="memo-button" type="button" data-progress-start>Début</button>
         <button class="memo-button" type="button" data-progress-finish>Fin</button>
         <button class="memo-button secondary" type="button" data-progress-reset>Reset</button>
       </div>

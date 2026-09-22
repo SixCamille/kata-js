@@ -59,7 +59,7 @@ function renderProgressCounter() {
     return KataProgress.read(kata.id).finishedAt;
   }).length;
 
-  progressCounter.textContent = completedCount + " kata(s) reussi(s) sur " + KATAS.length;
+  progressCounter.textContent = completedCount + " kata(s) réussi(s) sur " + KATAS.length;
 }
 
 function drawKata() {

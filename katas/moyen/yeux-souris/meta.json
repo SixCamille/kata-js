@@ -1,7 +1,7 @@
 {
   "title": "Yeux qui suivent la souris",
   "level": "moyen",
-  "concepts": ["mousemove", "coordonnees souris", "DOMRect", "transform"],
+  "concepts": ["mousemove", "coordonnées souris", "DOMRect", "transform"],
   "duration": 20,
   "hasStarter": true,
   "hasResources": true

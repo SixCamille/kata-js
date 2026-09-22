@@ -10,7 +10,7 @@ if (siteNavMount) {
     { id: "facile", label: "Facile", path: "katas/facile/index.html" },
     { id: "moyen", label: "Moyen", path: "katas/moyen/index.html" },
     { id: "difficile", label: "Difficile", path: "katas/difficile/index.html" },
-    { id: "pense-bete", label: "Pense-bete", path: "pense-bete/javascript.html" },
+    { id: "pense-bete", label: "Pense-bête", path: "pense-bete/javascript.html" },
     { id: "picker", label: "Picker", path: "picker/index.html" }
   ];
 

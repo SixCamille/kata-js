@@ -14,7 +14,7 @@
         <article class="memo-card" id="variables">
           <p class="memo-index">01</p>
           <h3>Variables</h3>
-          <p><code>const</code> sert pour une reference que l'on ne reassigne pas. <code>let</code> sert pour une valeur qui peut changer.</p>
+          <p><code>const</code> sert pour une référence que l'on ne reassigne pas. <code>let</code> sert pour une valeur qui peut changer.</p>
           <pre><code>const button = document.querySelector("button");
 let count = 0;</code></pre>
         </article>
@@ -22,7 +22,7 @@ let count = 0;</code></pre>
         <article class="memo-card" id="conditions">
           <p class="memo-index">02</p>
           <h3>Conditions</h3>
-          <p>Une condition permet de choisir un comportement selon l'etat actuel.</p>
+          <p>Une condition permet de choisir un comportement selon l'état actuel.</p>
           <pre><code>if (count &gt; 5) {
   message.textContent = "Bravo";
 } else {
@@ -33,7 +33,7 @@ let count = 0;</code></pre>
         <article class="memo-card" id="fonctions">
           <p class="memo-index">03</p>
           <h3>Fonctions</h3>
-          <p>Une fonction regroupe une action que l'on veut nommer, declencher ou reutiliser.</p>
+          <p>Une fonction regroupe une action que l'on veut nommer, déclencher ou réutiliser.</p>
           <pre><code>function updateMessage(text) {
   message.textContent = text;
 }</code></pre>
@@ -53,8 +53,8 @@ colors.forEach(function (color) {
 
         <article class="memo-card" id="selection-dom">
           <p class="memo-index">05</p>
-          <h3>Selectionner dans le DOM</h3>
-          <p><code>querySelector</code> recupere le premier element qui correspond au selecteur CSS. <code>querySelectorAll</code> recupere une liste.</p>
+          <h3>Sélectionner dans le DOM</h3>
+          <p><code>querySelector</code> récupère le premier élément qui correspond au sélecteur CSS. <code>querySelectorAll</code> récupère une liste.</p>
           <pre><code>const title = document.querySelector("h1");
 const card = document.querySelector(".card");
 const buttons = document.querySelectorAll("button");</code></pre>
@@ -62,8 +62,8 @@ const buttons = document.querySelectorAll("button");</code></pre>
 
         <article class="memo-card" id="modifier-dom">
           <p class="memo-index">06</p>
-          <h3>Modifier un element</h3>
-          <p>Le DOM peut changer son texte, ses classes ou certains styles en reaction a l'utilisateur.</p>
+          <h3>Modifier un élément</h3>
+          <p>Le DOM peut changer son texte, ses classes ou certains styles en reaction à l'utilisateur.</p>
           <pre><code>title.textContent = "Nouveau titre";
 card.classList.add("active");
 card.classList.remove("hidden");
@@ -72,8 +72,8 @@ card.style.transform = "translateX(20px)";</code></pre>
 
         <article class="memo-card" id="evenements">
           <p class="memo-index">07</p>
-          <h3>Ecouter un evenement</h3>
-          <p><code>addEventListener</code> relie une action utilisateur ou navigateur a une fonction.</p>
+          <h3>Ecouter un événement</h3>
+          <p><code>addEventListener</code> relie une action utilisateur ou navigateur à une fonction.</p>
           <pre><code>button.addEventListener("click", function () {
   count = count + 1;
 });</code></pre>
@@ -90,9 +90,9 @@ card.style.transform = "translateX(20px)";</code></pre>
         <article class="memo-card" id="temps">
           <p class="memo-index">08</p>
           <h3>Temps</h3>
-          <p><code>setTimeout</code> lance une action une seule fois. <code>setInterval</code> repete une action jusqu'a <code>clearInterval</code>.</p>
+          <p><code>setTimeout</code> lance une action une seule fois. <code>setInterval</code> répète une action jusqu'à <code>clearInterval</code>.</p>
           <pre><code>setTimeout(function () {
-  message.textContent = "Temps ecoule";
+  message.textContent = "Temps écoulé";
 }, 1000);
 
 const timerId = setInterval(function () {
@@ -105,7 +105,7 @@ clearInterval(timerId);</code></pre>
         <article class="memo-card" id="souris">
           <p class="memo-index">09</p>
           <h3>Souris</h3>
-          <p>Sur un evenement de souris, on peut lire la position du pointeur dans la fenetre.</p>
+          <p>Sur un événement de souris, on peut lire la position du pointeur dans la fenêtre.</p>
           <pre><code>document.addEventListener("mousemove", function (event) {
   console.log(event.clientX, event.clientY);
 });</code></pre>
@@ -114,7 +114,7 @@ clearInterval(timerId);</code></pre>
         <article class="memo-card" id="scroll">
           <p class="memo-index">10</p>
           <h3>Scroll</h3>
-          <p><code>window.scrollY</code> indique de combien la page a defile verticalement.</p>
+          <p><code>window.scrollY</code> indique de combien la page à defile verticalement.</p>
           <pre><code>window.addEventListener("scroll", function () {
   console.log(window.scrollY);
 });</code></pre>

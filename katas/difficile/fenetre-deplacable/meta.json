@@ -1,7 +1,7 @@
 {
   "title": "Fenetre deplacable",
   "level": "difficile",
-  "concepts": ["mousedown", "mousemove", "mouseup", "position", "etat"],
+  "concepts": ["mousedown", "mousemove", "mouseup", "position", "état"],
   "duration": 20,
   "hasStarter": true,
   "hasResources": true

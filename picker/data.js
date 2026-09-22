@@ -3,16 +3,16 @@ const KATAS = [
     id: "sticker-clic",
     title: "Sticker au clic",
     level: "facile",
-    summary: "Creer un element au clic et le placer aux coordonnees du pointeur.",
-    concepts: ["click", "coordonnees", "createElement", "style"],
+    summary: "Créer un élément au clic et le placer aux coordonnées du pointeur.",
+    concepts: ["click", "coordonnées", "createElement", "style"],
     starter: "katas/facile/sticker-clic/index.html"
   },
   {
     id: "mot-de-passe",
     title: "Afficher / masquer un mot de passe",
     level: "facile",
-    summary: "Manipuler un input, un bouton et un etat booleen.",
-    concepts: ["querySelector", "type d'input", "condition", "etat"],
+    summary: "Manipuler un input, un bouton et un état booléen.",
+    concepts: ["querySelector", "type d'input", "condition", "état"],
     starter: "katas/facile/mot-de-passe/index.html"
   },
   {
@@ -28,7 +28,7 @@ const KATAS = [
     title: "Menu ouvrant / fermant",
     level: "facile",
     summary: "Afficher ou masquer un menu depuis un bouton.",
-    concepts: ["click", "classList", "aria-expanded", "etat"],
+    concepts: ["click", "classList", "aria-expanded", "état"],
     starter: "katas/facile/menu-toggle/index.html"
   },
   {
@@ -36,7 +36,7 @@ const KATAS = [
     title: "Popup simple",
     level: "facile",
     summary: "Ouvrir une modale et la fermer avec une croix.",
-    concepts: ["click", "classList", "modale", "etat"],
+    concepts: ["click", "classList", "modale", "état"],
     starter: "katas/facile/popup-simple/index.html"
   },
   {
@@ -59,23 +59,23 @@ const KATAS = [
     id: "voiture-clic",
     title: "Voiture au clic",
     level: "facile",
-    summary: "Lancer une voiture au clic puis reinitialiser l'animation.",
-    concepts: ["click", "classList", "animation", "etat"],
+    summary: "Lancer une voiture au clic puis réinitialiser l'animation.",
+    concepts: ["click", "classList", "animation", "état"],
     starter: "katas/facile/voiture-clic/index.html"
   },
   {
     id: "sticker-orientation",
-    title: "Sticker emoji oriente",
+    title: "Sticker emoji orienté",
     level: "moyen",
-    summary: "Creer un sticker emoji au clic avec une taille et une orientation aleatoires.",
-    concepts: ["click", "coordonnees", "Math.random", "transform", "variables CSS"],
+    summary: "Créer un sticker emoji au clic avec une taille et une orientation aléatoires.",
+    concepts: ["click", "coordonnées", "Math.random", "transform", "variables CSS"],
     starter: "katas/moyen/sticker-orientation/index.html"
   },
   {
     id: "neige",
-    title: "Neige dans la fenetre",
+    title: "Neige dans la fenêtre",
     level: "difficile",
-    summary: "Generer regulierement des flocons qui tombent et disparaissent.",
+    summary: "Générer régulièrement des flocons qui tombent et disparaissent.",
     concepts: ["setInterval", "createElement", "Math.random", "animation"],
     starter: "katas/difficile/neige/index.html"
   },
@@ -91,7 +91,7 @@ const KATAS = [
     id: "personnage-clavier",
     title: "Petit personnage au clavier",
     level: "moyen",
-    summary: "Deplacer un personnage aux fleches sans sortir de la zone.",
+    summary: "Déplacer un personnage aux flèches sans sortir de la zone.",
     concepts: ["keydown", "event.key", "position", "limites"],
     starter: "katas/moyen/personnage-clavier/index.html"
   },
@@ -99,15 +99,15 @@ const KATAS = [
     id: "esquive-simple",
     title: "Jeu d'esquive simple",
     level: "difficile",
-    summary: "Deplacer un joueur et detecter les collisions avec des obstacles.",
-    concepts: ["keydown", "setInterval", "collision", "etat de jeu"],
+    summary: "Déplacer un joueur et détecter les collisions avec des obstacles.",
+    concepts: ["keydown", "setInterval", "collision", "état de jeu"],
     starter: "katas/difficile/esquive-simple/index.html"
   },
   {
     id: "attraper-objets",
     title: "Attraper les objets",
     level: "difficile",
-    summary: "Deplacer un panier, attraper des objets et mettre a jour un score.",
+    summary: "Déplacer un panier, attraper des objets et mettre à jour un score.",
     concepts: ["mousemove", "setInterval", "collision", "score"],
     starter: "katas/difficile/attraper-objets/index.html"
   },
@@ -115,31 +115,31 @@ const KATAS = [
     id: "drag-drop-zones",
     title: "Drag & drop avec zones",
     level: "difficile",
-    summary: "Deposer une carte dans une zone acceptee ou refusee.",
-    concepts: ["dragstart", "dragover", "drop", "etat"],
+    summary: "Déposer une carte dans une zone acceptée ou refusée.",
+    concepts: ["dragstart", "dragover", "drop", "état"],
     starter: "katas/difficile/drag-drop-zones/index.html"
   },
   {
     id: "chrono-todo",
-    title: "Chronometre de todo list",
+    title: "Chronomètre de todo list",
     level: "difficile",
     summary: "Combiner formulaire, liste, et chronometre simple.",
-    concepts: ["submit", "tableau", "setInterval", "etat compose"],
+    concepts: ["submit", "tableau", "setInterval", "état composé"],
     starter: "katas/difficile/chrono-todo/index.html"
   },
   {
     id: "theme-switch",
-    title: "Theme clair / sombre",
+    title: "Thème clair / sombre",
     level: "facile",
     summary: "Basculer l'apparence d'une page avec un bouton et une classe.",
-    concepts: ["click", "classList", "toggle", "etat"],
+    concepts: ["click", "classList", "toggle", "état"],
     starter: "katas/facile/theme-switch/index.html"
   },
   {
     id: "compteur-plus-moins",
     title: "Compteur + / -",
     level: "facile",
-    summary: "Mettre a jour une valeur affichee avec deux boutons.",
+    summary: "Mettre à jour une valeur affichée avec deux boutons.",
     concepts: ["click", "variable", "textContent", "conditions"],
     starter: "katas/facile/compteur-plus-moins/index.html"
   },
@@ -147,7 +147,7 @@ const KATAS = [
     id: "barre-progression",
     title: "Barre de progression",
     level: "facile",
-    summary: "Remplir une barre automatiquement puis la remettre a zero.",
+    summary: "Remplir une barre automatiquement puis la remettre à zéro.",
     concepts: ["setInterval", "clearInterval", "style.width", "limites"],
     starter: "katas/facile/barre-progression/index.html"
   },
@@ -156,14 +156,14 @@ const KATAS = [
     title: "Message temporaire",
     level: "facile",
     summary: "Afficher une notification puis la masquer automatiquement.",
-    concepts: ["click", "classList", "setTimeout", "etat"],
+    concepts: ["click", "classList", "setTimeout", "état"],
     starter: "katas/facile/message-temporaire/index.html"
   },
   {
     id: "bouton-fuit",
     title: "Bouton qui fuit",
     level: "moyen",
-    summary: "Deplacer un bouton quand le pointeur s'en approche.",
+    summary: "Déplacer un bouton quand le pointeur s'en approche.",
     concepts: ["mousemove", "getBoundingClientRect", "Math.random", "style"],
     starter: "katas/moyen/bouton-fuit/index.html"
   },
@@ -177,15 +177,15 @@ const KATAS = [
   },
   {
     id: "toast-empile",
-    title: "Toasts empiles",
+    title: "Toasts empilés",
     level: "moyen",
-    summary: "Creer plusieurs notifications qui s'empilent puis disparaissent.",
+    summary: "Créer plusieurs notifications qui s'empilent puis disparaissent.",
     concepts: ["click", "createElement", "setTimeout", "tableau"],
     starter: "katas/moyen/toast-empile/index.html"
   },
   {
     id: "autocompletion",
-    title: "Autocompletion",
+    title: "Autocomplétion",
     level: "moyen",
     summary: "Filtrer des suggestions pendant la saisie dans un champ.",
     concepts: ["input", "tableau", "filter", "rendu"],
@@ -195,7 +195,7 @@ const KATAS = [
     id: "fenetre-deplacable",
     title: "Fenetre deplacable",
     level: "difficile",
-    summary: "Deplacer une fausse fenetre avec la souris et gerer son etat.",
+    summary: "Déplacer une fausse fenêtre avec la souris et gérer son état.",
     concepts: ["mousedown", "mousemove", "mouseup", "position"],
     starter: "katas/difficile/fenetre-deplacable/index.html"
   },
@@ -203,8 +203,8 @@ const KATAS = [
     id: "chat-simule",
     title: "Chat simule",
     level: "difficile",
-    summary: "Envoyer un message puis afficher une reponse automatique apres un delai.",
-    concepts: ["submit", "createElement", "setTimeout", "etat"],
+    summary: "Envoyer un message puis afficher une réponse automatique après un délai.",
+    concepts: ["submit", "createElement", "setTimeout", "état"],
     starter: "katas/difficile/chat-simule/index.html"
   }
 ];

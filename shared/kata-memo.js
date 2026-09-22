@@ -7,18 +7,18 @@ const KATA_MEMOS = {
         label: "JS",
         sections: [
           {
-            title: "Creer un element",
+            title: "Créer un élément",
             items: [
               {
                 title: "Un sticker par clic",
-                text: "Un clic peut creer un nouvel element, lui donner une classe, puis l'ajouter dans la zone.",
+                text: "Un clic peut créer un nouvel élément, lui donner une classe, puis l'ajouter dans la zone.",
                 code: `const sticker = document.createElement("span");
 sticker.classList.add("sticker");
 zone.append(sticker);`
               },
               {
                 title: "Coordonnees du clic",
-                text: "Les coordonnees de l'evenement servent a placer le sticker la ou l'utilisateur clique.",
+                text: "Les coordonnées de l'événement servent à placer le sticker là où l'utilisateur clique.",
                 code: `console.log(event.clientX, event.clientY);`
               }
             ]
@@ -34,7 +34,7 @@ zone.append(sticker);`
             items: [
               {
                 title: "Zone relative",
-                text: "La zone de jeu peut servir de repere aux stickers places en absolu.",
+                text: "La zone de jeu peut servir de repère aux stickers places en absolu.",
                 code: `.stage {
   position: relative;
   overflow: hidden;
@@ -42,7 +42,7 @@ zone.append(sticker);`
               },
               {
                 title: "Sticker absolu",
-                text: "Un element en position absolute peut etre place avec left et top.",
+                text: "Un élément en position absolute peut être placé avec left et top.",
                 code: `.sticker {
   position: absolute;
   left: 120px;
@@ -56,7 +56,7 @@ zone.append(sticker);`
             items: [
               {
                 title: "Corriger le point d'ancrage",
-                text: "Par defaut, left/top placent le coin haut gauche. translate permet de centrer le sticker sur le curseur.",
+                text: "Par défaut, left/top placent le coin haut gauche. translate permet de centrer le sticker sur le curseur.",
                 code: `.sticker {
   transform: translate(-50%, -50%);
 }`
@@ -68,23 +68,23 @@ zone.append(sticker);`
     ]
   },
   "theme-switch": {
-    title: "Theme clair / sombre",
+    title: "Thème clair / sombre",
     tabs: [
       {
         id: "js",
         label: "JS",
         sections: [
           {
-            title: "Piloter le theme",
+            title: "Piloter le thème",
             items: [
               {
                 title: "Classe sur la page",
-                text: "Le JavaScript peut ajouter ou retirer une classe sur body. Le CSS se charge ensuite de changer l'apparence.",
+                text: "Le JavaScript peut ajouter ou retirer une classe sur body. Le CSS se chargé ensuite de changer l'apparence.",
                 code: `document.body.classList.toggle("dark");`
               },
               {
-                title: "Etat du bouton",
-                text: "Le texte du bouton et aria-pressed doivent rester synchronises avec le theme courant.",
+                title: "État du bouton",
+                text: "Le texte du bouton et aria-pressed doivent rester synchronisés avec le thème courant.",
                 code: `button.textContent = "Passer en clair";
 button.setAttribute("aria-pressed", "true");`
               }
@@ -101,21 +101,21 @@ button.setAttribute("aria-pressed", "true");`
             items: [
               {
                 title: "Nommer une couleur",
-                text: "Une variable CSS commence par deux tirets. Elle permet de donner un nom a une valeur reutilisable.",
+                text: "Une variable CSS commence par deux tirets. Elle permet de donner un nom à une valeur réutilisable.",
                 code: `:root {
   --page-bg: #edf2f7;
 }`
               },
               {
                 title: "Utiliser la variable",
-                text: "var(...) recupere la valeur de la variable. Si la variable change, tous les styles qui l'utilisent changent aussi.",
+                text: "var(...) récupère la valeur de la variable. Si la variable change, tous les styles qui l'utilisent changent aussi.",
                 code: `body {
   background: var(--page-bg);
 }`
               },
               {
-                title: "Changer un theme",
-                text: "Pour un theme, on peut garder les memes proprietes CSS et remplacer seulement les variables dans une classe d'etat.",
+                title: "Changer un thème",
+                text: "Pour un thème, on peut garder les memes propriétés CSS et remplacer seulement les variables dans une classe d'état.",
                 code: `body.dark {
   --page-bg: #111827;
   --page-text: #f8fafc;
@@ -135,25 +135,25 @@ button.setAttribute("aria-pressed", "true");`
         items: [
           {
             title: "Repeter toutes les secondes",
-            text: "setInterval lance une fonction a intervalle regulier. Ici, l'intervalle utile est 1000 millisecondes.",
+            text: "setInterval lance une fonction à intervalle régulier. Ici, l'intervalle utile est 1000 millisecondes.",
             code: `const timerId = setInterval(function () {
   // augmenter la progression
 }, 1000);`
           },
           {
-            title: "Arreter le timer",
-            text: "Quand la progression atteint 100, clearInterval evite de continuer a executer la fonction.",
+            title: "Arrêter le timer",
+            text: "Quand la progression atteint 100, clearInterval évite de continuer à exécuter la fonction.",
             code: `clearInterval(timerId);`
           },
           {
             title: "Limiter la valeur",
-            text: "Math.min permet de ne jamais depasser la limite haute, meme si on ajoute encore une valeur.",
+            text: "Math.min permet de ne jamais dépasser la limite haute, même si on ajoute encore une valeur.",
             code: `progress = Math.min(100, progress + 10);`
           }
         ]
       },
       {
-        title: "Mettre a jour l'ecran",
+        title: "Mettre à jour l'écran",
         items: [
           {
             title: "Largeur de la barre",
@@ -161,16 +161,16 @@ button.setAttribute("aria-pressed", "true");`
             code: `bar.style.width = progress + "%";`
           },
           {
-            title: "Texte et accessibilite",
-            text: "Le pourcentage affiche et aria-valuenow doivent suivre la meme valeur que la barre.",
+            title: "Texte et accessibilité",
+            text: "Le pourcentage affiché et aria-valuenow doivent suivre la même valeur que la barre.",
             code: `percent.textContent = progress + "%";
 progressBar.setAttribute("aria-valuenow", progress);`
           },
           {
-            title: "Remise a zero",
-            text: "Le bouton reset doit remettre la valeur a 0, mettre a jour l'ecran, puis relancer le timer si la barre etait arretee.",
+            title: "Remise à zéro",
+            text: "Le bouton reset doit remettre la valeur à 0, mettre à jour l'écran, puis relancer le timer si la barre était arrêtée.",
             code: `progress = 0;
-// mettre a jour l'ecran
+// mettre à jour l'écran
 // relancer le timer si besoin`
           }
         ]
@@ -184,14 +184,14 @@ progressBar.setAttribute("aria-valuenow", progress);`
         title: "Notions du pense-bete",
         items: [
           {
-            title: "Selection DOM",
-            text: "querySelector recupere le premier element qui correspond au selecteur CSS.",
+            title: "Sélection DOM",
+            text: "querySelector récupère le premier élément qui correspond au sélecteur CSS.",
             code: `const field = document.querySelector("input");
 const button = document.querySelector("button");`
           },
           {
             title: "Evenements et conditions",
-            text: "Un clic declenche une fonction. Une condition choisit quoi faire selon l'etat actuel.",
+            text: "Un clic déclenche une fonction. Une condition choisit quoi faire selon l'état actuel.",
             code: `button.addEventListener("click", function () {
   if (isVisible) {
     // cas visible
@@ -201,17 +201,17 @@ const button = document.querySelector("button");`
         ]
       },
       {
-        title: "Specifique au kata",
+        title: "Spécifique au kata",
         items: [
           {
             title: "Type d'un input",
-            text: "Le champ peut alterner entre un affichage masque et un affichage lisible.",
+            text: "Le champ peut alterner entre un affichage masqué et un affichage lisible.",
             code: `field.type = "text";
 field.type = "password";`
           },
           {
-            title: "Etat booleen",
-            text: "Un booleen memorise si le mot de passe est actuellement visible.",
+            title: "État booléen",
+            text: "Un booléen memorise si le mot de passe est actuellement visible.",
             code: `let isVisible = false;
 isVisible = !isVisible;`
           }
@@ -227,11 +227,11 @@ isVisible = !isVisible;`
         label: "JS",
         sections: [
           {
-            title: "Piloter un etat",
+            title: "Piloter un état",
             items: [
               {
                 title: "Classe d'ouverture",
-                text: "Le JavaScript peut se limiter a ajouter ou retirer une classe d'etat.",
+                text: "Le JavaScript peut se limiter à ajouter ou retirer une classe d'état.",
                 code: `menu.classList.toggle("is-open");`
               },
               {
@@ -251,8 +251,8 @@ isVisible = !isVisible;`
             title: "Ouvrir avec une transition",
             items: [
               {
-                title: "Etat ferme mais animable",
-                text: "display ne s'anime pas. Pour un effet plus joli, le menu reste dans la page mais sa hauteur et son opacite sont reduites.",
+                title: "État ferme mais animable",
+                text: "display ne s'anime pas. Pour un effet plus joli, le menu reste dans la page mais sa hauteur et son opacité sont réduites.",
                 code: `.menu {
   max-height: 0;
   overflow: hidden;
@@ -261,8 +261,8 @@ isVisible = !isVisible;`
 }`
               },
               {
-                title: "Etat ouvert",
-                text: "La classe d'etat augmente la hauteur et remet l'opacite. Le navigateur anime le passage entre les deux.",
+                title: "État ouvert",
+                text: "La classe d'état augmente la hauteur et remet l'opacité. Le navigateur anime le passage entre les deux.",
                 code: `.menu.is-open {
   max-height: 180px;
   opacity: 1;
@@ -282,11 +282,11 @@ isVisible = !isVisible;`
         label: "JS",
         sections: [
           {
-            title: "Changer l'etat",
+            title: "Changer l'état",
             items: [
               {
                 title: "Ouvrir et fermer",
-                text: "Deux boutons peuvent manipuler la meme classe d'etat sur la popup.",
+                text: "Deux boutons peuvent manipuler la même classe d'état sur la popup.",
                 code: `popup.classList.add("is-open");
 popup.classList.remove("is-open");`
               }
@@ -299,11 +299,11 @@ popup.classList.remove("is-open");`
         label: "CSS",
         sections: [
           {
-            title: "Calque plein ecran",
+            title: "Calque plein écran",
             items: [
               {
                 title: "Overlay fixe",
-                text: "Une popup peut couvrir la fenetre avec position fixed et inset.",
+                text: "Une popup peut couvrir la fenêtre avec position fixed et inset.",
                 code: `.popup {
   position: fixed;
   inset: 0;
@@ -320,11 +320,11 @@ popup.classList.remove("is-open");`
             ]
           },
           {
-            title: "Etat visible",
+            title: "État visible",
             items: [
               {
-                title: "Cachee puis ouverte",
-                text: "Le meme principe que le menu fonctionne : cache par defaut, visible avec une classe.",
+                title: "Cachée puis ouverte",
+                text: "Le même principe que le menu fonctionne : caché par défaut, visible avec une classe.",
                 code: `.popup {
   display: none;
 }
@@ -347,16 +347,16 @@ popup.classList.remove("is-open");`
         label: "JS",
         sections: [
           {
-            title: "Declencher le changement",
+            title: "Déclencher le changement",
             items: [
               {
-                title: "Selectionner la carte",
-                text: "La carte est un bouton. Tu peux donc la selectionner puis ecouter son clic.",
+                title: "Sélectionner la carte",
+                text: "La carte est un bouton. Tu peux donc la sélectionner puis écouter son clic.",
                 code: `const card = document.querySelector(".card");`
               },
               {
                 title: "Alterner une classe",
-                text: "L'objectif JS est de changer un etat visuel. La classe sert de pont entre le clic et le CSS.",
+                text: "L'objectif JS est de changer un état visuel. La classe sert de pont entre le clic et le CSS.",
                 code: `card.classList.toggle("is-flipped");`
               }
             ]
@@ -372,7 +372,7 @@ popup.classList.remove("is-open");`
             items: [
               {
                 title: "Mettre les faces en calques",
-                text: "Les deux faces peuvent occuper exactement la meme place dans la carte.",
+                text: "Les deux faces peuvent occuper exactement la même placé dans la carte.",
                 code: `.card {
   position: relative;
   overflow: hidden;
@@ -386,7 +386,7 @@ popup.classList.remove("is-open");`
               },
               {
                 title: "Placer le recto au-dessus",
-                text: "Le recto est le calque visible au depart. Le verso reste dessous, deja pret.",
+                text: "Le recto est le calque visible au départ. Le verso reste dessous, déjà prêt.",
                 code: `.front {
   z-index: 1;
   width: 100%;
@@ -406,8 +406,8 @@ popup.classList.remove("is-open");`
 }`
               },
               {
-                title: "Reveler le verso",
-                text: "Quand la classe d'etat est ajoutee, le recto devient de plus en plus etroit et laisse voir le verso.",
+                title: "Révéler le verso",
+                text: "Quand la classe d'état est ajoutée, le recto devient de plus en plus étroit et laisse voir le verso.",
                 code: `.card.is-flipped .front {
   width: 0;
 }`
@@ -419,31 +419,31 @@ popup.classList.remove("is-open");`
     ]
   },
   "neige": {
-    title: "Neige dans la fenetre",
+    title: "Neige dans la fenêtre",
     tabs: [
       {
         id: "js",
         label: "JS",
         sections: [
           {
-            title: "Creer regulierement",
+            title: "Créer régulièrement",
             items: [
               {
                 title: "Intervalle",
-                text: "setInterval permet de creer un flocon a rythme regulier.",
+                text: "setInterval permet de créer un flocon à rythme régulier.",
                 code: `setInterval(function () {
-  // creer un flocon
+  // créer un flocon
 }, 300);`
               },
               {
-                title: "Caractere de flocon",
-                text: "Un flocon peut etre un simple texte choisi dans une petite liste.",
+                title: "Caractère de flocon",
+                text: "Un flocon peut être un simple texte choisi dans une petite liste.",
                 code: `const shapes = [".", "*", "+"];
 flake.textContent = shapes[randomIndex];`
               },
               {
-                title: "Nettoyer apres animation",
-                text: "Quand l'animation est finie, le flocon peut etre retire du DOM.",
+                title: "Nettoyer après animation",
+                text: "Quand l'animation est finie, le flocon peut être retiré du DOM.",
                 code: `flake.addEventListener("animationend", function () {
   flake.remove();
 });`
@@ -460,8 +460,8 @@ flake.textContent = shapes[randomIndex];`
             title: "Flocon anime",
             items: [
               {
-                title: "Position de depart",
-                text: "Un flocon peut commencer au-dessus de l'ecran et etre place horizontalement par JavaScript.",
+                title: "Position de départ",
+                text: "Un flocon peut commencer au-dessus de l'écran et être placé horizontalement par JavaScript.",
                 code: `.flake {
   position: fixed;
   top: -24px;
@@ -469,7 +469,7 @@ flake.textContent = shapes[randomIndex];`
               },
               {
                 title: "Taille variable",
-                text: "Changer font-size suffit pour obtenir des flocons textuels de tailles differentes.",
+                text: "Changer font-size suffit pour obtenir des flocons textuels de tailles différentes.",
                 code: `.flake {
   font-size: 1.4rem;
   color: #ffffff;
@@ -506,14 +506,14 @@ flake.textContent = shapes[randomIndex];`
             items: [
               {
                 title: "Souris",
-                text: "Sur un evenement de souris, on peut lire la position du pointeur dans la fenetre.",
+                text: "Sur un événement de souris, on peut lire la position du pointeur dans la fenêtre.",
                 code: `document.addEventListener("mousemove", function (event) {
   console.log(event.clientX, event.clientY);
 });`
               },
               {
-                title: "Modifier un element",
-                text: "Le DOM peut modifier le style d'un element en reaction a l'utilisateur.",
+                title: "Modifier un élément",
+                text: "Le DOM peut modifier le style d'un élément en reaction à l'utilisateur.",
                 code: `pupil.style.transform = "translate(8px, -4px)";`
               }
             ]
@@ -525,18 +525,18 @@ flake.textContent = shapes[randomIndex];`
         label: "Calcul",
         sections: [
           {
-            title: "Specifique au kata",
+            title: "Spécifique au kata",
             items: [
               {
-                title: "Position d'un element",
-                text: "La boite d'un element permet de calculer son centre dans la fenetre.",
+                title: "Position d'un élément",
+                text: "La boite d'un élément permet de calculer son centre dans la fenêtre.",
                 code: `const rect = element.getBoundingClientRect();
 const centerX = rect.left + rect.width / 2;
 const centerY = rect.top + rect.height / 2;`
               },
               {
                 title: "Limiter une valeur",
-                text: "Limiter le deplacement evite que la pupille sorte trop loin de l'oeil.",
+                text: "Limiter le déplacement évite que la pupille sorte trop loin de l'oeil.",
                 code: `const limited = Math.max(-12, Math.min(12, value));`
               }
             ]
@@ -548,18 +548,18 @@ const centerY = rect.top + rect.height / 2;`
         label: "CSS",
         sections: [
           {
-            title: "Deplacer sans casser le layout",
+            title: "Déplacer sans casser le layout",
             items: [
               {
                 title: "Transform",
-                text: "transform deplace visuellement la pupille sans modifier la place de l'oeil dans la page.",
+                text: "transform déplacé visuellement la pupille sans modifier la placé de l'oeil dans la page.",
                 code: `.pupil {
   transform: translate(8px, -4px);
 }`
               },
               {
                 title: "Transition courte",
-                text: "Une transition tres courte rend le mouvement plus lisible sans le rendre mou.",
+                text: "Une transition très courte rend le mouvement plus lisible sans le rendre mou.",
                 code: `.pupil {
   transition: transform 80ms linear;
 }`
@@ -582,7 +582,7 @@ const centerY = rect.top + rect.height / 2;`
             items: [
               {
                 title: "Coordonnees",
-                text: "La position peut etre stockee dans deux variables, puis mise a jour dans une boucle.",
+                text: "La position peut être stockée dans deux variables, puis mise à jour dans une boucle.",
                 code: `let x = 0;
 let y = 0;`
               },
@@ -612,7 +612,7 @@ let y = 0;`
               },
               {
                 title: "Rond absolu",
-                text: "Le rond peut etre place dans la scene sans influencer le reste du document.",
+                text: "Le rond peut être placé dans la scène sans influencer le reste du document.",
                 code: `.ball {
   position: absolute;
   left: 0;
@@ -633,7 +633,7 @@ let y = 0;`
         label: "JS",
         sections: [
           {
-            title: "Declencher une course",
+            title: "Déclencher une course",
             items: [
               {
                 title: "Classe d'animation",
@@ -642,7 +642,7 @@ let y = 0;`
               },
               {
                 title: "Fin d'animation",
-                text: "L'evenement animationend permet de savoir quand la voiture a fini sa course.",
+                text: "L'événement animationend permet de savoir quand la voiture a fini sa course.",
                 code: `car.addEventListener("animationend", function () {
   car.classList.remove("is-driving");
 });`
@@ -656,18 +656,18 @@ let y = 0;`
         label: "CSS",
         sections: [
           {
-            title: "Deplacer avec CSS",
+            title: "Déplacer avec CSS",
             items: [
               {
-                title: "Animation declenchee",
-                text: "Une classe peut lancer une animation et garder le dernier etat avec forwards.",
+                title: "Animation déclenchée",
+                text: "Une classe peut lancer une animation et garder le dernier état avec forwards.",
                 code: `.car.is-driving {
   animation: drive 2.5s ease-in-out forwards;
 }`
               },
               {
                 title: "Translation",
-                text: "transform permet de deplacer la voiture sans changer son point de depart dans le flux.",
+                text: "transform permet de déplacer la voiture sans changer son point de départ dans le flux.",
                 code: `@keyframes drive {
   to {
     transform: translateX(620px);
@@ -681,7 +681,7 @@ let y = 0;`
     ]
   },
   "sticker-orientation": {
-    title: "Sticker emoji oriente",
+    title: "Sticker emoji orienté",
     tabs: [
       {
         id: "js",
@@ -696,8 +696,8 @@ let y = 0;`
                 code: `sticker.style.setProperty("--rotation", "18deg");`
               },
               {
-                title: "Valeur aleatoire",
-                text: "Math.random peut produire une rotation differente a chaque sticker.",
+                title: "Valeur aléatoire",
+                text: "Math.random peut produire une rotation différente à chaque sticker.",
                 code: `const rotation = Math.floor(Math.random() * 60) - 30;`
               }
             ]
@@ -719,8 +719,8 @@ let y = 0;`
 }`
               },
               {
-                title: "Valeur par defaut",
-                text: "La valeur apres la virgule sert de fallback si JavaScript n'a pas encore defini la variable.",
+                title: "Valeur par défaut",
+                text: "La valeur après la virgule sert de fallback si JavaScript n'a pas encore défini la variable.",
                 code: `rotate(var(--rotation, 0deg))`
               }
             ]
@@ -740,8 +740,8 @@ let y = 0;`
             title: "Plusieurs objets",
             items: [
               {
-                title: "Donnees par balle",
-                text: "Chaque balle peut avoir ses propres coordonnees et vitesses.",
+                title: "Données par balle",
+                text: "Chaque balle peut avoir ses propres coordonnées et vitesses.",
                 code: `const ball = {
   x: 20,
   y: 30,
@@ -750,8 +750,8 @@ let y = 0;`
 };`
               },
               {
-                title: "Mettre a jour l'affichage",
-                text: "Apres le calcul, chaque element peut recevoir sa nouvelle position visuelle.",
+                title: "Mettre à jour l'affichage",
+                text: "Apres le calcul, chaque élément peut recevoir sa nouvelle position visuelle.",
                 code: `element.style.transform = "translate(" + ball.x + "px, " + ball.y + "px)";`
               }
             ]
@@ -763,11 +763,11 @@ let y = 0;`
         label: "CSS",
         sections: [
           {
-            title: "Arene de mouvement",
+            title: "Arène de mouvement",
             items: [
               {
                 title: "Cadre relatif",
-                text: "L'arene sert de reference et masque ce qui sort du cadre.",
+                text: "L'arène sert de référence et masque ce qui sort du cadre.",
                 code: `.arena {
   position: relative;
   overflow: hidden;
@@ -775,7 +775,7 @@ let y = 0;`
               },
               {
                 title: "Balle absolue",
-                text: "Les balles peuvent etre placees librement dans l'arene.",
+                text: "Les balles peuvent être placées librement dans l'arène.",
                 code: `.ball {
   position: absolute;
   left: 0;
@@ -800,14 +800,14 @@ let y = 0;`
             items: [
               {
                 title: "Lire la touche",
-                text: "event.key permet de distinguer les fleches du clavier.",
+                text: "event.key permet de distinguer les flèches du clavier.",
                 code: `document.addEventListener("keydown", function (event) {
   console.log(event.key);
 });`
               },
               {
                 title: "Limiter aux bords",
-                text: "Math.max et Math.min aident a garder le personnage dans l'arene.",
+                text: "Math.max et Math.min aident à garder le personnage dans l'arène.",
                 code: `x = Math.max(0, Math.min(maxX, x));`
               }
             ]
@@ -819,11 +819,11 @@ let y = 0;`
         label: "CSS",
         sections: [
           {
-            title: "Arene et personnage",
+            title: "Arène et personnage",
             items: [
               {
-                title: "Arene relative",
-                text: "Le personnage peut etre positionne par rapport a son arene.",
+                title: "Arène relative",
+                text: "Le personnage peut être positionné par rapport à son arène.",
                 code: `.arena {
   position: relative;
   overflow: hidden;
@@ -831,7 +831,7 @@ let y = 0;`
               },
               {
                 title: "Personnage absolu",
-                text: "left/top donnent une position de depart que JavaScript peut modifier.",
+                text: "left/top donnent une position de départ que JavaScript peut modifier.",
                 code: `.hero {
   position: absolute;
   left: 300px;
@@ -862,7 +862,7 @@ let playerY = 440;`
               },
               {
                 title: "Collision",
-                text: "getBoundingClientRect permet de comparer les boites du joueur et des obstacles.",
+                text: "getBoundingClientRect permet de comparer les boîtes du joueur et des obstacles.",
                 code: `const playerRect = player.getBoundingClientRect();`
               }
             ]
@@ -874,11 +874,11 @@ let playerY = 440;`
         label: "CSS",
         sections: [
           {
-            title: "Objets dans l'arene",
+            title: "Objets dans l'arène",
             items: [
               {
                 title: "Position absolue",
-                text: "Le joueur et les obstacles peuvent vivre dans le meme repere visuel.",
+                text: "Le joueur et les obstacles peuvent vivre dans le même repère visuel.",
                 code: `.player,
 .obstacle {
   position: absolute;
@@ -886,7 +886,7 @@ let playerY = 440;`
               },
               {
                 title: "Formes simples",
-                text: "border-radius permet de distinguer rapidement des obstacles ronds d'un joueur carre.",
+                text: "border-radius permet de distinguer rapidement des obstacles ronds d'un joueur carré.",
                 code: `.obstacle {
   border-radius: 50%;
 }`
@@ -932,7 +932,7 @@ let playerY = 440;`
             items: [
               {
                 title: "Stage relatif",
-                text: "Le stage sert de repere commun au panier et aux objets.",
+                text: "Le stage sert de repère commun au panier et aux objets.",
                 code: `.stage {
   position: relative;
   overflow: hidden;
@@ -940,7 +940,7 @@ let playerY = 440;`
               },
               {
                 title: "Elements absolus",
-                text: "Le panier et les objets peuvent etre deplaces par JavaScript.",
+                text: "Le panier et les objets peuvent être déplacés par JavaScript.",
                 code: `.basket,
 .item {
   position: absolute;
@@ -964,14 +964,14 @@ let playerY = 440;`
             items: [
               {
                 title: "Autoriser le drop",
-                text: "dragover doit empecher le comportement par defaut pour autoriser un depot.",
+                text: "dragover doit empêcher le comportement par défaut pour autoriser un dépôt.",
                 code: `zone.addEventListener("dragover", function (event) {
   event.preventDefault();
 });`
               },
               {
-                title: "Etat visuel",
-                text: "JavaScript peut ajouter une classe quand une zone est survolee ou validee.",
+                title: "État visuel",
+                text: "JavaScript peut ajouter une classe quand une zone est survolée ou validée.",
                 code: `zone.classList.add("is-over");`
               }
             ]
@@ -986,15 +986,15 @@ let playerY = 440;`
             title: "Zones lisibles",
             items: [
               {
-                title: "Contour de depot",
-                text: "Une bordure en pointilles indique clairement qu'une zone accepte un depot.",
+                title: "Contour de dépôt",
+                text: "Une bordure en pointilles indique clairement qu'une zone accepte un dépôt.",
                 code: `.drop-zone {
   border: 2px dashed #8f9bad;
 }`
               },
               {
-                title: "Feedback d'etat",
-                text: "Une classe peut renforcer visuellement la zone survolee ou acceptee.",
+                title: "Feedback d'état",
+                text: "Une classe peut renforcer visuellement la zone survolée ou acceptée.",
                 code: `.drop-zone.is-over {
   background: #eef4f6;
   border-color: #5778c9;
@@ -1014,7 +1014,7 @@ let playerY = 440;`
         items: [
           {
             title: "Temps",
-            text: "setInterval repete une action jusqu'a clearInterval.",
+            text: "setInterval répète une action jusqu'à clearInterval.",
             code: `const timerId = setInterval(function () {
   seconds = seconds + 1;
 }, 1000);
@@ -1030,7 +1030,7 @@ tasks.push({ label: "Relire la consigne", done: false });`
         ]
       },
       {
-        title: "Specifique au kata",
+        title: "Spécifique au kata",
         items: [
           {
             title: "Submit d'un formulaire",
@@ -1041,7 +1041,7 @@ tasks.push({ label: "Relire la consigne", done: false });`
           },
           {
             title: "Vider puis reconstruire",
-            text: "Refaire le rendu depuis le tableau aide a synchroniser l'ecran avec l'etat courant.",
+            text: "Refaire le rendu depuis le tableau aide à synchroniser l'écran avec l'état courant.",
             code: `list.innerHTML = "";
 
 tasks.forEach(function (task) {
@@ -1058,36 +1058,36 @@ tasks.forEach(function (task) {
 
 function createDefaultMemo() {
   return {
-    title: "Memo de demarrage",
+    title: "Mémo de démarrage",
     sections: [
       {
-        title: "Methode de live coding",
+        title: "Méthode de live coding",
         items: [
           {
-            title: "Identifier les elements utiles",
-            text: "Commence par selectionner la zone, le bouton ou les elements que ton script doit manipuler.",
+            title: "Identifier les éléments utiles",
+            text: "Commence par sélectionner la zone, le bouton ou les éléments que ton script doit manipuler.",
             code: `const zone = document.querySelector(".zone");
 const button = document.querySelector("button");`
           },
           {
-            title: "Reagir a une action",
-            text: "Un kata visuel part souvent d'un evenement utilisateur, puis modifie le DOM ou le style.",
+            title: "Réagir à une action",
+            text: "Un kata visuel part souvent d'un événement utilisateur, puis modifie le DOM ou le style.",
             code: `button.addEventListener("click", function () {
-  // mettre a jour l'ecran ici
+  // mettre à jour l'écran ici
 });`
           }
         ]
       },
       {
-        title: "Points a verifier",
+        title: "Points à vérifier",
         items: [
           {
-            title: "Etat et rendu",
-            text: "Si l'ecran depend d'une valeur, garde cette valeur dans une variable puis rends l'affichage a partir d'elle."
+            title: "État et rendu",
+            text: "Si l'écran dépend d'une valeur, garde cette valeur dans une variable puis rends l'affichage à partir d'elle."
           },
           {
             title: "Console",
-            text: "Utilise console.log pour verifier les valeurs lues dans les evenements avant d'ecrire toute la logique."
+            text: "Utilise console.log pour vérifier les valeurs lues dans les événements avant d'écrire toute la logique."
           }
         ]
       }
@@ -1176,7 +1176,7 @@ function createMemoDialog(memo) {
   if (hasTabs) {
     const tabList = createElement("div", "kata-memo-tabs");
     tabList.setAttribute("role", "tablist");
-    tabList.setAttribute("aria-label", "Type de memo");
+    tabList.setAttribute("aria-label", "Type de mémo");
 
     tabs.forEach(function (tabData, index) {
       const tabButton = createElement("button", "kata-memo-tab", tabData.label);
