@@ -147,8 +147,8 @@ const KATAS = [
     id: "barre-progression",
     title: "Barre de progression",
     level: "facile",
-    summary: "Faire avancer ou reculer une barre par paliers.",
-    concepts: ["click", "nombre", "style.width", "limites"],
+    summary: "Remplir une barre automatiquement puis la remettre a zero.",
+    concepts: ["setInterval", "clearInterval", "style.width", "limites"],
     starter: "katas/facile/barre-progression/index.html"
   },
   {

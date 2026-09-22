@@ -127,6 +127,56 @@ button.setAttribute("aria-pressed", "true");`
       }
     ]
   },
+  "barre-progression": {
+    title: "Barre de progression",
+    sections: [
+      {
+        title: "Timer et progression",
+        items: [
+          {
+            title: "Repeter toutes les secondes",
+            text: "setInterval lance une fonction a intervalle regulier. Ici, l'intervalle utile est 1000 millisecondes.",
+            code: `const timerId = setInterval(function () {
+  // augmenter la progression
+}, 1000);`
+          },
+          {
+            title: "Arreter le timer",
+            text: "Quand la progression atteint 100, clearInterval evite de continuer a executer la fonction.",
+            code: `clearInterval(timerId);`
+          },
+          {
+            title: "Limiter la valeur",
+            text: "Math.min permet de ne jamais depasser la limite haute, meme si on ajoute encore une valeur.",
+            code: `progress = Math.min(100, progress + 10);`
+          }
+        ]
+      },
+      {
+        title: "Mettre a jour l'ecran",
+        items: [
+          {
+            title: "Largeur de la barre",
+            text: "La largeur peut recevoir une chaine avec un pourcentage pour refleter la valeur courante.",
+            code: `bar.style.width = progress + "%";`
+          },
+          {
+            title: "Texte et accessibilite",
+            text: "Le pourcentage affiche et aria-valuenow doivent suivre la meme valeur que la barre.",
+            code: `percent.textContent = progress + "%";
+progressBar.setAttribute("aria-valuenow", progress);`
+          },
+          {
+            title: "Remise a zero",
+            text: "Le bouton reset doit remettre la valeur a 0, mettre a jour l'ecran, puis relancer le timer si la barre etait arretee.",
+            code: `progress = 0;
+// mettre a jour l'ecran
+// relancer le timer si besoin`
+          }
+        ]
+      }
+    ]
+  },
   "mot-de-passe": {
     title: "Afficher / masquer",
     sections: [
