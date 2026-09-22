@@ -43,3 +43,14 @@ button {
   background: #1f2937;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.22);
 }
+
+.toast strong,
+.toast span {
+  display: block;
+}
+
+.toast span {
+  margin-top: 4px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
