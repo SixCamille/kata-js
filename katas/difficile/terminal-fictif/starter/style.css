@@ -1,0 +1,53 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Consolas, "Courier New", monospace;
+  color: #d1fae5;
+  background: #111827;
+}
+
+.terminal {
+  width: min(720px, calc(100vw - 32px));
+  height: min(480px, calc(100vh - 32px));
+  display: grid;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #020617;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.screen {
+  overflow: auto;
+  padding: 18px;
+}
+
+.line {
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.muted {
+  color: #86efac;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 18px;
+  border-top: 1px solid #334155;
+}
+
+input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  color: #d1fae5;
+  background: transparent;
+  font: inherit;
+}

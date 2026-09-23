@@ -206,5 +206,37 @@ const KATAS = [
     summary: "Envoyer un message puis afficher une réponse automatique après un délai.",
     concepts: ["submit", "createElement", "setTimeout", "état"],
     starter: "katas/moyen/chat-simule/index.html"
+  },
+  {
+    id: "carte-inclinee",
+    title: "Carte inclinée",
+    level: "moyen",
+    summary: "Incliner une carte selon la position de la souris au-dessus d'elle.",
+    concepts: ["mousemove", "DOMRect", "transform", "mouseleave"],
+    starter: "katas/moyen/carte-inclinee/index.html"
+  },
+  {
+    id: "menu-radial",
+    title: "Menu radial",
+    level: "difficile",
+    summary: "Ouvrir plusieurs actions autour d'un bouton central.",
+    concepts: ["click", "état", "Math.cos", "Math.sin", "transform"],
+    starter: "katas/difficile/menu-radial/index.html"
+  },
+  {
+    id: "terminal-fictif",
+    title: "Terminal fictif",
+    level: "difficile",
+    summary: "Reconnaître quelques commandes et afficher un historique.",
+    concepts: ["submit", "conditions", "tableau", "rendu DOM"],
+    starter: "katas/difficile/terminal-fictif/index.html"
+  },
+  {
+    id: "recherche-clavier",
+    title: "Recherche clavier",
+    level: "difficile",
+    summary: "Filtrer une liste et naviguer dans les résultats au clavier.",
+    concepts: ["input", "keydown", "tableau", "index sélectionné"],
+    starter: "katas/difficile/recherche-clavier/index.html"
   }
 ];

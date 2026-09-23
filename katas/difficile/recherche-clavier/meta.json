@@ -1,0 +1,8 @@
+{
+  "title": "Recherche clavier",
+  "level": "difficile",
+  "concepts": ["input", "keydown", "tableau", "index sélectionné"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

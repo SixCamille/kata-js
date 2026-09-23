@@ -1,0 +1,47 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f0fdf4;
+}
+
+.stage {
+  width: min(520px, calc(100vw - 32px));
+  height: min(520px, calc(100vh - 32px));
+  display: grid;
+  place-items: center;
+}
+
+.radial-menu {
+  position: relative;
+  width: 84px;
+  height: 84px;
+}
+
+button {
+  position: absolute;
+  inset: 0;
+  width: 64px;
+  height: 64px;
+  margin: auto;
+  border: 0;
+  border-radius: 50%;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toggle {
+  z-index: 2;
+  color: #ffffff;
+  background: #15803d;
+  font-size: 2rem;
+}
+
+.action {
+  color: #14532d;
+  background: #bbf7d0;
+  transition: transform 220ms ease, opacity 220ms ease;
+}

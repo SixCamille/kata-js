@@ -1,0 +1,8 @@
+{
+  "title": "Carte inclinée",
+  "level": "moyen",
+  "concepts": ["mousemove", "DOMRect", "transform", "mouseleave"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}
