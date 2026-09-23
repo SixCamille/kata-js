@@ -5,7 +5,6 @@ const progressCounter = document.querySelector("[data-progress-counter]");
 
 let selectedLevel = "tous";
 let pickedKata = null;
-const pickedKataIds = new Set();
 
 function getVisibleKatas() {
   if (selectedLevel === "tous") {
@@ -65,14 +64,13 @@ function renderProgressCounter() {
 
 function drawKata() {
   const visibleKatas = getVisibleKatas();
-  const newKatas = visibleKatas.filter(function (kata) {
-    return !pickedKataIds.has(kata.id);
+  const rerollKatas = visibleKatas.filter(function (kata) {
+    return !pickedKata || kata.id !== pickedKata.id;
   });
-  const availableKatas = newKatas.length > 0 ? newKatas : visibleKatas;
+  const availableKatas = rerollKatas.length > 0 ? rerollKatas : visibleKatas;
 
   const randomIndex = Math.floor(Math.random() * availableKatas.length);
   pickedKata = availableKatas[randomIndex];
-  pickedKataIds.add(pickedKata.id);
   renderResult();
 }
 
