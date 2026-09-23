@@ -16,14 +16,15 @@
         <div class="brief-content">
           <p class="level-tag">Kata moyen</p>
           <h2 id="brief-title">Carte inclinée</h2>
-          <p>La carte doit s'incliner légèrement selon la position de la souris au-dessus d'elle, puis revenir droite quand la souris sort.</p>
+          <p>Quand la souris passe sur la carte, elle doit donner l'impression de pencher vers le pointeur, comme une carte 3D que l'on oriente avec la main.</p>
+          <p>Par exemple : si la souris est plutôt à droite, la carte penche à droite ; si elle est plutôt en haut, elle penche vers le haut. Quand la souris quitte la carte, elle revient à plat.</p>
           <h3>Attendu</h3>
           <ul>
             <li>Ecouter les mouvements de souris sur la carte.</li>
             <li>Lire la position de la carte avec <code>getBoundingClientRect()</code>.</li>
-            <li>Comparer la souris avec le centre de la carte.</li>
-            <li>Modifier le <code>transform</code> pour incliner la carte.</li>
-            <li>Réinitialiser l'inclinaison au départ de la souris.</li>
+            <li>Trouver si la souris est plutôt à gauche/droite et haut/bas par rapport au centre de la carte.</li>
+            <li>Utiliser ces écarts pour modifier le <code>transform</code> de la carte avec une petite rotation.</li>
+            <li>Réinitialiser le <code>transform</code> au départ de la souris.</li>
           </ul>
           <hr>
           <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>
