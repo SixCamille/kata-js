@@ -1,6 +1,6 @@
 {
   "title": "Chat simule",
-  "level": "difficile",
+  "level": "moyen",
   "concepts": ["submit", "createElement", "setTimeout", "état"],
   "duration": 20,
   "hasStarter": true,

@@ -202,9 +202,9 @@ const KATAS = [
   {
     id: "chat-simule",
     title: "Chat simule",
-    level: "difficile",
+    level: "moyen",
     summary: "Envoyer un message puis afficher une réponse automatique après un délai.",
     concepts: ["submit", "createElement", "setTimeout", "état"],
-    starter: "katas/difficile/chat-simule/index.html"
+    starter: "katas/moyen/chat-simule/index.html"
   }
 ];
