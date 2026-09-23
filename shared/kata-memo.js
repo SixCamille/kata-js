@@ -1053,6 +1053,278 @@ tasks.forEach(function (task) {
         ]
       }
     ]
+  },
+  "carte-inclinee": {
+    title: "Carte inclinée",
+    tabs: [
+      {
+        id: "js",
+        label: "JS",
+        sections: [
+          {
+            title: "Position de la souris",
+            items: [
+              {
+                title: "Boîte de la carte",
+                text: "getBoundingClientRect donne la position et la taille de la carte dans la fenêtre.",
+                code: `const rect = card.getBoundingClientRect();
+const centerX = rect.left + rect.width / 2;
+const centerY = rect.top + rect.height / 2;`
+              },
+              {
+                title: "Écart depuis le centre",
+                text: "Comparer event.clientX et event.clientY avec le centre permet de savoir de quel côté se trouve la souris.",
+                code: `const offsetX = event.clientX - centerX;
+const offsetY = event.clientY - centerY;`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "Effet 3D léger",
+            items: [
+              {
+                title: "Perspective sur le parent",
+                text: "La perspective se place sur le parent pour rendre les rotations 3D plus lisibles.",
+                code: `.stage {
+  perspective: 900px;
+}`
+              },
+              {
+                title: "Rotation de la carte",
+                text: "rotateX et rotateY inclinent visuellement la carte sans changer sa place dans la page.",
+                code: `.tilt-card {
+  transform: rotateX(6deg) rotateY(-8deg);
+}`
+              },
+              {
+                title: "Retour fluide",
+                text: "Une transition courte rend le retour à plat plus doux quand la souris quitte la carte.",
+                code: `.tilt-card {
+  transition: transform 180ms ease;
+}`
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "menu-radial": {
+    title: "Menu radial",
+    tabs: [
+      {
+        id: "js",
+        label: "JS",
+        sections: [
+          {
+            title: "Ouvrir autour du centre",
+            items: [
+              {
+                title: "État ouvert / fermé",
+                text: "Un booléen suffit pour savoir si les actions doivent être déployées ou repliées.",
+                code: `let isOpen = false;
+isOpen = !isOpen;`
+              },
+              {
+                title: "Angle autour d'un cercle",
+                text: "Math.cos et Math.sin transforment un angle en coordonnées x/y autour du bouton central.",
+                code: `const x = Math.cos(angle) * radius;
+const y = Math.sin(angle) * radius;`
+              },
+              {
+                title: "Accessibilité du bouton",
+                text: "aria-expanded doit refléter l'état du menu principal.",
+                code: `toggle.setAttribute("aria-expanded", String(isOpen));`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "Boutons superposés puis déplacés",
+            items: [
+              {
+                title: "Même point de départ",
+                text: "Les boutons peuvent être placés en absolute au centre du conteneur avant d'être déplacés.",
+                code: `.radial-menu {
+  position: relative;
+}
+
+.action {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}`
+              },
+              {
+                title: "Déplacement visuel",
+                text: "translate déplace chaque action autour du centre sans modifier le flux de la page.",
+                code: `.action {
+  transform: translate(90px, -40px);
+}`
+              },
+              {
+                title: "Animation",
+                text: "La transition permet de voir les actions sortir et rentrer au lieu de changer brutalement.",
+                code: `.action {
+  transition: transform 220ms ease, opacity 220ms ease;
+}`
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "terminal-fictif": {
+    title: "Terminal fictif",
+    tabs: [
+      {
+        id: "js",
+        label: "JS",
+        sections: [
+          {
+            title: "Commandes et historique",
+            items: [
+              {
+                title: "Empêcher le rechargement",
+                text: "Un terminal dans un formulaire doit bloquer le comportement par défaut du submit.",
+                code: `form.addEventListener("submit", function (event) {
+  event.preventDefault();
+});`
+              },
+              {
+                title: "Normaliser la commande",
+                text: "trim enlève les espaces inutiles et toLowerCase facilite la comparaison.",
+                code: `const command = input.value.trim().toLowerCase();`
+              },
+              {
+                title: "Ajouter une ligne",
+                text: "Chaque commande ou réponse peut devenir un nouvel élément ajouté dans l'écran.",
+                code: `const line = document.createElement("p");
+line.textContent = "> " + command;
+screen.append(line);`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "Aspect terminal",
+            items: [
+              {
+                title: "Police monospace",
+                text: "Une police monospace rend les lignes de commande plus lisibles et plus proches d'un terminal.",
+                code: `.terminal {
+  font-family: Consolas, "Courier New", monospace;
+}`
+              },
+              {
+                title: "Historique scrollable",
+                text: "La zone d'écran peut défiler quand l'historique devient plus long que le terminal.",
+                code: `.screen {
+  overflow: auto;
+}`
+              },
+              {
+                title: "Input intégré",
+                text: "Un input transparent donne l'impression d'écrire directement dans le terminal.",
+                code: `input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+}`
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "recherche-clavier": {
+    title: "Recherche clavier",
+    tabs: [
+      {
+        id: "js",
+        label: "JS",
+        sections: [
+          {
+            title: "Filtrer et sélectionner",
+            items: [
+              {
+                title: "Filtrer pendant la saisie",
+                text: "L'événement input sert à recalculer la liste affichée quand le texte change.",
+                code: `input.addEventListener("input", function () {
+  // filtrer les commandes
+});`
+              },
+              {
+                title: "Lire les flèches",
+                text: "keydown permet de réagir aux touches de navigation et à Entrée.",
+                code: `input.addEventListener("keydown", function (event) {
+  console.log(event.key);
+});`
+              },
+              {
+                title: "Index sélectionné",
+                text: "Un nombre peut mémoriser quel résultat est actuellement actif.",
+                code: `let selectedIndex = 0;
+selectedIndex = selectedIndex + 1;`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "Résultat actif",
+            items: [
+              {
+                title: "Liste stable",
+                text: "Une hauteur minimale évite que l'interface saute trop quand il y a peu de résultats.",
+                code: `.results {
+  min-height: 160px;
+}`
+              },
+              {
+                title: "Classe active",
+                text: "La classe active montre quel résultat sera validé si l'utilisateur appuie sur Entrée.",
+                code: `.results li.active {
+  color: #ffffff;
+  background: #2563eb;
+}`
+              },
+              {
+                title: "Séparer les lignes",
+                text: "Des bordures simples rendent les résultats plus faciles à parcourir au clavier.",
+                code: `.results li {
+  padding: 11px 12px;
+  border-bottom: 1px solid #e2e8f0;
+}`
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 };
 
