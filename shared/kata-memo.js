@@ -177,6 +177,70 @@ progressBar.setAttribute("aria-valuenow", progress);`
       }
     ]
   },
+  "message-temporaire": {
+    title: "Message temporaire",
+    tabs: [
+      {
+        id: "js",
+        label: "JS",
+        sections: [
+          {
+            title: "Afficher puis masquer",
+            items: [
+              {
+                title: "Classe d'état",
+                text: "Le clic peut afficher le message en ajoutant une classe. Le CSS décide ensuite à quoi ressemble l'état visible.",
+                code: `message.classList.add("is-visible");`
+              },
+              {
+                title: "Délai avec setTimeout",
+                text: "setTimeout lance une fonction une seule fois après un délai. C'est utile pour revenir à l'état masqué sans nouveau clic.",
+                code: `setTimeout(function () {
+  message.classList.remove("is-visible");
+}, 2000);`
+              },
+              {
+                title: "Eviter les timers empilés",
+                text: "Si l'utilisateur clique plusieurs fois rapidement, garde l'identifiant du timer pour annuler l'ancien délai avant d'en lancer un nouveau.",
+                code: `clearTimeout(timeoutId);
+timeoutId = setTimeout(function () {
+  // masquer le message
+}, 2000);`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "Etat visible",
+            items: [
+              {
+                title: "Message caché",
+                text: "Un message temporaire peut rester dans le HTML mais être invisible tant qu'il n'a pas sa classe d'état.",
+                code: `.notice {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}`
+              },
+              {
+                title: "Message affiché",
+                text: "La classe ajoutée par JavaScript rend le message visible et peut déclencher une transition.",
+                code: `.notice.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}`
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "mot-de-passe": {
     title: "Afficher / masquer",
     sections: [
