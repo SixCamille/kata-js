@@ -1325,6 +1325,68 @@ selectedIndex = selectedIndex + 1;`
         ]
       }
     ]
+  },
+  "bouton-fuit": {
+    title: "Bouton qui fuit",
+    tabs: [
+      {
+        id: "js",
+        label: "JS",
+        sections: [
+          {
+            title: "Coordonnees et distance",
+            items: [
+              {
+                title: "Boite d'un element",
+                text: "getBoundingClientRect donne la position et la taille d'un element dans la fenetre. C'est utile pour comparer la souris avec le bouton ou l'arene.",
+                code: `const buttonRect = button.getBoundingClientRect();
+const arenaRect = arena.getBoundingClientRect();`
+              },
+              {
+                title: "Offset local x/y",
+                text: "event.clientX et event.clientY sont dans le repere de la fenetre. En retirant left/top de l'arene, tu obtiens la position de la souris dans l'arene.",
+                code: `const offsetX = event.clientX - arenaRect.left;
+const offsetY = event.clientY - arenaRect.top;`
+              },
+              {
+                title: "Centre du bouton",
+                text: "Le centre se calcule avec left/top plus la moitie de la largeur/hauteur. Tu peux ensuite comparer ce centre avec la souris.",
+                code: `const buttonCenterX = buttonRect.left + buttonRect.width / 2;
+const buttonCenterY = buttonRect.top + buttonRect.height / 2;`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "Placer dans l'arene",
+            items: [
+              {
+                title: "Arene relative",
+                text: "L'arene sert de repere au bouton et masque ce qui depasse.",
+                code: `.arena {
+  position: relative;
+  overflow: hidden;
+}`
+              },
+              {
+                title: "Bouton absolu",
+                text: "Un bouton en absolute peut etre deplace avec left et top depuis JavaScript.",
+                code: `.runner {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+}`
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 };
 
