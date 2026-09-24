@@ -618,6 +618,105 @@ popup.classList.remove("is-open");`
       }
     ]
   },
+  "autocompletion": {
+    title: "Autocomplétion de fruits",
+    tabs: [
+      {
+        id: "js",
+        label: "JS",
+        sections: [
+          {
+            title: "Filtrer et rendre",
+            items: [
+              {
+                title: "Tableau de référence",
+                text: "Le starter fournit déjà un tableau de fruits. Le rôle du script est de lire la saisie, filtrer ce tableau, puis afficher seulement les résultats utiles.",
+                code: `const fruits = ["Abricot", "Banane", "Cerise"];
+
+const resultats = fruits.filter(function (fruit) {
+  return fruit.toLowerCase().includes(recherche);
+});`
+              },
+              {
+                title: "Événement input",
+                text: "input se déclenche à chaque modification du champ : lettre ajoutée, suppression, collage ou effacement. C'est l'événement principal pour recalculer la liste.",
+                code: `champ.addEventListener("input", function () {
+  const recherche = champ.value.toLowerCase();
+  // filtrer puis reconstruire la liste
+});`
+              },
+              {
+                title: "Reconstruire la liste",
+                text: "Avant d'afficher de nouveaux résultats, vide la liste. Ensuite, crée un li par suggestion retenue et ajoute-le dans le ul.",
+                code: `liste.innerHTML = "";
+
+resultats.forEach(function (fruit) {
+  const item = document.createElement("li");
+  item.textContent = fruit;
+  liste.append(item);
+});`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "clavier",
+        label: "Clavier",
+        sections: [
+          {
+            title: "Écouter les touches",
+            items: [
+              {
+                title: "keydown",
+                text: "keydown sert aux touches de contrôle : Entrée, Escape, flèches. Pour une autocomplétion, il complète input mais ne le remplace pas.",
+                code: `champ.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    champ.value = "";
+    liste.innerHTML = "";
+  }
+});`
+              },
+              {
+                title: "Comparer event.key",
+                text: "event.key donne une valeur lisible comme Enter, Escape, ArrowDown ou ArrowUp. Cela évite de dépendre de codes numériques difficiles à retenir.",
+                code: `if (event.key === "Enter") {
+  // valider une suggestion sélectionnée
+}`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "Liste compacte",
+            items: [
+              {
+                title: "Cadre des suggestions",
+                text: "La liste peut rester prête dans le HTML. Le JavaScript décide seulement si elle contient des li ou non.",
+                code: `.suggestions {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}`
+              },
+              {
+                title: "État visuel au clavier",
+                text: "Si tu ajoutes une navigation au clavier, une classe d'état peut rendre la suggestion active visible.",
+                code: `.suggestions li.is-active {
+  background: #fff8bf;
+}`
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "neige": {
     title: "Neige dans la fenêtre",
     tabs: [
