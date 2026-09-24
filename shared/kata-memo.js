@@ -1152,60 +1152,6 @@ let playerY = 440;`
       }
     ]
   },
-  "drag-drop-zones": {
-    title: "Drag & drop avec zones",
-    tabs: [
-      {
-        id: "js",
-        label: "JS",
-        sections: [
-          {
-            title: "Evenements drag",
-            items: [
-              {
-                title: "Autoriser le drop",
-                text: "dragover doit empêcher le comportement par défaut pour autoriser un dépôt.",
-                code: `zone.addEventListener("dragover", function (event) {
-  event.preventDefault();
-});`
-              },
-              {
-                title: "État visuel",
-                text: "JavaScript peut ajouter une classe quand une zone est survolée ou validée.",
-                code: `zone.classList.add("is-over");`
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: "css",
-        label: "CSS",
-        sections: [
-          {
-            title: "Zones lisibles",
-            items: [
-              {
-                title: "Contour de dépôt",
-                text: "Une bordure en pointilles indique clairement qu'une zone accepte un dépôt.",
-                code: `.drop-zone {
-  border: 2px dashed #8f9bad;
-}`
-              },
-              {
-                title: "Feedback d'état",
-                text: "Une classe peut renforcer visuellement la zone survolée ou acceptée.",
-                code: `.drop-zone.is-over {
-  background: #eef4f6;
-  border-color: #5778c9;
-}`
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
   "chrono-todo": {
     title: "Chrono + todo",
     sections: [
