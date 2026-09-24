@@ -11,6 +11,7 @@ Le public est composé d'apprenants de 2e année. Les contenus doivent donc rest
 - Garder une approche JavaScript vanilla : HTML, CSS et JavaScript sans framework.
 - Prévoir des notions de cours adaptées à des 2e années, pas seulement une consigne d'exercice.
 - Expliquer les concepts utiles sans donner directement la solution des katas évaluables.
+- Placer les aides techniques dans la pop-up de mémo du kata, pas dans la consigne principale. Le kata `neige` sert de référence pour la structure attendue du mémo : onglets courts comme `JS` et `CSS`, sections ciblées, exemples utiles mais non complets.
 - Fournir des ressources ciblées quand une API précise serait artificielle à connaître par coeur.
 - Calibrer les katas pour un live coding individuel de 20 minutes.
 - Maintenir trois niveaux : facile, moyen, difficile.

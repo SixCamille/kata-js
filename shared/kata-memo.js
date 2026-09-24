@@ -1824,52 +1824,37 @@ KATA_MEMOS["progression-scroll"] = {
   title: "Progression du scroll",
   tabs: [
     {
-      id: "method",
-      label: "Méthode",
-      sections: [
-        {
-          title: "Mesurer avant d'afficher",
-          items: [
-            {
-              title: "Trois valeurs utiles",
-              text: "Pour une barre de progression, commence par isoler la position actuelle, la hauteur totale du document et la hauteur visible de la fenêtre. Le pourcentage vient seulement après."
-            },
-            {
-              title: "Hauteur avec contenu scrollable",
-              text: "La propriété scrollHeight donne la hauteur complète d'un élément, y compris la partie qui dépasse et qui nécessite du scroll. C'est la valeur utile quand le contenu est plus grand que la zone visible.",
-              code: `const pageHeight = document.documentElement.scrollHeight;
-const visibleHeight = window.innerHeight;`
-            },
-            {
-              title: "Hauteur réellement parcourable",
-              text: "Toute la page n'est pas scrollable : quand le bas de la fenêtre atteint le bas du document, il reste encore la hauteur visible à retirer.",
-              code: `const maxScroll = pageHeight - visibleHeight;`
-            }
-          ]
-        }
-      ]
-    },
-    {
       id: "js",
       label: "JS",
       sections: [
         {
-          title: "Calculer la progression",
+          title: "Mesurer le scroll",
           items: [
             {
-              title: "Position courante",
+              title: "Position actuelle",
               text: "window.scrollY donne le nombre de pixels déjà parcourus depuis le haut de la page.",
               code: `const currentScroll = window.scrollY;`
             },
             {
-              title: "Rapport puis pourcentage",
-              text: "Divise la position courante par la distance maximale, puis transforme le résultat en pourcentage pour piloter la largeur de la barre.",
+              title: "Hauteur complète",
+              text: "scrollHeight donne la hauteur totale d'un élément, contenu caché par le scroll inclus. Pour la page, on peut la lire sur document.documentElement.",
+              code: `const pageHeight = document.documentElement.scrollHeight;
+const visibleHeight = window.innerHeight;`
+            },
+            {
+              title: "Distance scrollable",
+              text: "La distance réellement scrollable correspond à la hauteur totale moins la hauteur visible de la fenêtre.",
+              code: `const maxScroll = pageHeight - visibleHeight;`
+            },
+            {
+              title: "Pourcentage",
+              text: "Le rapport entre la position actuelle et la distance maximale peut ensuite être converti en pourcentage.",
               code: `const progress = currentScroll / maxScroll;
 const percent = progress * 100;`
             },
             {
-              title: "Largeur CSS",
-              text: "La propriété width attend une chaîne CSS. Ajoute le symbole pourcentage à la valeur calculée.",
+              title: "Largeur de la barre",
+              text: "La largeur peut recevoir une chaîne CSS avec le symbole pourcentage.",
               code: `bar.style.width = percent + "%";`
             }
           ]
