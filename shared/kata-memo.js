@@ -1820,6 +1820,90 @@ const COURSE_KATA_MEMO_HINTS = [
 }`]
 ];
 
+KATA_MEMOS["progression-scroll"] = {
+  title: "Progression du scroll",
+  tabs: [
+    {
+      id: "method",
+      label: "Méthode",
+      sections: [
+        {
+          title: "Mesurer avant d'afficher",
+          items: [
+            {
+              title: "Trois valeurs utiles",
+              text: "Pour une barre de progression, commence par isoler la position actuelle, la hauteur totale du document et la hauteur visible de la fenêtre. Le pourcentage vient seulement après."
+            },
+            {
+              title: "Hauteur avec contenu scrollable",
+              text: "La propriété scrollHeight donne la hauteur complète d'un élément, y compris la partie qui dépasse et qui nécessite du scroll. C'est la valeur utile quand le contenu est plus grand que la zone visible.",
+              code: `const pageHeight = document.documentElement.scrollHeight;
+const visibleHeight = window.innerHeight;`
+            },
+            {
+              title: "Hauteur réellement parcourable",
+              text: "Toute la page n'est pas scrollable : quand le bas de la fenêtre atteint le bas du document, il reste encore la hauteur visible à retirer.",
+              code: `const maxScroll = pageHeight - visibleHeight;`
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "js",
+      label: "JS",
+      sections: [
+        {
+          title: "Calculer la progression",
+          items: [
+            {
+              title: "Position courante",
+              text: "window.scrollY donne le nombre de pixels déjà parcourus depuis le haut de la page.",
+              code: `const currentScroll = window.scrollY;`
+            },
+            {
+              title: "Rapport puis pourcentage",
+              text: "Divise la position courante par la distance maximale, puis transforme le résultat en pourcentage pour piloter la largeur de la barre.",
+              code: `const progress = currentScroll / maxScroll;
+const percent = progress * 100;`
+            },
+            {
+              title: "Largeur CSS",
+              text: "La propriété width attend une chaîne CSS. Ajoute le symbole pourcentage à la valeur calculée.",
+              code: `bar.style.width = percent + "%";`
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "css",
+      label: "CSS",
+      sections: [
+        {
+          title: "Barre fixe",
+          items: [
+            {
+              title: "Toujours visible",
+              text: "La barre peut rester en haut de l'écran avec position fixed. Le JavaScript ne change que la largeur de l'élément interne.",
+              code: `.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.bar {
+  width: 0%;
+}`
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
 function createCourseKataMemo(title, concepts, cssCode) {
   const conceptList = concepts.split(",").map(function (concept) {
     return concept.trim();
