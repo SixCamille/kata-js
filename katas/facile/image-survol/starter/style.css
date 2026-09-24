@@ -1,0 +1,47 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f8fafc;
+}
+
+.kata-stage {
+  width: min(760px, calc(100vw - 32px));
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+
+.intro {
+  margin: 0 0 24px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.preview {
+  margin: 0;
+}
+
+.preview img {
+  display: block;
+  width: min(420px, 100%);
+  border-radius: 8px;
+  border: 1px solid #d6deea;
+}
+
+.preview figcaption {
+  margin-top: 10px;
+  font-weight: 700;
+}

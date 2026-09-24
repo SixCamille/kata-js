@@ -1,0 +1,13 @@
+{
+  "title": "Curseur personnalisé",
+  "level": "moyen",
+  "concepts": [
+    "mousemove",
+    "clientX",
+    "clientY",
+    "transform"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

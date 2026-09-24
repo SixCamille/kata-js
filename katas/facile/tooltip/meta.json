@@ -1,0 +1,13 @@
+{
+  "title": "Tooltip",
+  "level": "facile",
+  "concepts": [
+    "mouseenter",
+    "mouseleave",
+    "classList",
+    "position"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

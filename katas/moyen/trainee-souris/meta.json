@@ -1,0 +1,13 @@
+{
+  "title": "Traînée derrière la souris",
+  "level": "moyen",
+  "concepts": [
+    "mousemove",
+    "createElement",
+    "setTimeout",
+    "position"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

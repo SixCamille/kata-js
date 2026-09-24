@@ -1,0 +1,13 @@
+{
+  "title": "Apparition au scroll",
+  "level": "moyen",
+  "concepts": [
+    "scroll",
+    "getBoundingClientRect",
+    "classList",
+    "viewport"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

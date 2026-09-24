@@ -1,0 +1,13 @@
+{
+  "title": "Popup extérieure",
+  "level": "moyen",
+  "concepts": [
+    "click",
+    "event.target",
+    "classList",
+    "condition"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

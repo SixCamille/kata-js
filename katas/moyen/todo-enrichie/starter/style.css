@@ -1,0 +1,61 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f8fafc;
+}
+
+.kata-stage {
+  width: min(760px, calc(100vw - 32px));
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+
+.intro {
+  margin: 0 0 24px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.todo-form {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-form input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px;
+}
+
+.todo-list {
+  margin: 18px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #d6deea;
+}
+
+.todo-list li.is-done {
+  color: #64748b;
+  text-decoration: line-through;
+}

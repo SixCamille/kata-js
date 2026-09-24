@@ -1,0 +1,13 @@
+{
+  "title": "Compteur de caractères",
+  "level": "facile",
+  "concepts": [
+    "input",
+    "value",
+    "length",
+    "textContent"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

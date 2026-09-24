@@ -1,0 +1,13 @@
+{
+  "title": "Carte 3D interactive",
+  "level": "difficile",
+  "concepts": [
+    "mousemove",
+    "DOMRect",
+    "variables CSS",
+    "transform"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

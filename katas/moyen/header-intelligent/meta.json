@@ -1,0 +1,13 @@
+{
+  "title": "Header intelligent",
+  "level": "moyen",
+  "concepts": [
+    "scroll",
+    "window.scrollY",
+    "état précédent",
+    "classList"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

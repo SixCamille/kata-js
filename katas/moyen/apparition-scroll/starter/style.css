@@ -1,0 +1,56 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f8fafc;
+}
+
+.kata-stage {
+  width: min(760px, calc(100vw - 32px));
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+
+.intro {
+  margin: 0 0 24px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.spacer {
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.reveal-card {
+  width: min(520px, calc(100vw - 32px));
+  margin: 0 auto 80px;
+  padding: 50px 24px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.reveal-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

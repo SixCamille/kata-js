@@ -1,0 +1,63 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f8fafc;
+}
+
+.kata-stage {
+  width: min(760px, calc(100vw - 32px));
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+
+.intro {
+  margin: 0 0 24px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.clock {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  border: 8px solid #172033;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 4px;
+  border-radius: 999px;
+  background: #172033;
+  transform-origin: bottom center;
+}
+
+.hour {
+  height: 72px;
+}
+
+.minute {
+  height: 96px;
+}
+
+.second {
+  height: 108px;
+  background: #ef4444;
+}

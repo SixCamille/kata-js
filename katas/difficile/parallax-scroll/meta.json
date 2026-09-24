@@ -1,0 +1,13 @@
+{
+  "title": "Parallax scroll",
+  "level": "difficile",
+  "concepts": [
+    "scroll",
+    "window.scrollY",
+    "dataset",
+    "transform"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

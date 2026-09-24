@@ -1,0 +1,13 @@
+{
+  "title": "Comparateur d'images enrichi",
+  "level": "difficile",
+  "concepts": [
+    "mousedown",
+    "mousemove",
+    "pourcentage",
+    "style.width"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

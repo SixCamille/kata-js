@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kata - Onglets</title>
+    <link rel="stylesheet" href="../../../shared/starter-shell.css">
+  </head>
+  <body class="level-facile" data-kata="onglets">
+    <div data-site-nav data-root="../../.." data-title="KATA JS" data-active="facile"></div>
+    <div class="starter-layout">
+      <main class="playground-zone">
+        <iframe class="playground-frame" src="starter/index.html" title="Playground du kata onglets"></iframe>
+      </main>
+      <aside class="kata-brief" aria-labelledby="brief-title">
+        <div class="brief-content">
+          <p class="level-tag">Kata facile</p>
+          <h2 id="brief-title">Onglets</h2>
+          <p>Un clic sur un onglet doit afficher le panneau correspondant et masquer les autres.</p>
+          <p>Un seul contenu doit être actif à la fois. Le bouton d'onglet sélectionné et le panneau visible doivent donc être mis à jour ensemble.</p>
+          <h3>Attendu</h3>
+          <ul>
+            <li>Sélectionner les boutons d'onglets et les panneaux.</li>
+            <li>Ecouter le clic sur un onglet.</li>
+            <li>Retirer l'état actif des autres onglets.</li>
+            <li>Afficher seulement le panneau demandé.</li>
+            <li>Mettre à jour aria-selected.</li>
+          </ul>
+          <hr>
+          <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>
+          <hr>
+          <div class="brief-actions">
+            <button class="memo-button" type="button" data-open-memo>Ouvrir le mémo</button>
+            <a class="memo-button" href="starter/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le playground</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="../../../shared/site-nav.js"></script>
+    <script src="../../../shared/kata-memo.js"></script>
+    <script src="../../../shared/kata-progress.js"></script>
+  </body>
+</html>

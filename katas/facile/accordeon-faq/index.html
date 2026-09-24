@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kata - Accordéon FAQ</title>
+    <link rel="stylesheet" href="../../../shared/starter-shell.css">
+  </head>
+  <body class="level-facile" data-kata="accordeon-faq">
+    <div data-site-nav data-root="../../.." data-title="KATA JS" data-active="facile"></div>
+    <div class="starter-layout">
+      <main class="playground-zone">
+        <iframe class="playground-frame" src="starter/index.html" title="Playground du kata accordéon faq"></iframe>
+      </main>
+      <aside class="kata-brief" aria-labelledby="brief-title">
+        <div class="brief-content">
+          <p class="level-tag">Kata facile</p>
+          <h2 id="brief-title">Accordéon FAQ</h2>
+          <p>Chaque question doit ouvrir sa réponse, puis la refermer au clic suivant.</p>
+          <p>L'utilisateur doit comprendre quelle réponse est ouverte. Au clic sur une question, l'état visuel et l'attribut d'accessibilité doivent rester synchronisés.</p>
+          <h3>Attendu</h3>
+          <ul>
+            <li>Sélectionner les boutons de question.</li>
+            <li>Ecouter le clic sur chaque question.</li>
+            <li>Afficher ou masquer la réponse associée.</li>
+            <li>Mettre à jour l'état visuel de l'élément ouvert.</li>
+            <li>Mettre à jour aria-expanded.</li>
+          </ul>
+          <hr>
+          <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>
+          <hr>
+          <div class="brief-actions">
+            <button class="memo-button" type="button" data-open-memo>Ouvrir le mémo</button>
+            <a class="memo-button" href="starter/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le playground</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="../../../shared/site-nav.js"></script>
+    <script src="../../../shared/kata-memo.js"></script>
+    <script src="../../../shared/kata-progress.js"></script>
+  </body>
+</html>

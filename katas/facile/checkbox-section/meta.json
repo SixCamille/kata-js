@@ -1,0 +1,13 @@
+{
+  "title": "Afficher selon une checkbox",
+  "level": "facile",
+  "concepts": [
+    "change",
+    "checked",
+    "classList",
+    "condition"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

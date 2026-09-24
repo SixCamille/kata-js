@@ -1,0 +1,13 @@
+{
+  "title": "Onglets",
+  "level": "facile",
+  "concepts": [
+    "click",
+    "classList",
+    "dataset",
+    "contenu actif"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

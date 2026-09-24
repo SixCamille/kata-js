@@ -1328,6 +1328,228 @@ selectedIndex = selectedIndex + 1;`
   }
 };
 
+const COURSE_KATA_MEMO_HINTS = [
+  ["changer-couleur-fond", "Changer la couleur du fond", "click, tableau de couleurs, index courant, style.backgroundColor", `body {
+  transition: background 220ms ease;
+}`],
+  ["accordeon-faq", "Accordéon FAQ", "click, classList, aria-expanded, réponse associée", `.faq-item p {
+  display: none;
+}
+
+.faq-item.is-open p {
+  display: block;
+}`],
+  ["onglets", "Onglets", "click, dataset, classe active, panneau correspondant", `.panel {
+  display: none;
+}
+
+.panel.is-active {
+  display: block;
+}`],
+  ["tooltip", "Tooltip", "mouseenter, mouseleave, classList, positionnement absolu", `.tooltip {
+  position: absolute;
+  opacity: 0;
+}
+
+.tooltip.is-visible {
+  opacity: 1;
+}`],
+  ["image-survol", "Image qui change au survol", "mouseenter, mouseleave, src, alt", `img {
+  display: block;
+  width: 100%;
+}`],
+  ["etoiles-notation", "Étoiles de notation", "click, querySelectorAll, index, classList", `.rating button {
+  color: #cbd5e1;
+}
+
+.rating button.is-active {
+  color: #f59e0b;
+}`],
+  ["bouton-jaime", "Bouton J'aime", "click, booléen, compteur, aria-pressed", `.like-button.is-liked {
+  color: #ffffff;
+  background: #ef4444;
+}`],
+  ["checkbox-section", "Afficher selon une checkbox", "change, checked, condition, classe visible", `.extra-panel {
+  display: none;
+}
+
+.extra-panel.is-visible {
+  display: block;
+}`],
+  ["compteur-caracteres", "Compteur de caractères", "input, value, length, textContent", `textarea {
+  min-height: 140px;
+  resize: vertical;
+}`],
+  ["lancer-de", "Lancer de dé", "click, Math.random, Math.floor, textContent", `.dice {
+  display: grid;
+  place-items: center;
+}`],
+  ["fond-scroll", "Fond lié au scroll", "scroll, window.scrollY, progression, style.backgroundColor", `.meter {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+}`],
+  ["header-intelligent", "Header intelligent", "scroll, position précédente, comparaison, transform", `.smart-header {
+  position: fixed;
+  transition: transform 180ms ease;
+}
+
+.smart-header.is-hidden {
+  transform: translateY(-100%);
+}`],
+  ["apparition-scroll", "Apparition au scroll", "scroll, getBoundingClientRect, viewport, classList", `.reveal-card {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}`],
+  ["retour-haut", "Retour en haut", "scroll, click, window.scrollTo, classList", `.back-top {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.back-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}`],
+  ["curseur-personnalise", "Curseur personnalisé", "mousemove, clientX, clientY, transform", `.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}`],
+  ["trainee-souris", "Traînée derrière la souris", "mousemove, createElement, coordonnées, setTimeout", `.trail {
+  position: fixed;
+  pointer-events: none;
+  animation: fade 500ms ease forwards;
+}`],
+  ["popup-exterieure", "Popup extérieure", "click, event.target, overlay, condition", `.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+}
+
+.modal.is-open {
+  display: grid;
+}`],
+  ["filtre-produits", "Filtre produits", "click, tableau, filter, rendu DOM", `.products {
+  display: grid;
+  gap: 10px;
+}`],
+  ["todo-enrichie", "Todo enrichie", "submit, tableau, rendu DOM, compteur", `.todo-list li.is-done {
+  color: #64748b;
+  text-decoration: line-through;
+}`],
+  ["machine-ecrire", "Machine à écrire", "setInterval, index, slice, textContent", `.typewriter {
+  min-height: 56px;
+}`],
+  ["puzzle-reordonnable", "Puzzle réordonnable", "dragstart, dragover, drop, ordre", `.puzzle li {
+  cursor: grab;
+}`],
+  ["carte-gratter", "Carte à gratter", "mousemove, coordonnées locales, createElement, progression", `.scratch-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.scratch-hole {
+  position: absolute;
+  border-radius: 50%;
+}`],
+  ["interface-tinder", "Interface Tinder", "mousedown, mousemove, mouseup, transform, tableau", `.swipe-card {
+  position: absolute;
+  cursor: grab;
+  user-select: none;
+}`],
+  ["carte-3d-interactive", "Carte 3D interactive", "mousemove, DOMRect, variables CSS, transform", `.card-3d {
+  transform-style: preserve-3d;
+}
+
+.shine {
+  background: radial-gradient(circle at var(--shine-x) var(--shine-y), rgba(255,255,255,0.45), transparent 35%);
+}`],
+  ["parallax-souris", "Parallax souris", "mousemove, dataset, facteur de vitesse, transform", `.layer {
+  position: absolute;
+}`],
+  ["parallax-scroll", "Parallax scroll", "scroll, window.scrollY, dataset, transform", `.shape {
+  position: absolute;
+}`],
+  ["command-palette", "Command palette", "keydown, input, tableau, sélection active", `.palette {
+  position: fixed;
+  display: none;
+}
+
+.palette.is-open {
+  display: block;
+}`],
+  ["formulaire-dynamique", "Formulaire dynamique", "click, createElement, tableau, rendu DOM", `.participant {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+}`],
+  ["horloge-analogique", "Horloge analogique", "Date, setInterval, angles, transform", `.hand {
+  position: absolute;
+  transform-origin: bottom center;
+}`],
+  ["comparateur-images-enrichi", "Comparateur d'images enrichi", "mousedown, mousemove, pourcentage, style.width", `.compare {
+  position: relative;
+  overflow: hidden;
+}
+
+.handle {
+  position: absolute;
+  cursor: ew-resize;
+}`]
+];
+
+function createCourseKataMemo(title, concepts, cssCode) {
+  return {
+    title,
+    tabs: [
+      {
+        id: "js",
+        label: "JS",
+        sections: [
+          {
+            title: "Briques utiles",
+            items: [
+              {
+                title: "Concepts du kata",
+                text: "Ce kata mobilise surtout : " + concepts + ". Commence par identifier l'événement principal et les valeurs qui changent."
+              },
+              {
+                title: "Avancer par étapes",
+                text: "Teste d'abord les sélections et les valeurs avec console.log, puis connecte seulement ensuite le rendu visuel."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "Repère CSS",
+            items: [
+              {
+                title: "Classes et propriétés utiles",
+                text: "Le starter fournit déjà les classes de base. Le JavaScript doit les activer ou modifier quelques propriétés ciblées.",
+                code: cssCode
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  };
+}
+
+COURSE_KATA_MEMO_HINTS.forEach(function (memoHint) {
+  KATA_MEMOS[memoHint[0]] = createCourseKataMemo(memoHint[1], memoHint[2], memoHint[3]);
+});
+
 function createDefaultMemo() {
   return {
     title: "Mémo de démarrage",

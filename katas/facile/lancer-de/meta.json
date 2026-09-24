@@ -1,0 +1,13 @@
+{
+  "title": "Lancer de dé",
+  "level": "facile",
+  "concepts": [
+    "click",
+    "Math.random",
+    "Math.floor",
+    "textContent"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Parallax souris",
+  "level": "difficile",
+  "concepts": [
+    "mousemove",
+    "dataset",
+    "transform",
+    "coordonnées"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

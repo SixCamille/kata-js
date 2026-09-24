@@ -1,0 +1,13 @@
+{
+  "title": "Puzzle réordonnable",
+  "level": "difficile",
+  "concepts": [
+    "dragstart",
+    "drop",
+    "tableau",
+    "ordre"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Machine à écrire",
+  "level": "moyen",
+  "concepts": [
+    "setInterval",
+    "index",
+    "slice",
+    "textContent"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

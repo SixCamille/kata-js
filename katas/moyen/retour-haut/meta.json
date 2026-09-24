@@ -1,0 +1,13 @@
+{
+  "title": "Retour en haut",
+  "level": "moyen",
+  "concepts": [
+    "scroll",
+    "click",
+    "window.scrollTo",
+    "classList"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

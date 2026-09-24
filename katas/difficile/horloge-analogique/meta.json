@@ -1,0 +1,13 @@
+{
+  "title": "Horloge analogique",
+  "level": "difficile",
+  "concepts": [
+    "Date",
+    "setInterval",
+    "transform",
+    "angles"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

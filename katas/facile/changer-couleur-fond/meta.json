@@ -1,0 +1,13 @@
+{
+  "title": "Changer la couleur du fond",
+  "level": "facile",
+  "concepts": [
+    "click",
+    "tableau",
+    "index",
+    "style.backgroundColor"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

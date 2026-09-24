@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kata - Parallax souris</title>
+    <link rel="stylesheet" href="../../../shared/starter-shell.css">
+  </head>
+  <body class="level-difficile" data-kata="parallax-souris">
+    <div data-site-nav data-root="../../.." data-title="KATA JS" data-active="difficile"></div>
+    <div class="starter-layout">
+      <main class="playground-zone">
+        <iframe class="playground-frame" src="starter/index.html" title="Playground du kata parallax souris"></iframe>
+      </main>
+      <aside class="kata-brief" aria-labelledby="brief-title">
+        <div class="brief-content">
+          <p class="level-tag">Kata difficile</p>
+          <h2 id="brief-title">Parallax souris</h2>
+          <p>Les couches doivent bouger légèrement dans des directions et vitesses différentes.</p>
+          <p>Le pointeur sert de repère : plus il s'éloigne du centre, plus les couches se décalent. Les plans proches peuvent bouger davantage que les plans lointains.</p>
+          <h3>Attendu</h3>
+          <ul>
+            <li>Sélectionner les couches.</li>
+            <li>Ecouter le mouvement de souris.</li>
+            <li>Calculer l'écart depuis le centre de l'écran.</li>
+            <li>Utiliser un facteur différent par couche.</li>
+            <li>Appliquer un transform à chaque couche.</li>
+          </ul>
+          <hr>
+          <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>
+          <hr>
+          <div class="brief-actions">
+            <button class="memo-button" type="button" data-open-memo>Ouvrir le mémo</button>
+            <a class="memo-button" href="starter/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le playground</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="../../../shared/site-nav.js"></script>
+    <script src="../../../shared/kata-memo.js"></script>
+    <script src="../../../shared/kata-progress.js"></script>
+  </body>
+</html>

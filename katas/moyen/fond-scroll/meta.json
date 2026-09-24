@@ -1,0 +1,13 @@
+{
+  "title": "Fond lié au scroll",
+  "level": "moyen",
+  "concepts": [
+    "scroll",
+    "window.scrollY",
+    "pourcentage",
+    "style"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

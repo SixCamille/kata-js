@@ -1,0 +1,13 @@
+{
+  "title": "Étoiles de notation",
+  "level": "facile",
+  "concepts": [
+    "click",
+    "querySelectorAll",
+    "index",
+    "classList"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

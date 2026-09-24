@@ -1,0 +1,13 @@
+{
+  "title": "Bouton J'aime",
+  "level": "facile",
+  "concepts": [
+    "click",
+    "booléen",
+    "textContent",
+    "classList"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Todo enrichie",
+  "level": "moyen",
+  "concepts": [
+    "submit",
+    "tableau",
+    "rendu DOM",
+    "compteur"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

@@ -1,0 +1,63 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f8fafc;
+}
+
+.kata-stage {
+  width: min(760px, calc(100vw - 32px));
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+
+.intro {
+  margin: 0 0 24px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tabs button {
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  padding: 10px 14px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.tabs button.is-active {
+  color: #ffffff;
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.panel {
+  display: none;
+  padding: 18px;
+  border: 1px solid #d6deea;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.panel.is-active {
+  display: block;
+}

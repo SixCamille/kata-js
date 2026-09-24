@@ -1,0 +1,13 @@
+{
+  "title": "Carte à gratter",
+  "level": "difficile",
+  "concepts": [
+    "mousemove",
+    "createElement",
+    "coordonnées",
+    "pourcentage"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

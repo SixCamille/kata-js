@@ -1,0 +1,51 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f8fafc;
+}
+
+.kata-stage {
+  width: min(760px, calc(100vw - 32px));
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+
+.intro {
+  margin: 0 0 24px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.card-3d {
+  position: relative;
+  width: min(340px, calc(100vw - 32px));
+  min-height: 220px;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 28px;
+  color: #ffffff;
+  background: #172033;
+  transform-style: preserve-3d;
+  transition: transform 180ms ease;
+}
+
+.shine {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--shine-x, 50%) var(--shine-y, 50%), rgba(255,255,255,0.45), transparent 35%);
+  pointer-events: none;
+}

@@ -1,0 +1,60 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f8fafc;
+}
+
+.kata-stage {
+  width: min(760px, calc(100vw - 32px));
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+
+.intro {
+  margin: 0 0 24px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.palette {
+  position: fixed;
+  left: 50%;
+  top: 90px;
+  width: min(560px, calc(100vw - 32px));
+  display: none;
+  padding: 16px;
+  border: 1px solid #d6deea;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.25);
+  transform: translateX(-50%);
+}
+
+.palette.is-open {
+  display: block;
+}
+
+.commands {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.commands li.active {
+  color: #ffffff;
+  background: #2563eb;
+}

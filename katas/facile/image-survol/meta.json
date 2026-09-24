@@ -1,0 +1,13 @@
+{
+  "title": "Image qui change au survol",
+  "level": "facile",
+  "concepts": [
+    "mouseenter",
+    "mouseleave",
+    "src",
+    "alt"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

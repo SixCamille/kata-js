@@ -1,0 +1,13 @@
+{
+  "title": "Command palette",
+  "level": "difficile",
+  "concepts": [
+    "keydown",
+    "input",
+    "tableau",
+    "état sélectionné"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Interface Tinder",
+  "level": "difficile",
+  "concepts": [
+    "mousedown",
+    "mousemove",
+    "mouseup",
+    "tableau",
+    "transform"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

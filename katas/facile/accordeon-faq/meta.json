@@ -1,0 +1,13 @@
+{
+  "title": "Accordéon FAQ",
+  "level": "facile",
+  "concepts": [
+    "click",
+    "classList",
+    "aria-expanded",
+    "état"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

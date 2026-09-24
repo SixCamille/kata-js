@@ -1,0 +1,50 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f8fafc;
+}
+
+.kata-stage {
+  width: min(760px, calc(100vw - 32px));
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+
+.intro {
+  margin: 0 0 24px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.like-button {
+  border: 1px solid #ef4444;
+  border-radius: 4px;
+  padding: 12px 16px;
+  color: #ef4444;
+  background: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.like-button.is-liked {
+  color: #ffffff;
+  background: #ef4444;
+}
+
+.status {
+  font-weight: 700;
+}

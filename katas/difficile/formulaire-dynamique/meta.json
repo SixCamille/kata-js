@@ -1,0 +1,13 @@
+{
+  "title": "Formulaire dynamique",
+  "level": "difficile",
+  "concepts": [
+    "click",
+    "createElement",
+    "tableau",
+    "rendu DOM"
+  ],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}
