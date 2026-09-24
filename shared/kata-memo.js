@@ -1359,6 +1359,12 @@ const localY = event.clientY - arenaRect.top;`
                 text: "Le centre se calcule avec left/top plus la moitie de la largeur/hauteur. Tu peux ensuite comparer ce centre avec la souris.",
                 code: `const buttonCenterX = buttonRect.left + buttonRect.width / 2;
 const buttonCenterY = buttonRect.top + buttonRect.height / 2;`
+              },
+              {
+                title: "Position aleatoire bornee",
+                text: "Quand la souris est trop proche, tire une nouvelle position aleatoire dans les dimensions disponibles de l'arene.",
+                code: `const maxX = arena.clientWidth - button.offsetWidth;
+const newX = Math.random() * maxX;`
               }
             ]
           }
