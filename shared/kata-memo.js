@@ -187,11 +187,34 @@ let isOpen = false;`
     code: `const index = Math.floor(Math.random() * 5);`
   },
   {
-    matches: ["Math.cos", "Math.sin", "angles", "vecteur", "distance", "pourcentage"],
-    title: "Calcul simple",
-    text: "Les calculs doivent rester isolés dans des variables avant de modifier l'affichage.",
-    code: `const percent = current / total;
-const angle = Math.PI / 4;`
+    matches: ["pourcentage"],
+    title: "Calculer un pourcentage",
+    text: "Un pourcentage vient souvent d'une valeur actuelle divisée par une valeur totale.",
+    code: `const ratio = current / total;
+const percent = ratio * 100;`
+  },
+  {
+    matches: ["coordonnées", "vecteur"],
+    title: "Coordonnées relatives",
+    text: "Pour obtenir une position locale, on retire la position du parent à la position de l'événement.",
+    code: `const x = event.clientX - rect.left;
+const y = event.clientY - rect.top;`
+  },
+  {
+    matches: ["distance", "collision"],
+    title: "Distance entre deux points",
+    text: "Math.hypot calcule la longueur entre deux écarts x/y.",
+    code: `const dx = x2 - x1;
+const dy = y2 - y1;
+const distance = Math.hypot(dx, dy);`
+  },
+  {
+    matches: ["Math.cos", "Math.sin", "angles"],
+    title: "Angle en radians",
+    text: "cos et sin travaillent avec des radians. Ils donnent deux valeurs utilisables comme coordonnées x/y.",
+    code: `const angle = Math.PI / 4;
+const x = Math.cos(angle);
+const y = Math.sin(angle);`
   },
   {
     matches: ["Date"],
