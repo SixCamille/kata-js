@@ -200,6 +200,14 @@ const KATAS = [
     starter: "katas/difficile/fenetre-deplacable/index.html"
   },
   {
+    id: "bouton-esquive",
+    title: "Bouton qui esquive",
+    level: "difficile",
+    summary: "Faire fuir un bouton dans la direction opposée au pointeur.",
+    concepts: ["mousemove", "getBoundingClientRect", "vecteur", "bornes"],
+    starter: "katas/difficile/bouton-esquive/index.html"
+  },
+  {
     id: "chat-simule",
     title: "Chat simule",
     level: "moyen",

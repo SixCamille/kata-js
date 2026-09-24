@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kata - Bouton qui esquive</title>
+    <link rel="stylesheet" href="../../../shared/starter-shell.css">
+  </head>
+  <body class="level-difficile" data-kata="bouton-esquive">
+    <div data-site-nav data-root="../../.." data-title="KATA JS" data-active="difficile"></div>
+    <div class="starter-layout">
+      <main class="playground-zone">
+        <iframe class="playground-frame" src="starter/index.html" title="Playground du kata bouton qui esquive"></iframe>
+      </main>
+      <aside class="kata-brief" aria-labelledby="brief-title">
+        <div class="brief-content">
+          <p class="level-tag">Kata difficile</p>
+          <h2 id="brief-title">Bouton qui esquive</h2>
+          <p>Le bouton doit s'éloigner de la souris quand elle s'approche.</p>
+          <p>Contrairement au kata moyen, le bouton ne reçoit pas une position aléatoire : son déplacement dépend de la position du pointeur. Il doit partir dans la direction opposée à la souris, tout en restant dans l'arène.</p>
+          <h3>Attendu</h3>
+          <ul>
+            <li>Ecouter les mouvements de souris dans l'arène.</li>
+            <li>Calculer le centre du bouton avec <code>getBoundingClientRect()</code>.</li>
+            <li>Déterminer la direction de fuite à partir de la position du pointeur.</li>
+            <li>Mettre à jour <code>left</code> et <code>top</code> sans sortir des limites.</li>
+          </ul>
+          <hr>
+          <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>
+          <hr>
+          <div class="brief-actions">
+            <button class="memo-button" type="button" data-open-memo>Ouvrir le mémo</button>
+            <a class="memo-button" href="starter/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le playground</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="../../../shared/site-nav.js"></script>
+    <script src="../../../shared/kata-memo.js"></script>
+    <script src="../../../shared/kata-progress.js"></script>
+  </body>
+</html>

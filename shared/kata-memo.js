@@ -1410,6 +1410,85 @@ const fleeY = buttonCenterY - event.clientY;`
         ]
       }
     ]
+  },
+  "bouton-esquive": {
+    title: "Bouton qui esquive",
+    tabs: [
+      {
+        id: "js",
+        label: "JS",
+        sections: [
+          {
+            title: "Direction de fuite",
+            items: [
+              {
+                title: "Boites utiles",
+                text: "getBoundingClientRect donne des coordonnees dans la fenetre. Tu peux l'utiliser sur l'arene et sur le bouton.",
+                code: `const arenaRect = arena.getBoundingClientRect();
+const buttonRect = button.getBoundingClientRect();`
+              },
+              {
+                title: "Centre du bouton",
+                text: "Le centre sert de point de comparaison avec la souris.",
+                code: `const centerX = buttonRect.left + buttonRect.width / 2;
+const centerY = buttonRect.top + buttonRect.height / 2;`
+              },
+              {
+                title: "Vecteur oppose a la souris",
+                text: "Soustraire la position de la souris au centre du bouton donne une direction qui part de la souris vers le bouton.",
+                code: `const directionX = centerX - event.clientX;
+const directionY = centerY - event.clientY;`
+              },
+              {
+                title: "Distance",
+                text: "La distance permet de declencher le mouvement seulement quand le pointeur est assez proche.",
+                code: `const distance = Math.sqrt(directionX * directionX + directionY * directionY);`
+              },
+              {
+                title: "Position locale",
+                text: "Pour modifier left/top, repars d'une position dans le repere de l'arene.",
+                code: `const currentX = buttonRect.left - arenaRect.left;
+const currentY = buttonRect.top - arenaRect.top;`
+              },
+              {
+                title: "Bornes",
+                text: "Apres le calcul du prochain deplacement, borne la valeur pour garder le bouton visible.",
+                code: `const maxX = arena.clientWidth - button.offsetWidth;
+const boundedX = Math.max(0, Math.min(maxX, nextX));`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "Deplacement dans l'arene",
+            items: [
+              {
+                title: "Arene relative",
+                text: "L'arene fournit le repere de positionnement et coupe ce qui depasse.",
+                code: `.arena {
+  position: relative;
+  overflow: hidden;
+}`
+              },
+              {
+                title: "Bouton absolu",
+                text: "left/top peuvent etre modifies par JavaScript sans changer le flux de la page.",
+                code: `.runner {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+}`
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 };
 

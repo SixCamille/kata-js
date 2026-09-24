@@ -1,0 +1,8 @@
+{
+  "title": "Bouton qui esquive",
+  "level": "difficile",
+  "concepts": ["mousemove", "getBoundingClientRect", "vecteur", "distance", "bornes"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

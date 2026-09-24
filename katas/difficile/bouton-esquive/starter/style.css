@@ -1,0 +1,40 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #e0f2fe;
+}
+
+.arena {
+  position: relative;
+  width: min(780px, calc(100vw - 32px));
+  height: min(440px, calc(100vh - 32px));
+  overflow: hidden;
+  border: 2px solid #0f766e;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+p {
+  margin: 22px;
+  font-weight: 700;
+}
+
+.runner {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #0f766e;
+  font-weight: 800;
+  cursor: pointer;
+  transition: left 90ms linear, top 90ms linear;
+}
