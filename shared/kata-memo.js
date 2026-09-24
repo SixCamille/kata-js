@@ -1346,9 +1346,8 @@ screen.append(line);`
               },
               {
                 title: "Index sélectionné",
-                text: "Un nombre peut mémoriser quel résultat est actuellement actif.",
-                code: `let selectedIndex = 0;
-selectedIndex = selectedIndex + 1;`
+                text: "Un nombre peut mémoriser quel résultat est actuellement actif. À toi de décider quand il change et comment il reste dans la liste.",
+                code: `let selectedIndex = 0;`
               }
             ]
           }
@@ -1417,29 +1416,6 @@ const mouseY = event.clientY;`
                 text: "En retirant left/top de l'arene, tu convertis les coordonnees de la fenetre en coordonnees dans l'arene.",
                 code: `const localX = event.clientX - arenaRect.left;
 const localY = event.clientY - arenaRect.top;`
-              },
-              {
-                title: "Centre du bouton",
-                text: "Le centre se calcule avec left/top plus la moitie de la largeur/hauteur. Tu peux ensuite comparer ce centre avec la souris.",
-                code: `const buttonCenterX = buttonRect.left + buttonRect.width / 2;
-const buttonCenterY = buttonRect.top + buttonRect.height / 2;`
-              },
-              {
-                title: "Position aleatoire bornee",
-                text: "Quand la souris est trop proche, tire une nouvelle position aleatoire dans les dimensions disponibles de l'arene.",
-                code: `const maxX = arena.clientWidth - button.offsetWidth;
-const newX = Math.random() * maxX;`
-              },
-              {
-                title: "Variante : sens de fuite",
-                text: "Pour une version plus difficile, calcule la direction qui part du pointeur vers le centre du bouton, puis utilise ce decalage pour proposer la prochaine position.",
-                code: `const fleeX = buttonCenterX - event.clientX;
-const fleeY = buttonCenterY - event.clientY;`
-              },
-              {
-                title: "Garder dans l'arene",
-                text: "Apres un deplacement calcule, borne la valeur pour que le bouton reste dans la zone.",
-                code: `const boundedX = Math.max(0, Math.min(maxX, nextX));`
               }
             ]
           }
@@ -1483,7 +1459,7 @@ const fleeY = buttonCenterY - event.clientY;`
         label: "JS",
         sections: [
           {
-            title: "Direction de fuite",
+            title: "Coordonnees utiles",
             items: [
               {
                 title: "Boites utiles",
@@ -1492,33 +1468,10 @@ const fleeY = buttonCenterY - event.clientY;`
 const buttonRect = button.getBoundingClientRect();`
               },
               {
-                title: "Centre du bouton",
-                text: "Le centre sert de point de comparaison avec la souris.",
-                code: `const centerX = buttonRect.left + buttonRect.width / 2;
-const centerY = buttonRect.top + buttonRect.height / 2;`
-              },
-              {
-                title: "Vecteur oppose a la souris",
-                text: "Soustraire la position de la souris au centre du bouton donne une direction qui part de la souris vers le bouton.",
-                code: `const directionX = centerX - event.clientX;
-const directionY = centerY - event.clientY;`
-              },
-              {
-                title: "Distance",
-                text: "La distance permet de declencher le mouvement seulement quand le pointeur est assez proche.",
-                code: `const distance = Math.sqrt(directionX * directionX + directionY * directionY);`
-              },
-              {
-                title: "Position locale",
-                text: "Pour modifier left/top, repars d'une position dans le repere de l'arene.",
-                code: `const currentX = buttonRect.left - arenaRect.left;
-const currentY = buttonRect.top - arenaRect.top;`
-              },
-              {
-                title: "Bornes",
-                text: "Apres le calcul du prochain deplacement, borne la valeur pour garder le bouton visible.",
-                code: `const maxX = arena.clientWidth - button.offsetWidth;
-const boundedX = Math.max(0, Math.min(maxX, nextX));`
+                title: "Position de la souris",
+                text: "event.clientX et event.clientY donnent le point de départ des calculs, sans imposer la stratégie de déplacement.",
+                code: `const mouseX = event.clientX;
+const mouseY = event.clientY;`
               }
             ]
           }
