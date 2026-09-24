@@ -11,11 +11,42 @@
       <h1>Filtre produits</h1>
       <p class="intro">Les boutons de catégorie doivent afficher uniquement les produits concernés.</p>
       <div class="filters">
-        <button type="button" data-filter="all">Tous</button>
+        <button class="is-active" type="button" data-filter="all">Tous</button>
         <button type="button" data-filter="fruit">Fruits</button>
-        <button type="button" data-filter="drink">Boissons</button>
+        <button type="button" data-filter="legume">Légumes</button>
       </div>
-      <ul class="products"></ul>
+      <ul class="products">
+        <li data-category="fruit">
+          <span class="product-icon">🍓</span>
+          <strong>Fraise</strong>
+          <span>Fruit rouge</span>
+        </li>
+        <li data-category="legume">
+          <span class="product-icon">🥕</span>
+          <strong>Carotte</strong>
+          <span>Légume racine</span>
+        </li>
+        <li data-category="fruit">
+          <span class="product-icon">🍌</span>
+          <strong>Banane</strong>
+          <span>Fruit jaune</span>
+        </li>
+        <li data-category="legume">
+          <span class="product-icon">🥦</span>
+          <strong>Brocoli</strong>
+          <span>Légume vert</span>
+        </li>
+        <li data-category="fruit">
+          <span class="product-icon">🍇</span>
+          <strong>Raisin</strong>
+          <span>Fruit en grappe</span>
+        </li>
+        <li data-category="legume">
+          <span class="product-icon">🍅</span>
+          <strong>Tomate</strong>
+          <span>Légume fruit</span>
+        </li>
+      </ul>
     </main>
     <script src="script.js"></script>
   </body>
