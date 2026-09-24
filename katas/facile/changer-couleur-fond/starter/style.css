@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -5,11 +11,12 @@ body {
   place-items: center;
   font-family: Arial, Helvetica, sans-serif;
   color: #172033;
-  background: #f8fafc;
+  background: #38bdf8;
+  overflow-x: hidden;
 }
 
 .kata-stage {
-  width: min(760px, calc(100vw - 32px));
+  width: min(560px, calc(100% - 32px));
   padding: 24px;
 }
 
@@ -20,7 +27,7 @@ h1 {
 
 .intro {
   margin: 0 0 24px;
-  color: #475569;
+  color: #0c4a6e;
   line-height: 1.5;
 }
 
