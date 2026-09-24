@@ -279,7 +279,7 @@ const CSS_SYNTAX_EXAMPLES = [
 }`
   },
   {
-    matches: ["transform", "position", "coordonnées", "style", "mousemove", "keydown", "animation CSS"],
+    matches: ["transform", "animation CSS"],
     title: "Déplacement visuel",
     text: "transform déplace visuellement un élément sans changer sa place dans le flux de la page.",
     code: `.element {
@@ -328,7 +328,7 @@ const CSS_SYNTAX_EXAMPLES = [
 }`
   },
   {
-    matches: ["rendu DOM", "tableau", "filter", "querySelectorAll", "createElement"],
+    matches: ["rendu DOM", "tableau", "filter", "querySelectorAll"],
     title: "Liste lisible",
     text: "Une liste rendue par JavaScript reste plus stable si son espacement est prévu en CSS.",
     code: `.list {
