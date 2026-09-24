@@ -1,4 +1,140 @@
 const KATA_MEMOS = {
+  "drag-drop-zones": {
+    title: "Drag & drop avec zones",
+    tabs: [
+      {
+        id: "method",
+        label: "Méthode",
+        sections: [
+          {
+            title: "Découper l'interaction",
+            items: [
+              {
+                title: "Trois moments à séparer",
+                text: "Un drag & drop se traite rarement dans une seule fonction. Sépare le départ du glisser, le survol d'une zone, puis le dépôt final. Chaque étape a un rôle précis."
+              },
+              {
+                title: "Une donnée à transporter",
+                text: "Au départ du glisser, mémorise ce qui est déplacé. Pour ce kata, l'information peut rester simple : l'élément carte ou une valeur placée dans dataTransfer."
+              },
+              {
+                title: "Une décision au moment du drop",
+                text: "La zone possède déjà une information dans son HTML. Le dépôt doit lire cette information, décider si la zone accepte la carte, puis mettre à jour le message et l'état visuel."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "events",
+        label: "Événements",
+        sections: [
+          {
+            title: "Événements drag & drop",
+            items: [
+              {
+                title: "Début du glisser",
+                text: "dragstart se déclenche sur l'élément draggable. C'est le bon endroit pour préparer la donnée déplacée ou ajouter une classe d'état.",
+                code: `card.addEventListener("dragstart", function (event) {
+  event.dataTransfer.setData("text/plain", "js-card");
+});`
+              },
+              {
+                title: "Autoriser le dépôt",
+                text: "Par défaut, une zone ne reçoit pas drop. Il faut annuler le comportement par défaut pendant dragover sur les zones prévues.",
+                code: `zone.addEventListener("dragover", function (event) {
+  event.preventDefault();
+});`
+              },
+              {
+                title: "Traiter le dépôt",
+                text: "drop est le moment où tu lis la zone ciblée et où tu décides de l'état final. Garde la logique courte : lire, tester, afficher.",
+                code: `zone.addEventListener("drop", function (event) {
+  event.preventDefault();
+  const isAccepted = zone.dataset.accept === "true";
+});`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "dom",
+        label: "DOM",
+        sections: [
+          {
+            title: "Zones, état et rendu",
+            items: [
+              {
+                title: "Parcourir les zones",
+                text: "querySelectorAll récupère toutes les zones. forEach permet ensuite de brancher les mêmes événements sur chacune sans dupliquer le code.",
+                code: `const zones = document.querySelectorAll(".drop-zone");
+
+zones.forEach(function (zone) {
+  // ajouter les listeners de cette zone
+});`
+              },
+              {
+                title: "Lire data-accept",
+                text: "dataset transforme les attributs data-* en propriétés JavaScript. Attention : la valeur lue est une chaîne de caractères, pas un booléen.",
+                code: `const acceptsCard = zone.dataset.accept === "true";`
+              },
+              {
+                title: "Nettoyer avant d'afficher",
+                text: "Avant de marquer une zone valide ou invalide, retire les anciennes classes sur toutes les zones. Cela évite de garder plusieurs résultats visibles.",
+                code: `zones.forEach(function (zone) {
+  zone.classList.remove("is-valid", "is-invalid");
+});`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "css",
+        label: "CSS",
+        sections: [
+          {
+            title: "États visuels utiles",
+            items: [
+              {
+                title: "Carte déplaçable",
+                text: "Le curseur indique l'action possible. Une classe temporaire peut rendre le glisser plus lisible, sans changer la structure HTML.",
+                code: `.card {
+  cursor: grab;
+}
+
+.card.is-dragging {
+  opacity: 0.65;
+}`
+              },
+              {
+                title: "Zone prête",
+                text: "Une classe sur la zone survolée peut aider l'utilisateur à comprendre où il va déposer la carte.",
+                code: `.drop-zone.is-over {
+  border-color: #202633;
+  background: #fff7db;
+}`
+              },
+              {
+                title: "Résultat validé ou refusé",
+                text: "Le starter contient déjà les classes is-valid et is-invalid. Le JavaScript doit seulement choisir laquelle appliquer.",
+                code: `.drop-zone.is-valid {
+  border-color: #27ae60;
+  background: #ecfdf5;
+}
+
+.drop-zone.is-invalid {
+  border-color: #c0392b;
+  background: #fef2f2;
+}`
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "sticker-clic": {
     title: "Sticker au clic",
     tabs: [
