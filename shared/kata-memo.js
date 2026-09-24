@@ -1343,10 +1343,16 @@ selectedIndex = selectedIndex + 1;`
 const arenaRect = arena.getBoundingClientRect();`
               },
               {
-                title: "Offset local x/y",
-                text: "event.clientX et event.clientY sont dans le repere de la fenetre. En retirant left/top de l'arene, tu obtiens la position de la souris dans l'arene.",
-                code: `const offsetX = event.clientX - arenaRect.left;
-const offsetY = event.clientY - arenaRect.top;`
+                title: "Coordonnees souris",
+                text: "event.clientX et event.clientY donnent la position de la souris dans la fenetre. C'est le point de depart pour calculer une position locale.",
+                code: `const mouseX = event.clientX;
+const mouseY = event.clientY;`
+              },
+              {
+                title: "Coordonnees locales x/y",
+                text: "En retirant left/top de l'arene, tu convertis les coordonnees de la fenetre en coordonnees dans l'arene.",
+                code: `const localX = event.clientX - arenaRect.left;
+const localY = event.clientY - arenaRect.top;`
               },
               {
                 title: "Centre du bouton",
