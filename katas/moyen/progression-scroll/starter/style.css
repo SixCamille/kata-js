@@ -1,8 +1,11 @@
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #172033;
-  background: #f8fafc;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #f5f0e8;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, #20242b 0%, #12151b 100%);
+  background-size: 72px 72px, 100% 100%;
 }
 
 .progress {
@@ -11,34 +14,72 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 8px;
-  background: #e2e8f0;
+  height: 10px;
+  background: rgba(245, 240, 232, 0.16);
 }
 
 .bar {
   width: 0%;
   height: 100%;
-  background: #2563eb;
+  background: repeating-linear-gradient(
+    135deg,
+    #f97316 0 12px,
+    #facc15 12px 24px
+  );
+  box-shadow: 0 0 18px rgba(249, 115, 22, 0.55);
 }
 
 main {
-  width: min(760px, calc(100vw - 32px));
-  margin: 70px auto;
+  width: min(820px, calc(100vw - 32px));
+  margin: 84px auto;
 }
 
 h1 {
-  margin: 0 0 24px;
-  font-size: 2.4rem;
+  margin: 0 0 32px;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  line-height: 0.95;
+  font-weight: 400;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #facc15;
 }
 
 section {
-  min-height: 55vh;
-  margin: 0 0 28px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #d6deea;
-  border-radius: 6px;
-  background: #ffffff;
-  font-size: 2rem;
-  font-weight: 800;
+  min-height: 52vh;
+  margin: 0 0 34px;
+  padding: clamp(28px, 6vw, 56px);
+  border-left: 10px solid #f97316;
+  background: rgba(245, 240, 232, 0.08);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+}
+
+section:nth-of-type(even) {
+  border-left-color: #facc15;
+  background: rgba(250, 204, 21, 0.08);
+}
+
+h2 {
+  margin: 0 0 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #facc15;
+}
+
+p {
+  max-width: 62ch;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+section p {
+  margin: 0 0 18px;
 }

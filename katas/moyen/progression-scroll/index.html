@@ -18,6 +18,8 @@
           <h2 id="brief-title">Progression du scroll</h2>
           <p>Une barre fixe doit indiquer la proportion de page déjà parcourue.</p>
           <p>Quand l'utilisateur descend, la largeur de la barre augmente. Elle doit représenter le rapport entre la position actuelle et la hauteur réellement scrollable.</p>
+          <h3>Aide</h3>
+          <p>Pour connaître la hauteur complète d'un élément, contenu invisible inclus, utilisez sa propriété <code>scrollHeight</code>. Pour la page entière, <code>document.documentElement.scrollHeight</code> donne la hauteur totale, tandis que <code>window.innerHeight</code> donne la hauteur visible de la fenêtre.</p>
           <h3>Attendu</h3>
           <ul>
             <li>Ecouter l'événement <code>scroll</code>.</li>
