@@ -2201,17 +2201,30 @@ if (kataMemo && openMemoButton) {
     });
   });
 
-  openMemoButton.addEventListener("click", function () {
+  function openMemoDialog() {
+    document.body.classList.add("is-memo-open");
     memoDialog.showModal();
+  }
+
+  function closeMemoDialog() {
+    memoDialog.close();
+  }
+
+  openMemoButton.addEventListener("click", function () {
+    openMemoDialog();
   });
 
   closeMemoButton.addEventListener("click", function () {
-    memoDialog.close();
+    closeMemoDialog();
   });
 
   memoDialog.addEventListener("click", function (event) {
     if (event.target === memoDialog) {
-      memoDialog.close();
+      closeMemoDialog();
     }
+  });
+
+  memoDialog.addEventListener("close", function () {
+    document.body.classList.remove("is-memo-open");
   });
 }

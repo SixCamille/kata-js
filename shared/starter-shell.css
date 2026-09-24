@@ -23,6 +23,10 @@ body {
   background: var(--paper);
 }
 
+body.is-memo-open {
+  overflow: hidden;
+}
+
 .level-facile {
   --level-color: var(--level-facile);
   --level-soft: rgba(168, 207, 69, 0.22);
@@ -330,11 +334,12 @@ body {
 }
 
 .kata-memo-dialog {
-  width: min(860px, calc(100% - 28px));
-  max-height: calc(100vh - 28px);
+  width: min(860px, calc(100% - 48px));
+  max-height: calc(100vh - 56px);
   padding: 0;
   border: 2px solid var(--line);
   border-radius: 8px;
+  overflow: hidden;
   color: var(--ink);
   background: var(--panel);
   box-shadow: 10px 10px 0 var(--line);
@@ -345,8 +350,9 @@ body {
 }
 
 .kata-memo-panel {
-  max-height: calc(100vh - 32px);
-  overflow: auto;
+  max-height: calc(100vh - 60px);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .kata-memo-header {
