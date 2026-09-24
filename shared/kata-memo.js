@@ -1365,6 +1365,17 @@ const buttonCenterY = buttonRect.top + buttonRect.height / 2;`
                 text: "Quand la souris est trop proche, tire une nouvelle position aleatoire dans les dimensions disponibles de l'arene.",
                 code: `const maxX = arena.clientWidth - button.offsetWidth;
 const newX = Math.random() * maxX;`
+              },
+              {
+                title: "Variante : sens de fuite",
+                text: "Pour une version plus difficile, calcule la direction qui part du pointeur vers le centre du bouton, puis utilise ce decalage pour proposer la prochaine position.",
+                code: `const fleeX = buttonCenterX - event.clientX;
+const fleeY = buttonCenterY - event.clientY;`
+              },
+              {
+                title: "Garder dans l'arene",
+                text: "Apres un deplacement calcule, borne la valeur pour que le bouton reste dans la zone.",
+                code: `const boundedX = Math.max(0, Math.min(maxX, nextX));`
               }
             ]
           }
