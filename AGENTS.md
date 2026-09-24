@@ -15,6 +15,7 @@ Le public est composé d'apprenants de 2e année. Les contenus doivent donc rest
 - Les pop-ups de mémo doivent avant tout fournir de la syntaxe copiable, pas une méthode de résolution. Elles peuvent montrer comment écrire un tableau, un écouteur d'événement, un timer, une classe CSS ou une propriété de style, mais ne doivent pas assembler ces briques en solution complète du kata.
 - Les mémos doivent toujours contenir exactement deux onglets : `JS` et `CSS`. Ne pas ajouter d'onglet `Méthode`, `Calcul`, `Clavier` ou autre.
 - Les exemples du mémo rappellent les notions utiles au kata, quel que soit le niveau, mais ils peuvent rester génériques et ne doivent pas forcément reprendre les noms, la structure ou le scénario exacts du kata.
+- Les exemples affichés dans un mémo doivent être choisis explicitement dans une table de référence par kata, avec un ordre défini pour `JS` et pour `CSS`. Ne pas sélectionner les mémos par détection automatique de mots-clés dans les concepts.
 - Pour les katas faciles, une tolérance est possible quand la syntaxe montrée correspond presque à toute la logique attendue ; même dans ce cas, garder les exemples courts et éviter de fournir une correction complète.
 - Fournir des ressources ciblées quand une API précise serait artificielle à connaître par coeur.
 - Calibrer les katas pour un live coding individuel de 20 minutes.
