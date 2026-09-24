@@ -1668,23 +1668,73 @@ const COURSE_KATA_MEMO_HINTS = [
 ];
 
 function createCourseKataMemo(title, concepts, cssCode) {
+  const conceptList = concepts.split(",").map(function (concept) {
+    return concept.trim();
+  });
+  const mainEvent = conceptList[0] || "événement";
+  const changingValues = conceptList.slice(1, 4).join(", ") || "valeurs à mettre à jour";
+
   return {
     title,
     tabs: [
+      {
+        id: "method",
+        label: "Méthode",
+        sections: [
+          {
+            title: "Comprendre le kata",
+            items: [
+              {
+                title: "Découper le comportement",
+                text: "Ce kata mobilise surtout : " + concepts + ". Commence par écrire en français ce qui déclenche l'action, quelles valeurs changent, puis ce que l'écran doit montrer."
+              },
+              {
+                title: "Repérer la source de vérité",
+                text: "Cherche la valeur qui décrit l'état actuel : un booléen, un index, une position, un tableau ou un pourcentage. Le rendu doit partir de cette valeur plutôt que de plusieurs petits états dispersés."
+              },
+              {
+                title: "Tester sans deviner",
+                text: "Teste d'abord les sélections et les valeurs avec console.log. Quand les valeurs sont justes, branche seulement ensuite le rendu visuel."
+              }
+            ]
+          }
+        ]
+      },
       {
         id: "js",
         label: "JS",
         sections: [
           {
-            title: "Briques utiles",
+            title: "Briques JavaScript",
             items: [
               {
-                title: "Concepts du kata",
-                text: "Ce kata mobilise surtout : " + concepts + ". Commence par identifier l'événement principal et les valeurs qui changent."
+                title: "Sélectionner les éléments",
+                text: "Commence par récupérer les éléments du starter que ton script va lire ou modifier.",
+                code: `const zone = document.querySelector(".zone");
+const button = document.querySelector("button");`
               },
               {
-                title: "Avancer par étapes",
-                text: "Teste d'abord les sélections et les valeurs avec console.log, puis connecte seulement ensuite le rendu visuel."
+                title: "Réagir au bon événement",
+                text: "L'événement principal de ce kata est probablement lié à : " + mainEvent + ". Utilise le type d'événement adapté, puis vérifie ce que l'objet event te donne.",
+                code: `button.addEventListener("click", function (event) {
+  console.log(event);
+});`
+              },
+              {
+                title: "Garder les valeurs utiles",
+                text: "Les valeurs à suivre tournent autour de : " + changingValues + ". Stocke-les dans des variables simples avant de modifier l'interface.",
+                code: `let currentValue = 0;
+
+function render() {
+  // mettre à jour l'écran depuis currentValue
+}`
+              },
+              {
+                title: "Mettre à jour le DOM",
+                text: "Selon le kata, le rendu peut passer par du texte, une classe CSS ou une propriété de style ciblée.",
+                code: `element.textContent = currentValue;
+element.classList.toggle("is-active", Boolean(currentValue));
+element.style.transform = "translateX(" + currentValue + "px)";`
               }
             ]
           }
@@ -1695,12 +1745,27 @@ function createCourseKataMemo(title, concepts, cssCode) {
         label: "CSS",
         sections: [
           {
-            title: "Repère CSS",
+            title: "Repères CSS",
             items: [
               {
                 title: "Classes et propriétés utiles",
-                text: "Le starter fournit déjà les classes de base. Le JavaScript doit les activer ou modifier quelques propriétés ciblées.",
+                text: "Le starter fournit déjà les classes de base. Le JavaScript doit les activer ou modifier seulement quelques propriétés ciblées.",
                 code: cssCode
+              },
+              {
+                title: "Préparer les états",
+                text: "Un état visuel clair rend le JavaScript plus simple : une classe décrit le changement, le CSS porte l'apparence.",
+                code: `.element {
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.element.is-active {
+  opacity: 1;
+}`
+              },
+              {
+                title: "Limiter les surprises",
+                text: "Quand un élément bouge ou apparaît, fixe son cadre avec position, overflow, min-height ou transform pour éviter les sauts de layout."
               }
             ]
           }
