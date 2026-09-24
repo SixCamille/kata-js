@@ -18,6 +18,9 @@ body {
 .kata-stage {
   width: min(560px, calc(100% - 32px));
   padding: 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 32px rgba(23, 32, 51, 0.18);
 }
 
 h1 {
@@ -27,7 +30,7 @@ h1 {
 
 .intro {
   margin: 0 0 24px;
-  color: #0c4a6e;
+  color: #475569;
   line-height: 1.5;
 }
 
