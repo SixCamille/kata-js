@@ -121,9 +121,12 @@ const percent = ratio * 100;`
   },
   relativeCoordinates: {
     title: "Coordonnées relatives",
-    text: "Pour obtenir une position locale, on retire la position du parent à la position de l'événement.",
-    code: `const x = event.clientX - rect.left;
-const y = event.clientY - rect.top;`
+    text: "event est un paramètre fourni par le navigateur quand l'action se produit. Pour une position locale, on retire la position du parent aux coordonnées de l'événement.",
+    code: `zone.addEventListener("click", function (event) {
+  const rect = zone.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+});`
   },
   distance: {
     title: "Distance entre deux points",
