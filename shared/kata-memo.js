@@ -3,7 +3,7 @@ const KATA_MEMOS = {};
 const JS_MEMO_ITEMS = {
   click: {
     title: "Écouter un clic",
-    text: "addEventListener branche une fonction sur une action utilisateur. Le mémo montre la syntaxe, pas la décision à prendre dans le kata.",
+    text: "addEventListener branche une fonction sur une action utilisateur, comme un clic sur un bouton.",
     code: `button.addEventListener("click", function () {
   console.log("clic");
 });`
