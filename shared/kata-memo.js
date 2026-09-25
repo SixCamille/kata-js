@@ -317,7 +317,7 @@ const KATA_MEMO_REFERENCES = {
   "recherche-clavier": { title: "Recherche clavier", js: ["input", "keydown", "array", "state"], css: ["list", "stateClass"] },
   "retour-haut": { title: "Retour en haut", js: ["scroll", "click", "classList"], css: ["stateClass", "transition"] },
   "rond-rebond": { title: "Rond qui rebondit", js: ["interval", "state", "condition", "style"], css: ["positionFrame", "transform"] },
-  "sticker-clic": { title: "Sticker au clic", js: ["click", "relativeCoordinates", "createElement", "style"], css: ["positionFrame"] },
+  "sticker-clic": { title: "Sticker au clic", js: ["click", "relativeCoordinates", "createElement"], css: ["positionFrame"] },
   "sticker-orientation": { title: "Sticker emoji orienté", js: ["click", "relativeCoordinates", "createElement", "random"], css: ["positionFrame", "transform", "variable"] },
   "terminal-fictif": { title: "Terminal fictif", js: ["submit", "condition", "array", "createElement"], css: ["list", "textFeedback"] },
   "theme-switch": { title: "Thème clair / sombre", js: ["click", "classList", "state", "attribute"], css: ["variable", "stateClass"] },
