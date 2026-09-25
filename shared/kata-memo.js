@@ -171,6 +171,16 @@ element.classList.toggle("is-active");`
     code: `message.textContent = "Bonjour";
 console.log(field.value.length);`
   },
+  inputType: {
+    title: "Type d'un input",
+    text: "type choisit le comportement du champ. Quelques valeurs courantes : text, email, number, range, checkbox, password.",
+    code: `console.log(field.type);
+
+field.type = "email";
+field.type = "number";
+field.type = "password";
+field.type = "text";`
+  },
   style: {
     title: "Modifier un style",
     text: "La propriété style modifie une règle CSS directement sur un élément.",
@@ -304,7 +314,7 @@ const KATA_MEMO_REFERENCES = {
   "menu-radial": { title: "Menu radial", js: ["click", "state", "angle", "attribute"], css: ["positionFrame", "transform", "transition"] },
   "menu-toggle": { title: "Menu ouvrant / fermant", js: ["click", "classList", "attribute"], css: ["hiddenPanel", "transition"] },
   "message-temporaire": { title: "Message temporaire", js: ["click", "classList", "timeout"], css: ["stateClass", "transition"] },
-  "mot-de-passe": { title: "Afficher / masquer un mot de passe", js: ["click", "state", "condition", "attribute"], css: ["textFeedback"] },
+  "mot-de-passe": { title: "Afficher / masquer un mot de passe", js: ["click", "state", "condition", "inputType"], css: ["textFeedback"] },
   "neige": { title: "Neige dans la fenêtre", js: ["interval", "createElement", "random"], css: ["positionFrame", "transform"] },
   "onglets": { title: "Onglets", js: ["click", "classList", "attribute"], css: ["hiddenPanel", "stateClass"] },
   "parallax-scroll": { title: "Parallax scroll", js: ["scroll", "attribute", "style"], css: ["positionFrame", "transform"] },
