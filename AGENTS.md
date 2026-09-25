@@ -2,7 +2,7 @@
 
 ## Contexte du projet
 
-Ce repo contient le site/repo KATA pour les katas JavaScript visuels du module EPSI B2 FI.
+Ce repo contient le site/repo KATA pour les katas JavaScript visuels destinés à des apprenants de 2e année.
 
 Le public est composé d'apprenants de 2e année. Les contenus doivent donc rester accessibles, mais ne doivent pas être trop simplistes : chaque ajout doit intégrer quelques notions de cours utiles, explicites et réutilisables.
 

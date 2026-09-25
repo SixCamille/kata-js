@@ -1,10 +1,10 @@
-# Brief EPSI KATA
+# Brief KATA JS
 
-Source : BRAIN, noeud `obj_epsi_b2_javascript_creer_le_repo_git_des_katas_visuels`.
+Source : brief initial du repo KATA JS.
 
 ## Objectif
 
-Créer un repo/site unique pour les katas JavaScript visuels du module EPSI B2 FI.
+Créer un repo/site unique pour des katas JavaScript visuels de niveau 2e année.
 
 Le support doit servir à deux moments :
 
@@ -13,7 +13,7 @@ Le support doit servir à deux moments :
 
 ## Public
 
-Apprenants EPSI B2 FI.
+Apprenants de 2e année.
 
 Le support doit rester simple, lisible et exploitable par des profils débutants à intermédiaires en JavaScript vanilla.
 
