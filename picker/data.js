@@ -226,10 +226,10 @@ const KATAS = [
   {
     id: "menu-radial",
     title: "Menu radial",
-    level: "difficile",
+    level: "moyen",
     summary: "Ouvrir plusieurs actions autour d'un bouton central.",
     concepts: ["click", "état", "Math.cos", "Math.sin", "transform"],
-    starter: "katas/difficile/menu-radial/index.html"
+    starter: "katas/moyen/menu-radial/index.html"
   },
   {
     id: "terminal-fictif",

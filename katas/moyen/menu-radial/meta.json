@@ -1,6 +1,6 @@
 {
   "title": "Menu radial",
-  "level": "difficile",
+  "level": "moyen",
   "concepts": ["click", "état", "Math.cos", "Math.sin", "transform"],
   "duration": 20,
   "hasStarter": true,

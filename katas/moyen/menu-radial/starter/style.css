@@ -45,3 +45,19 @@ button {
   background: #bbf7d0;
   transition: transform 220ms ease, opacity 220ms ease;
 }
+
+.radial-menu.is-open .action:nth-child(1) {
+  transform: translate(-96px, 0);
+}
+
+.radial-menu.is-open .action:nth-child(2) {
+  transform: translate(0, -96px);
+}
+
+.radial-menu.is-open .action:nth-child(3) {
+  transform: translate(96px, 0);
+}
+
+.radial-menu.is-open .action:nth-child(4) {
+  transform: translate(0, 96px);
+}
