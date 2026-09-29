@@ -50,6 +50,35 @@ const JS_MEMO_ITEMS = {
   event.preventDefault();
 });`
   },
+  dragStart: {
+    title: "Début du déplacement",
+    text: "dragstart se déclenche sur l'élément draggable au moment où l'utilisateur commence à le déplacer.",
+    code: `card.addEventListener("dragstart", function (event) {
+  event.dataTransfer.setData("text/plain", card.id);
+});`
+  },
+  dragOver: {
+    title: "Autoriser une zone",
+    text: "Par défaut, une zone refuse le dépôt. preventDefault dans dragover indique qu'elle peut recevoir un élément.",
+    code: `zone.addEventListener("dragover", function (event) {
+  event.preventDefault();
+});`
+  },
+  drop: {
+    title: "Réagir au dépôt",
+    text: "drop se déclenche quand l'utilisateur relâche l'élément au-dessus d'une zone autorisée.",
+    code: `zone.addEventListener("drop", function (event) {
+  event.preventDefault();
+  console.log("élément déposé");
+});`
+  },
+  dragData: {
+    title: "Transporter une petite donnée",
+    text: "dataTransfer permet de mémoriser une chaîne au départ du drag, puis de la relire au moment du drop.",
+    code: `event.dataTransfer.setData("text/plain", "valeur");
+
+const value = event.dataTransfer.getData("text/plain");`
+  },
   scroll: {
     title: "Lire le scroll",
     text: "window.scrollY donne la distance déjà parcourue depuis le haut de la page.",
@@ -300,7 +329,7 @@ const KATA_MEMO_REFERENCES = {
   "compteur-caracteres": { title: "Compteur de caractères", js: ["input", "text"], css: ["textFeedback"] },
   "compteur-plus-moins": { title: "Compteur + / -", js: ["click", "state", "text", "condition"], css: ["textFeedback"] },
   "curseur-personnalise": { title: "Curseur personnalisé", js: ["mouse", "style"], css: ["transform", "positionFrame"] },
-  "drag-drop-zones": { title: "Drag & drop avec zones", js: ["dragDrop", "attribute", "classList"], css: ["stateClass"] },
+  "drag-drop-zones": { title: "Drag & drop avec zones", js: ["dragStart", "dragOver", "drop", "dragData", "attribute", "classList"], css: ["stateClass"] },
   "esquive-simple": { title: "Jeu d'esquive simple", js: ["keydown", "interval", "rect", "distance"], css: ["positionFrame"] },
   "etoiles-notation": { title: "Étoiles de notation", js: ["click", "forEach", "state", "classList"], css: ["stateClass"] },
   "fenetre-deplacable": { title: "Fenetre deplacable", js: ["mouse", "state", "relativeCoordinates", "style"], css: ["positionFrame"] },
