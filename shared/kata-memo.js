@@ -86,6 +86,14 @@ const value = event.dataTransfer.getData("text/plain");`
   console.log(window.scrollY);
 });`
   },
+  scrollToElement: {
+    title: "Faire défiler un élément",
+    text: "scrollTo déplace le scroll d'un conteneur. top: 0 indique le début vertical de cet élément.",
+    code: `zone.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});`
+  },
   interval: {
     title: "Répéter avec un timer",
     text: "setInterval relance une fonction à intervalle régulier. clearInterval l'arrête.",
@@ -356,7 +364,7 @@ const KATA_MEMO_REFERENCES = {
   "progression-scroll": { title: "Progression du scroll", js: ["scroll", "percent", "style"], css: ["width"] },
   "puzzle-reordonnable": { title: "Puzzle réordonnable", js: ["dragDrop", "array", "state"], css: ["list"] },
   "recherche-clavier": { title: "Recherche clavier", js: ["input", "keydown", "array", "state"], css: ["list", "stateClass"] },
-  "retour-haut": { title: "Retour en haut", js: ["scroll", "click", "classList"], css: ["stateClass", "transition"] },
+  "retour-haut": { title: "Retour en haut", js: ["scroll", "click", "classList", "scrollToElement"], css: ["stateClass", "transition"] },
   "rond-rebond": { title: "Rond qui rebondit", js: ["interval", "state", "condition", "style"], css: ["positionFrame", "transform"] },
   "sticker-clic": { title: "Sticker au clic", js: ["click", "relativeCoordinates", "createElement"], css: ["positionFrame"] },
   "sticker-orientation": { title: "Sticker emoji orienté", js: ["click", "relativeCoordinates", "createElement", "random"], css: ["positionFrame", "transform", "variable"] },
