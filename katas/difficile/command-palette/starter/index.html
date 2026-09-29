@@ -6,14 +6,17 @@
     <title>Playground - Command palette</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body class="preview-palette-open">
     <main class="kata-stage">
       <h1>Command palette</h1>
       <p class="intro">Ouvre la palette, déplace la sélection avec les flèches, puis appuie sur Entrée pour appliquer une couleur au fond.</p>
-      <button class="toggle-palette" type="button" aria-expanded="true">Palette de couleurs</button>
+      <button class="toggle-palette" type="button" aria-expanded="false">Ouvrir la palette</button>
       <p class="hint">Commande clavier attendue : Ctrl + K pour ouvrir ou fermer, Escape pour fermer.</p>
-      <section class="palette is-open" aria-label="Palette de couleurs">
-        <p class="palette-title">Choisir une couleur</p>
+      <section class="palette" aria-label="Palette de couleurs">
+        <div class="palette-header">
+          <p class="palette-title">Choisir une couleur</p>
+          <button class="close-palette" type="button">Fermer la palette</button>
+        </div>
         <div class="color-options">
           <button class="color-option is-selected" type="button" data-color="#38bdf8" style="--color: #38bdf8;">Ciel</button>
           <button class="color-option" type="button" data-color="#f97316" style="--color: #f97316;">Corail</button>
