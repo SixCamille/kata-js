@@ -263,6 +263,14 @@ const CSS_MEMO_ITEMS = {
   transform: translate(20px, 10px);
 }`
   },
+  transformOrigin: {
+    title: "Point de rotation",
+    text: "transform-origin choisit le point fixe autour duquel un élément tourne. Pour une aiguille, on place souvent ce point à sa base.",
+    code: `.needle {
+  transform-origin: bottom center;
+  transform: rotate(45deg);
+}`
+  },
   positionFrame: {
     title: "Repère de position",
     text: "Un parent en relative peut servir de cadre à des enfants positionnés en absolute.",
@@ -368,7 +376,7 @@ const KATA_MEMO_REFERENCES = {
   "fond-scroll": { title: "Fond lié au scroll", js: ["scroll", "percent", "style"], css: ["transition"] },
   "formulaire-dynamique": { title: "Formulaire dynamique", js: ["click", "createElement", "array"], css: ["list"] },
   "header-intelligent": { title: "Header intelligent", js: ["scroll", "state", "classList"], css: ["transform", "transition"] },
-  "horloge-analogique": { title: "Horloge analogique", js: ["date", "interval", "style"], css: ["transform", "positionFrame"] },
+  "horloge-analogique": { title: "Horloge analogique", js: ["date", "interval", "style"], css: ["transform", "transformOrigin", "positionFrame"] },
   "image-flip": { title: "Image qui flip", js: ["click", "classList"], css: ["transform", "transition"] },
   "image-survol": { title: "Image qui change au survol", js: ["mouse", "attribute"], css: ["transition"] },
   "interface-tinder": { title: "Interface Tinder", js: ["mouse", "array", "style"], css: ["positionFrame", "transform"] },
