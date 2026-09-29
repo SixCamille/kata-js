@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -5,12 +11,16 @@ body {
   place-items: center;
   font-family: Arial, Helvetica, sans-serif;
   color: #172033;
-  background: #f8fafc;
+  background: #38bdf8;
+  transition: background 220ms ease;
 }
 
 .kata-stage {
-  width: min(760px, calc(100vw - 32px));
+  width: min(680px, calc(100vw - 32px));
   padding: 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
 }
 
 h1 {
@@ -19,7 +29,7 @@ h1 {
 }
 
 .intro {
-  margin: 0 0 24px;
+  margin: 0 0 16px;
   color: #475569;
   line-height: 1.5;
 }
@@ -30,31 +40,80 @@ textarea {
   font: inherit;
 }
 
+.toggle-palette {
+  border: 0;
+  border-radius: 4px;
+  padding: 11px 16px;
+  color: #ffffff;
+  background: #172033;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hint {
+  margin: 14px 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
 .palette {
-  position: fixed;
-  left: 50%;
-  top: 90px;
-  width: min(560px, calc(100vw - 32px));
   display: none;
-  padding: 16px;
+  margin-top: 22px;
+  padding: 18px;
   border: 1px solid #d6deea;
   border-radius: 8px;
   background: #ffffff;
-  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.25);
-  transform: translateX(-50%);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
 }
 
 .palette.is-open {
   display: block;
 }
 
-.commands {
-  margin: 12px 0 0;
-  padding: 0;
-  list-style: none;
+.palette-title {
+  margin: 0 0 14px;
+  font-weight: 700;
 }
 
-.commands li.active {
-  color: #ffffff;
-  background: #2563eb;
+.color-options {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.color-option {
+  min-height: 72px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 10px 8px;
+  color: #172033;
+  background: linear-gradient(var(--color), var(--color)) top / 100% 34px no-repeat, #f8fafc;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.color-option.is-selected {
+  border-color: #172033;
+  box-shadow: 0 0 0 4px rgba(23, 32, 51, 0.18);
+  transform: translateY(-2px);
+}
+
+.status {
+  min-height: 1.5rem;
+  margin: 18px 0 0;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .color-options {
+    grid-template-columns: 1fr;
+  }
+
+  .color-option {
+    min-height: 56px;
+    background-size: 48px 100%;
+    background-position: left;
+    padding-left: 64px;
+    text-align: left;
+  }
 }

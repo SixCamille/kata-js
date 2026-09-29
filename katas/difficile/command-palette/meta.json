@@ -3,9 +3,10 @@
   "level": "difficile",
   "concepts": [
     "keydown",
-    "input",
     "tableau",
-    "état sélectionné"
+    "état sélectionné",
+    "classList",
+    "style"
   ],
   "duration": 20,
   "hasStarter": true,

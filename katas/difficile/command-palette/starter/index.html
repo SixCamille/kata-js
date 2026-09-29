@@ -9,13 +9,20 @@
   <body>
     <main class="kata-stage">
       <h1>Command palette</h1>
-      <p class="intro">La palette doit s'ouvrir au clavier, filtrer les commandes et valider la sélection.</p>
-      <p class="hint">Appuie sur Ctrl + K pour ouvrir la palette.</p>
-      <section class="palette">
-        <input type="search" placeholder="Chercher..." aria-label="Commande">
-        <ul class="commands"></ul>
+      <p class="intro">Ouvre la palette, déplace la sélection avec les flèches, puis appuie sur Entrée pour appliquer une couleur au fond.</p>
+      <button class="toggle-palette" type="button" aria-expanded="true">Palette de couleurs</button>
+      <p class="hint">Commande clavier attendue : Ctrl + K pour ouvrir ou fermer, Escape pour fermer.</p>
+      <section class="palette is-open" aria-label="Palette de couleurs">
+        <p class="palette-title">Choisir une couleur</p>
+        <div class="color-options">
+          <button class="color-option is-selected" type="button" data-color="#38bdf8" style="--color: #38bdf8;">Ciel</button>
+          <button class="color-option" type="button" data-color="#f97316" style="--color: #f97316;">Corail</button>
+          <button class="color-option" type="button" data-color="#22c55e" style="--color: #22c55e;">Menthe</button>
+          <button class="color-option" type="button" data-color="#a855f7" style="--color: #a855f7;">Lilas</button>
+          <button class="color-option" type="button" data-color="#facc15" style="--color: #facc15;">Soleil</button>
+        </div>
       </section>
-      <p class="status">Aucune commande lancée.</p>
+      <p class="status">Couleur sélectionnée : Ciel.</p>
     </main>
     <script src="script.js"></script>
   </body>
