@@ -43,6 +43,19 @@ const JS_MEMO_ITEMS = {
   console.log(event.clientX, event.clientY);
 });`
   },
+  mouseDrag: {
+    title: "Attraper puis relâcher",
+    text: "Pour un déplacement manuel, on garde souvent un booléen entre mousedown et mouseup.",
+    code: `let isDragging = false;
+
+handle.addEventListener("mousedown", function () {
+  isDragging = true;
+});
+
+document.addEventListener("mouseup", function () {
+  isDragging = false;
+});`
+  },
   dragDrop: {
     title: "Événements drag & drop",
     text: "dragover et drop ont souvent besoin de preventDefault pour autoriser le dépôt.",
@@ -269,6 +282,17 @@ const CSS_MEMO_ITEMS = {
   transition: transform 180ms ease, opacity 180ms ease;
 }`
   },
+  grabCursor: {
+    title: "Curseur de prise",
+    text: "grab indique qu'un élément peut être attrapé. grabbing peut marquer l'état pendant le déplacement.",
+    code: `.handle {
+  cursor: grab;
+}
+
+.handle.is-dragging {
+  cursor: grabbing;
+}`
+  },
   width: {
     title: "Largeur pilotable",
     text: "Une largeur de départ claire permet ensuite à JavaScript de modifier seulement la valeur.",
@@ -332,7 +356,7 @@ const KATA_MEMO_REFERENCES = {
   "chat-simule": { title: "Chat simule", js: ["submit", "createElement", "timeout"], css: ["list", "textFeedback"] },
   "checkbox-section": { title: "Afficher selon une checkbox", js: ["change", "condition", "classList"], css: ["hiddenPanel"] },
   "command-palette": { title: "Command palette", js: ["keydown", "click", "array", "state", "classList", "style", "attribute"], css: ["hiddenPanel", "stateClass", "transition"] },
-  "comparateur-images-enrichi": { title: "Comparateur d'images enrichi", js: ["mouse", "state", "rect", "percent", "style"], css: ["positionFrame", "width"] },
+  "comparateur-images-enrichi": { title: "Comparateur d'images enrichi", js: ["mouseDrag", "mouse", "state", "rect", "percent", "style"], css: ["positionFrame", "width", "grabCursor"] },
   "compteur-caracteres": { title: "Compteur de caractères", js: ["input", "text"], css: ["textFeedback"] },
   "compteur-plus-moins": { title: "Compteur + / -", js: ["click", "state", "text", "condition"], css: ["textFeedback"] },
   "curseur-personnalise": { title: "Curseur personnalisé", js: ["mouse", "style"], css: ["transform", "positionFrame"] },
