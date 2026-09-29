@@ -120,14 +120,6 @@ const KATAS = [
     starter: "katas/difficile/drag-drop-zones/index.html"
   },
   {
-    id: "chrono-todo",
-    title: "Chronomètre de todo list",
-    level: "difficile",
-    summary: "Combiner formulaire, liste, et chronometre simple.",
-    concepts: ["submit", "tableau", "setInterval", "état composé"],
-    starter: "katas/difficile/chrono-todo/index.html"
-  },
-  {
     id: "theme-switch",
     title: "Thème clair / sombre",
     level: "facile",

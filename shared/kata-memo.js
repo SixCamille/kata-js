@@ -323,7 +323,6 @@ const KATA_MEMO_REFERENCES = {
   "changer-couleur-fond": { title: "Changer la couleur du fond", js: ["click", "array", "state", "style"], css: ["transition"] },
   "chat-simule": { title: "Chat simule", js: ["submit", "createElement", "timeout"], css: ["list", "textFeedback"] },
   "checkbox-section": { title: "Afficher selon une checkbox", js: ["change", "condition", "classList"], css: ["hiddenPanel"] },
-  "chrono-todo": { title: "Chronomètre de todo list", js: ["submit", "array", "interval", "createElement"], css: ["list", "textFeedback"] },
   "command-palette": { title: "Command palette", js: ["keydown", "input", "array", "state"], css: ["list", "stateClass"] },
   "comparateur-images-enrichi": { title: "Comparateur d'images enrichi", js: ["mouse", "percent", "style"], css: ["positionFrame", "width"] },
   "compteur-caracteres": { title: "Compteur de caractères", js: ["input", "text"], css: ["textFeedback"] },
