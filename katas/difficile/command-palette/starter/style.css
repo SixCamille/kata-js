@@ -57,18 +57,27 @@ textarea {
 }
 
 .palette {
+  position: fixed;
+  left: 50%;
+  top: 80px;
+  z-index: 10;
   display: none;
-  margin-top: 22px;
+  width: min(560px, calc(100vw - 32px));
   padding: 18px;
   border: 1px solid #d6deea;
   border-radius: 8px;
   background: #ffffff;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.28);
+  transform: translateX(-50%);
 }
 
 .palette.is-open,
 .preview-palette-open .palette {
   display: block;
+}
+
+.preview-palette-open .kata-stage {
+  filter: saturate(0.85);
 }
 
 .palette-header {
