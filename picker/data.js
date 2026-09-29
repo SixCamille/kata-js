@@ -476,7 +476,7 @@ const KATAS = [
     title: "Comparateur d'images enrichi",
     level: "difficile",
     summary: "Gérer un avant/après avec déplacement fluide et contraintes de bord.",
-    concepts: ["mousedown","mousemove","pourcentage","style.width"],
+    concepts: ["mousedown","mousemove","mouseup","getBoundingClientRect","pourcentage","style.width","style.left"],
     starter: "katas/difficile/comparateur-images-enrichi/index.html"
   }
 ];

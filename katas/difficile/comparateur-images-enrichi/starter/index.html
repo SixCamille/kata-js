@@ -9,12 +9,17 @@
   <body>
     <main class="kata-stage">
       <h1>Comparateur d'images enrichi</h1>
-      <p class="intro">Le séparateur doit révéler plus ou moins l'image après, sans sortir du cadre.</p>
-      <section class="compare">
-        <div class="image before">Avant</div>
-        <div class="image after">Après</div>
-        <button class="handle" type="button" aria-label="Déplacer le comparateur"></button>
+      <p class="intro">Déplace le séparateur pour révéler plus ou moins le squelette du dinosaure.</p>
+      <section class="compare" aria-label="Comparaison entre un dinosaure coloré et son squelette">
+        <img class="image image-base" src="dinosaure-couleur.png" alt="Dinosaure orange en vue de profil">
+        <div class="image image-reveal">
+          <img src="dinosaure-squelette.png" alt="Squelette lumineux du même dinosaure">
+        </div>
+        <button class="handle" type="button" aria-label="Déplacer le comparateur">
+          <span></span>
+        </button>
       </section>
+      <p class="status">Squelette révélé : <strong>50%</strong></p>
     </main>
     <script src="script.js"></script>
   </body>
