@@ -324,7 +324,7 @@ const KATA_MEMO_REFERENCES = {
   "barre-progression": { title: "Barre de progression", js: ["interval", "percent", "style"], css: ["width", "transition"] },
   "bouton-esquive": { title: "Bouton qui esquive", js: ["mouse", "rect", "distance", "condition"], css: ["positionFrame"] },
   "bouton-fuit": { title: "Bouton qui fuit", js: ["mouse", "rect", "relativeCoordinates", "random"], css: ["positionFrame"] },
-  "bouton-jaime": { title: "Bouton J'aime", js: ["click", "state", "text", "classList"], css: ["stateClass"] },
+  "bouton-jaime": { title: "Bouton J'aime", js: ["click", "state", "text"], css: ["transition"] },
   "carte-3d-interactive": { title: "Carte 3D interactive", js: ["mouse", "rect", "style"], css: ["transform", "variable", "transition"] },
   "carte-gratter": { title: "Carte à gratter", js: ["mouse", "relativeCoordinates", "createElement", "percent"], css: ["positionFrame"] },
   "carte-inclinee": { title: "Carte inclinée", js: ["mouse", "rect", "style"], css: ["transform", "transition"] },

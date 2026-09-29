@@ -4,23 +4,56 @@ body {
   display: grid;
   place-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: #172033;
-  background: #f8fafc;
+  color: #2f1b2c;
+  background:
+    radial-gradient(circle at top left, #ffe3ef 0, transparent 32%),
+    linear-gradient(135deg, #fff7fb 0%, #f5fbff 100%);
 }
 
 .kata-stage {
-  width: min(760px, calc(100vw - 32px));
-  padding: 24px;
+  width: min(420px, calc(100vw - 32px));
+}
+
+.post-card {
+  padding: 32px 28px;
+  border: 1px solid #ffd1df;
+  border-radius: 8px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 18px 40px rgba(116, 58, 87, 0.14);
+}
+
+.post-illustration {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #f43f5e;
+  background: #fff0f5;
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #be416a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 h1 {
-  margin: 0 0 10px;
-  font-size: 1.6rem;
+  margin: 0 0 12px;
+  font-size: 1.75rem;
 }
 
 .intro {
-  margin: 0 0 24px;
-  color: #475569;
+  margin: 0 auto 24px;
+  max-width: 260px;
+  color: #6b5264;
   line-height: 1.5;
 }
 
@@ -31,20 +64,23 @@ textarea {
 }
 
 .like-button {
-  border: 1px solid #ef4444;
-  border-radius: 4px;
-  padding: 12px 16px;
-  color: #ef4444;
-  background: #ffffff;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 22px;
+  color: #ffffff;
+  background: #f43f5e;
   font-weight: 700;
   cursor: pointer;
+  box-shadow: 0 10px 18px rgba(244, 63, 94, 0.24);
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 
-.like-button.is-liked {
-  color: #ffffff;
-  background: #ef4444;
+.like-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(244, 63, 94, 0.28);
 }
 
-.status {
-  font-weight: 700;
+.like-button:focus-visible {
+  outline: 3px solid #fecdd3;
+  outline-offset: 4px;
 }

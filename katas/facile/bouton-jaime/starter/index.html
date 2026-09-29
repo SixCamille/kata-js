@@ -8,10 +8,13 @@
   </head>
   <body>
     <main class="kata-stage">
-      <h1>Bouton J'aime</h1>
-      <p class="intro">Le bouton doit alterner entre aimé et non aimé, puis ajuster le compteur.</p>
-      <button class="like-button" type="button" aria-pressed="false">J'aime</button>
-      <p class="status"><span class="count">12</span> likes</p>
+      <section class="post-card" aria-labelledby="post-title">
+        <div class="post-illustration" aria-hidden="true">&hearts;</div>
+        <p class="eyebrow">Mini interaction</p>
+        <h1 id="post-title">Bouton J'aime</h1>
+        <p class="intro">Fais changer le texte du bouton à chaque clic.</p>
+        <button class="like-button" type="button">J'aime</button>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>
