@@ -26,6 +26,7 @@ const KataCards = (function () {
     const preview = document.createElement("iframe");
     preview.src = getPreviewPath(kata, root);
     preview.title = "Apercu du kata " + kata.title;
+    preview.loading = "lazy";
     preview.tabIndex = -1;
     preview.setAttribute("scrolling", "no");
     previewLink.append(preview);
