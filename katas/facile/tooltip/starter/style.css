@@ -16,7 +16,9 @@ body {
   place-items: center;
   font-family: Arial, Helvetica, sans-serif;
   color: #172033;
-  background: #f8fafc;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 32rem),
+    linear-gradient(135deg, #eef6ff 0%, #f8fafc 46%, #fff7ed 100%);
 }
 
 .kata-stage {
@@ -24,13 +26,29 @@ body {
   padding: 24px;
 }
 
+.hero-card {
+  max-width: 620px;
+  margin-bottom: 18px;
+}
+
+.eyebrow,
+.card-label {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 h1 {
   margin: 0 0 10px;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .intro {
-  margin: 0 0 24px;
+  max-width: 56ch;
+  margin: 0;
   color: #475569;
   line-height: 1.5;
 }
@@ -41,36 +59,125 @@ textarea {
   font: inherit;
 }
 
+.tooltip-board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.demo-card {
+  min-height: 220px;
+  padding: 22px;
+  border: 1px solid #d6e0ef;
+  border-radius: 8px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 50px rgba(23, 32, 51, 0.12);
+}
+
+.demo-card--example {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+}
+
 .tooltip-zone {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  padding-top: 82px;
+}
+
+.tooltip-zone--example {
+  padding-top: 92px;
 }
 
 .info-button {
-  width: 44px;
-  height: 44px;
-  border: 0;
+  min-width: 52px;
+  height: 52px;
+  border: 2px solid #bfdbfe;
   border-radius: 50%;
   color: #ffffff;
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #0f766e);
   font-weight: 700;
   cursor: pointer;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.24);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.info-button:hover,
+.info-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(37, 99, 235, 0.28);
+}
+
+.info-button:focus-visible {
+  outline: 3px solid rgba(14, 165, 233, 0.35);
+  outline-offset: 4px;
+}
+
+.info-button--example {
+  min-width: 68px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0f766e, #16a34a);
 }
 
 .tooltip {
   position: absolute;
   left: 50%;
-  bottom: calc(100% + 10px);
-  width: 220px;
+  top: 0;
+  width: min(260px, 72vw);
   margin: 0;
-  padding: 10px;
-  border-radius: 4px;
+  padding: 12px 14px;
+  border-radius: 8px;
   color: #ffffff;
   background: #172033;
+  box-shadow: 0 16px 34px rgba(23, 32, 51, 0.28);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.35;
   opacity: 0;
-  transform: translateX(-50%);
+  pointer-events: none;
+  transform: translate(-50%, 8px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 14px;
+  height: 14px;
+  background: #172033;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.tooltip--example {
+  background: #14532d;
+}
+
+.tooltip--example::after {
+  background: #14532d;
 }
 
 .tooltip.is-visible {
   opacity: 1;
+  transform: translate(-50%, -2px);
+}
+
+@media (max-width: 640px) {
+  .kata-stage {
+    padding: 18px;
+  }
+
+  .tooltip-board {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-card {
+    min-height: 200px;
+  }
 }
