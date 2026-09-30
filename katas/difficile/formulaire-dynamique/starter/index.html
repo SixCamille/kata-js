@@ -8,13 +8,24 @@
   </head>
   <body>
     <main class="kata-stage">
-      <h1>Formulaire dynamique</h1>
-      <p class="intro">Le formulaire doit permettre d'ajouter plusieurs participants puis d'en supprimer.</p>
-      <button class="add-person" type="button">Ajouter un participant</button>
-      <form class="dynamic-form">
-        <div class="participants"></div>
-      </form>
-      <p class="status"><span>0</span> participant</p>
+      <section class="form-panel" aria-labelledby="form-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Atelier inscription</p>
+            <h1 id="form-title">Formulaire dynamique</h1>
+          </div>
+          <p class="status" aria-live="polite"><span>0</span> participant</p>
+        </div>
+
+        <p class="intro">Ajoutez autant de participants que nécessaire, puis retirez uniquement les lignes concernées.</p>
+
+        <button class="add-person" type="button">Ajouter un participant</button>
+
+        <form class="dynamic-form">
+          <div class="participants" aria-label="Liste des participants"></div>
+          <p class="empty-state">Aucun participant pour le moment.</p>
+        </form>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>
