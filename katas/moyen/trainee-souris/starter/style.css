@@ -15,23 +15,33 @@ body {
   display: grid;
   place-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: #172033;
-  background: #f8fafc;
+  color: #27112f;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.95) 0 2px, transparent 3px),
+    radial-gradient(circle at 78% 22%, rgba(250, 204, 21, 0.55) 0 2px, transparent 3px),
+    radial-gradient(circle at 62% 82%, rgba(244, 114, 182, 0.5) 0 2px, transparent 3px),
+    linear-gradient(135deg, #fff7ed 0%, #fdf2f8 48%, #eef2ff 100%);
 }
 
 .kata-stage {
   width: min(760px, calc(100vw - 32px));
-  padding: 24px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 24px 70px rgba(147, 51, 234, 0.16);
+  backdrop-filter: blur(12px);
 }
 
 h1 {
   margin: 0 0 10px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  color: #3b0a45;
 }
 
 .intro {
-  margin: 0 0 24px;
-  color: #475569;
+  margin: 0 0 20px;
+  color: #6b3b73;
   line-height: 1.5;
 }
 
@@ -42,24 +52,90 @@ textarea {
 }
 
 .hint {
+  margin: 18px 0 0;
   font-size: 1.5rem;
   font-weight: 700;
+  color: #4a154b;
+}
+
+.demo-trail {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.88) 0 2px, transparent 3px),
+    radial-gradient(circle at 85% 68%, rgba(255, 255, 255, 0.7) 0 2px, transparent 3px),
+    linear-gradient(135deg, rgba(250, 204, 21, 0.24), rgba(236, 72, 153, 0.2), rgba(129, 140, 248, 0.22));
+}
+
+.sparkle {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #facc15;
+  box-shadow:
+    0 0 0 6px rgba(250, 204, 21, 0.16),
+    0 0 28px rgba(236, 72, 153, 0.65);
+  clip-path: polygon(50% 0, 62% 34%, 98% 35%, 69% 56%, 79% 92%, 50% 70%, 21% 92%, 31% 56%, 2% 35%, 38% 34%);
+  transform: translate(-50%, -50%) rotate(12deg);
+}
+
+.sparkle-1 {
+  left: 20%;
+  top: 72%;
+  transform: translate(-50%, -50%) rotate(-10deg) scale(0.55);
+  opacity: 0.32;
+}
+
+.sparkle-2 {
+  left: 34%;
+  top: 58%;
+  transform: translate(-50%, -50%) rotate(18deg) scale(0.72);
+  opacity: 0.48;
+}
+
+.sparkle-3 {
+  left: 49%;
+  top: 44%;
+  transform: translate(-50%, -50%) rotate(-22deg) scale(0.9);
+  opacity: 0.68;
+}
+
+.sparkle-4 {
+  left: 63%;
+  top: 34%;
+  transform: translate(-50%, -50%) rotate(26deg) scale(1.08);
+  opacity: 0.86;
+}
+
+.sparkle-5 {
+  left: 76%;
+  top: 27%;
+  transform: translate(-50%, -50%) rotate(-14deg) scale(1.24);
+  background: #f472b6;
+  opacity: 1;
 }
 
 .trail {
   position: fixed;
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: #f59e0b;
+  background: #facc15;
+  box-shadow:
+    0 0 0 5px rgba(250, 204, 21, 0.18),
+    0 0 22px rgba(236, 72, 153, 0.6);
+  clip-path: polygon(50% 0, 62% 34%, 98% 35%, 69% 56%, 79% 92%, 50% 70%, 21% 92%, 31% 56%, 2% 35%, 38% 34%);
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(12deg);
   animation: fade 500ms ease forwards;
 }
 
 @keyframes fade {
   to {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.2);
+    transform: translate(-50%, -50%) rotate(40deg) scale(0.2);
   }
 }
