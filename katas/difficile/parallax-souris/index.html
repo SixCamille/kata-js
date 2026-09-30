@@ -16,15 +16,16 @@
         <div class="brief-content">
           <p class="level-tag">Kata difficile</p>
           <h2 id="brief-title">Parallax souris</h2>
-          <p>Les couches doivent bouger légèrement dans des directions et vitesses différentes.</p>
-          <p>Le pointeur sert de repère : plus il s'éloigne du centre, plus les couches se décalent. Les plans proches peuvent bouger davantage que les plans lointains.</p>
+          <p>Créer un effet de profondeur contrôlé par la souris : les trois cercles doivent réagir au déplacement du pointeur, comme des plans placés à des distances différentes.</p>
+          <p>Le centre de l'écran sert de position neutre. Quand la souris va vers la droite, la gauche, le haut ou le bas, chaque couche se décale légèrement selon son propre facteur. Plus une couche est proche, plus son mouvement peut être visible.</p>
           <h3>Attendu</h3>
           <ul>
-            <li>Sélectionner les couches.</li>
-            <li>Ecouter le mouvement de souris.</li>
-            <li>Calculer l'écart depuis le centre de l'écran.</li>
-            <li>Utiliser un facteur différent par couche.</li>
-            <li>Appliquer un transform à chaque couche.</li>
+            <li>Sélectionner les éléments qui ont la classe <code>layer</code>.</li>
+            <li>Ecouter le mouvement de souris sur la page.</li>
+            <li>Calculer l'écart horizontal et vertical entre la souris et le centre de la fenêtre.</li>
+            <li>Lire le facteur de vitesse de chaque couche avec son attribut <code>data-speed</code>.</li>
+            <li>Appliquer un <code>transform</code> différent à chaque couche pour créer le décalage.</li>
+            <li>Obtenir un retour naturel vers la position initiale quand la souris revient près du centre.</li>
           </ul>
           <hr>
           <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>
