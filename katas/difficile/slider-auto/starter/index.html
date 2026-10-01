@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Playground - Slider automatique</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="kata-stage">
+      <section class="slider" aria-label="Galerie photo automatique">
+        <img class="slider-image" src="hippo.png" alt="Animal dans l'eau">
+
+        <button class="slider-button previous" type="button" aria-label="Photo précédente">
+          &lt;
+        </button>
+        <button class="slider-button next" type="button" aria-label="Photo suivante">
+          &gt;
+        </button>
+
+        <div class="slider-caption">
+          <p class="eyebrow">Photo 1 / 3</p>
+          <h1>Exploration sauvage</h1>
+          <p class="description">Fais défiler les images avec les flèches ou laisse le timer avancer.</p>
+        </div>
+
+        <div class="dots" aria-label="Position dans le slider">
+          <button class="dot is-active" type="button" aria-label="Aller à la photo 1"></button>
+          <button class="dot" type="button" aria-label="Aller à la photo 2"></button>
+          <button class="dot" type="button" aria-label="Aller à la photo 3"></button>
+        </div>
+
+        <div class="progress" aria-hidden="true">
+          <span></span>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

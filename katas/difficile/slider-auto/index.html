@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kata - Slider automatique</title>
+    <link rel="stylesheet" href="../../../shared/starter-shell.css">
+  </head>
+  <body class="level-difficile" data-kata="slider-auto">
+    <div data-site-nav data-root="../../.." data-title="KATA JS" data-active="difficile"></div>
+
+    <div class="starter-layout">
+      <main class="playground-zone">
+        <iframe class="playground-frame" src="starter/index.html" title="Playground du kata slider automatique" scrolling="no"></iframe>
+      </main>
+
+      <aside class="kata-brief" aria-labelledby="brief-title">
+        <div class="brief-content">
+          <p class="level-tag">Kata difficile</p>
+          <h2 id="brief-title">Slider automatique</h2>
+          <p>Le slider doit afficher une photo à la fois, changer avec les flèches, puis avancer tout seul grâce à un timer.</p>
+          <p>Quand la dernière photo est dépassée, le slider doit revenir à la première. Le même principe doit fonctionner dans l'autre sens : depuis la première photo, la flèche précédente affiche la dernière.</p>
+
+          <h3>Attendu</h3>
+          <ul>
+            <li>Stocker les photos et leurs textes dans un tableau.</li>
+            <li>Garder l'index de la photo actuellement affichée.</li>
+            <li>Faire fonctionner les boutons précédent et suivant.</li>
+            <li>Mettre à jour l'image, le texte et l'indicateur actif.</li>
+            <li>Utiliser un timer pour passer automatiquement à la photo suivante.</li>
+            <li>Revenir à la photo 1 après la dernière photo.</li>
+          </ul>
+
+          <hr>
+          <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>
+
+          <hr>
+          <div class="brief-actions">
+            <button class="memo-button" type="button" data-open-memo>Ouvrir le mémo</button>
+            <a class="memo-button" href="starter/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le playground</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="../../../shared/site-nav.js"></script>
+    <script src="../../../shared/kata-memo.js"></script>
+    <script src="../../../shared/kata-progress.js"></script>
+  </body>
+</html>

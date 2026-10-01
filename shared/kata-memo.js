@@ -420,6 +420,7 @@ const KATA_MEMO_REFERENCES = {
   "recherche-clavier": { title: "Recherche clavier", js: ["input", "keydown", "array", "state"], css: ["list", "stateClass"] },
   "retour-haut": { title: "Retour en haut", js: ["scroll", "click", "classList", "scrollToElement"], css: ["stateClass", "transition"] },
   "rond-rebond": { title: "Rond qui rebondit", js: ["interval", "state", "condition", "style"], css: ["positionFrame", "transform"] },
+  "slider-auto": { title: "Slider automatique", js: ["click", "array", "state", "condition", "interval", "imageSource", "classList"], css: ["stateClass", "transition"] },
   "sticker-clic": { title: "Sticker au clic", js: ["click", "relativeCoordinates", "createElement"], css: ["positionFrame"] },
   "sticker-orientation": { title: "Sticker emoji orienté", js: ["click", "relativeCoordinates", "createElement", "random"], css: ["positionFrame", "transform", "variable"] },
   "terminal-fictif": { title: "Terminal fictif", js: ["submit", "condition", "array", "createElement"], css: ["list", "textFeedback"] },

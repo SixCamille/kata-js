@@ -80,6 +80,14 @@ const KATAS = [
     starter: "katas/difficile/neige/index.html"
   },
   {
+    id: "slider-auto",
+    title: "Slider automatique",
+    level: "difficile",
+    summary: "Faire défiler des photos avec des flèches, un timer et un retour au début.",
+    concepts: ["tableau", "index", "setInterval", "src", "classe active"],
+    starter: "katas/difficile/slider-auto/index.html"
+  },
+  {
     id: "balles-mouvement",
     title: "Plusieurs balles en mouvement",
     level: "difficile",

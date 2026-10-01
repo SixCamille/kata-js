@@ -1,0 +1,8 @@
+{
+  "title": "Slider automatique",
+  "level": "difficile",
+  "concepts": ["tableau", "index", "setInterval", "src", "classe active"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": false
+}
