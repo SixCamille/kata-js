@@ -54,11 +54,31 @@ const savedItems = JSON.parse(localStorage.getItem("items")) || [];`
   console.log(event.key);
 });`
   },
+  keyboardShortcut: {
+    title: "Raccourci clavier",
+    text: "Les propriétés ctrlKey, shiftKey ou altKey indiquent si une touche modificatrice est maintenue.",
+    code: `document.addEventListener("keydown", function (event) {
+  if (event.ctrlKey && event.key === "k") {
+    event.preventDefault();
+  }
+});`
+  },
   mouse: {
     title: "Événement de souris",
     text: "Les événements de souris donnent des coordonnées dans la fenêtre.",
     code: `zone.addEventListener("mousemove", function (event) {
   console.log(event.clientX, event.clientY);
+});`
+  },
+  hover: {
+    title: "Entrée et sortie de souris",
+    text: "mouseenter se déclenche quand la souris entre dans la zone. mouseleave se déclenche quand elle en sort.",
+    code: `element.addEventListener("mouseenter", function () {
+  console.log("survol");
+});
+
+element.addEventListener("mouseleave", function () {
+  console.log("sortie");
 });`
   },
   mouseDrag: {
@@ -72,6 +92,17 @@ handle.addEventListener("mousedown", function () {
 
 document.addEventListener("mouseup", function () {
   isDragging = false;
+});`
+  },
+  manualDragMove: {
+    title: "Suivre un drag manuel",
+    text: "Pendant un déplacement manuel, mousemove peut lire la position seulement si l'élément est en train d'être attrapé.",
+    code: `document.addEventListener("mousemove", function (event) {
+  if (!isDragging) {
+    return;
+  }
+
+  console.log(event.clientX, event.clientY);
 });`
   },
   dragDrop: {
@@ -121,6 +152,14 @@ const value = event.dataTransfer.getData("text/plain");`
     title: "Faire défiler un élément",
     text: "scrollTo déplace le scroll d'un conteneur. top: 0 indique le début vertical de cet élément.",
     code: `zone.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});`
+  },
+  scrollToPageTop: {
+    title: "Revenir en haut de page",
+    text: "window.scrollTo déplace le scroll de la page entière.",
+    code: `window.scrollTo({
   top: 0,
   behavior: "smooth"
 });`
@@ -270,6 +309,15 @@ element.style.width = "50%";`
     code: `console.log(element.dataset.name);
 button.setAttribute("aria-expanded", "true");`
   },
+  eventTarget: {
+    title: "Identifier la cible",
+    text: "event.target indique l'élément exact qui a reçu l'action utilisateur.",
+    code: `container.addEventListener("click", function (event) {
+  if (event.target === container) {
+    console.log("clic sur le conteneur");
+  }
+});`
+  },
   imageSource: {
     title: "Changer l'image affichée",
     text: "src indique quel fichier image est affiché par une balise img.",
@@ -394,23 +442,23 @@ const KATA_MEMO_REFERENCES = {
   "changer-couleur-fond": { title: "Changer la couleur du fond", js: ["click", "array", "state", "style"], css: ["transition"] },
   "chat-simule": { title: "Chat simule", js: ["submit", "createElement", "timeout"], css: ["list", "textFeedback"] },
   "checkbox-section": { title: "Afficher selon une checkbox", js: ["change", "condition", "classList"], css: ["hiddenPanel"] },
-  "command-palette": { title: "Command palette", js: ["keydown", "click", "array", "state", "classList", "style", "attribute"], css: ["hiddenPanel", "stateClass", "transition"] },
-  "comparateur-images-enrichi": { title: "Comparateur d'images enrichi", js: ["mouseDrag", "mouse", "state", "rect", "percent", "style"], css: ["positionFrame", "width", "grabCursor"] },
+  "command-palette": { title: "Command palette", js: ["keydown", "keyboardShortcut", "click", "array", "state", "classList", "style", "attribute"], css: ["hiddenPanel", "stateClass", "transition"] },
+  "comparateur-images-enrichi": { title: "Comparateur d'images enrichi", js: ["mouseDrag", "manualDragMove", "state", "rect", "percent", "style"], css: ["positionFrame", "width", "grabCursor"] },
   "compteur-caracteres": { title: "Compteur de caractères", js: ["input", "text"], css: ["textFeedback"] },
   "compteur-plus-moins": { title: "Compteur + / -", js: ["click", "state", "text", "condition"], css: ["textFeedback"] },
   "curseur-personnalise": { title: "Curseur personnalisé", js: ["mouse", "style"], css: ["transform", "positionFrame"] },
   "drag-drop-zones": { title: "Drag & drop avec zones", js: ["dragStart", "dragOver", "drop", "dragData", "attribute", "classList"], css: ["stateClass"] },
   "esquive-simple": { title: "Jeu d'esquive simple", js: ["keydown", "interval", "rect", "distance"], css: ["positionFrame"] },
   "etoiles-notation": { title: "Étoiles de notation", js: ["click", "forEach", "state", "classList"], css: ["stateClass"] },
-  "fenetre-deplacable": { title: "Fenetre deplacable", js: ["mouse", "state", "relativeCoordinates", "style"], css: ["positionFrame"] },
+  "fenetre-deplacable": { title: "Fenetre deplacable", js: ["mouseDrag", "manualDragMove", "state", "relativeCoordinates", "style"], css: ["positionFrame", "grabCursor"] },
   "filtre-produits": { title: "Filtre produits", js: ["click", "array", "filter", "createElement"], css: ["list"] },
   "fond-scroll": { title: "Fond lié au scroll", js: ["scroll", "percent", "style"], css: ["transition"] },
   "formulaire-dynamique": { title: "Formulaire dynamique", js: ["click", "input", "array", "createElement", "text"], css: ["list", "textFeedback"] },
   "header-intelligent": { title: "Header intelligent", js: ["scroll", "state", "classList"], css: ["transform", "transition"] },
   "horloge-analogique": { title: "Horloge analogique", js: ["date", "interval", "style"], css: ["transform", "transformOrigin", "positionFrame"] },
   "image-flip": { title: "Image qui flip", js: ["click", "classList"], css: ["transform", "transition"] },
-  "image-survol": { title: "Image qui change au survol", js: ["mouse", "imageSource"], css: ["transition"] },
-  "interface-tinder": { title: "Interface Tinder", js: ["mouse", "array", "style"], css: ["positionFrame", "transform"] },
+  "image-survol": { title: "Image qui change au survol", js: ["hover", "imageSource"], css: ["transition"] },
+  "interface-tinder": { title: "Interface Tinder", js: ["mouseDrag", "manualDragMove", "array", "state", "condition", "style"], css: ["positionFrame", "transform", "transition"] },
   "kanban-persistant": { title: "Kanban persistant", js: ["submit", "array", "createElement", "localStorage", "jsonStorage", "attribute"], css: ["list", "stateClass", "transition"] },
   "lancer-de": { title: "Lancer de dé", js: ["click", "random", "text"], css: ["textFeedback"] },
   "machine-ecrire": { title: "Machine à écrire", js: ["click", "forEach", "state", "condition", "stringSlice", "text", "attribute"], css: ["list", "textFeedback", "transition"] },
@@ -423,12 +471,12 @@ const KATA_MEMO_REFERENCES = {
   "parallax-scroll": { title: "Parallax scroll", js: ["scroll", "forEach", "attribute", "style"], css: ["positionFrame", "transform"] },
   "parallax-souris": { title: "Parallax souris", js: ["mouse", "attribute", "style"], css: ["positionFrame", "transform"] },
   "personnage-clavier": { title: "Petit personnage au clavier", js: ["keydown", "state", "condition", "style"], css: ["positionFrame"] },
-  "popup-exterieure": { title: "Popup extérieure", js: ["click", "condition", "classList"], css: ["hiddenPanel", "positionFrame"] },
+  "popup-exterieure": { title: "Popup extérieure", js: ["click", "eventTarget", "condition", "classList"], css: ["hiddenPanel", "positionFrame"] },
   "popup-simple": { title: "Popup simple", js: ["click", "classList"], css: ["hiddenPanel", "positionFrame"] },
   "progression-scroll": { title: "Progression du scroll", js: ["scroll", "percent", "style"], css: ["width"] },
-  "puzzle-reordonnable": { title: "Puzzle réordonnable", js: ["dragDrop", "array", "state"], css: ["list"] },
+  "puzzle-reordonnable": { title: "Puzzle réordonnable", js: ["dragStart", "dragOver", "drop", "dragData", "array", "state", "attribute"], css: ["list", "stateClass"] },
   "recherche-clavier": { title: "Recherche clavier", js: ["input", "keydown", "array", "state"], css: ["list", "stateClass"] },
-  "retour-haut": { title: "Retour en haut", js: ["scroll", "click", "classList", "scrollToElement"], css: ["stateClass", "transition"] },
+  "retour-haut": { title: "Retour en haut", js: ["scroll", "click", "classList", "scrollToPageTop"], css: ["stateClass", "transition"] },
   "rond-rebond": { title: "Rond qui rebondit", js: ["interval", "state", "condition", "style"], css: ["positionFrame", "transform"] },
   "slider-auto": { title: "Slider automatique", js: ["click", "array", "state", "condition", "interval", "imageSource", "classList"], css: ["stateClass", "transition"] },
   "sticker-clic": { title: "Sticker au clic", js: ["click", "relativeCoordinates", "createElement"], css: ["positionFrame"] },
@@ -437,7 +485,7 @@ const KATA_MEMO_REFERENCES = {
   "theme-switch": { title: "Thème clair / sombre", js: ["click", "classList", "state", "attribute"], css: ["variable", "stateClass"] },
   "toast-empile": { title: "Toasts empilés", js: ["click", "createElement", "timeout"], css: ["positionFrame", "transition"] },
   "todo-enrichie": { title: "Todo enrichie", js: ["submit", "array", "createElement", "text"], css: ["list", "textFeedback"] },
-  "tooltip": { title: "Tooltip", js: ["mouse", "classList", "style"], css: ["positionFrame", "stateClass"] },
+  "tooltip": { title: "Tooltip", js: ["hover", "classList", "style"], css: ["positionFrame", "stateClass"] },
   "trainee-souris": { title: "Traînée derrière la souris", js: ["mouse", "createElement", "timeout", "style"], css: ["positionFrame", "transition"] },
   "voiture-clic": { title: "Voiture au clic", js: ["click", "classList"], css: ["transform", "transition"] },
   "yeux-souris": { title: "Yeux qui suivent la souris", js: ["mouse", "rect", "style"], css: ["transform"] }
