@@ -15,6 +15,15 @@ const JS_MEMO_ITEMS = {
   console.log(field.value);
 });`
   },
+  localStorage: {
+    title: "Mémoriser dans le navigateur",
+    text: "localStorage garde de petites chaînes de caractères même après un rechargement de page.",
+    code: `localStorage.setItem("cle", "valeur");
+
+const savedValue = localStorage.getItem("cle");
+
+localStorage.removeItem("cle");`
+  },
   change: {
     title: "Lire une case cochée",
     text: "change est pratique pour les checkbox. checked vaut true ou false.",
@@ -365,6 +374,7 @@ const KATA_MEMO_REFERENCES = {
   "attraper-objets": { title: "Attraper les objets", js: ["mouse", "interval", "rect", "distance"], css: ["positionFrame"] },
   "autocompletion": { title: "Autocompletion", js: ["input", "array", "filter", "createElement"], css: ["list"] },
   "balles-mouvement": { title: "Plusieurs balles en mouvement", js: ["array", "state", "interval", "condition"], css: ["positionFrame", "transform"] },
+  "bloc-note-persistant": { title: "Bloc-note persistant", js: ["input", "localStorage", "text"], css: ["textFeedback", "transition"] },
   "barre-progression": { title: "Barre de progression", js: ["interval", "percent", "style"], css: ["width", "transition"] },
   "bouton-esquive": { title: "Bouton qui esquive", js: ["mouse", "rect", "distance", "condition"], css: ["positionFrame"] },
   "bouton-fuit": { title: "Bouton qui fuit", js: ["mouse", "rect", "relativeCoordinates", "random"], css: ["positionFrame"] },

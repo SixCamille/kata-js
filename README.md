@@ -64,7 +64,7 @@ katas/
   difficile/            Katas combinant plusieurs mécanismes
 ```
 
-La banque référencée par le picker contient actuellement 61 katas : 20 faciles, 20 moyens et 21 difficiles.
+La banque référencée par le picker contient actuellement 61 katas : 21 faciles, 21 moyens et 19 difficiles.
 
 ## Organisation d'un kata
 

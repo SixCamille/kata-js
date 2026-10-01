@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kata - Bloc-note persistant</title>
+    <link rel="stylesheet" href="../../../shared/starter-shell.css">
+  </head>
+  <body class="level-facile" data-kata="bloc-note-persistant">
+    <div data-site-nav data-root="../../.." data-title="KATA JS" data-active="facile"></div>
+    <div class="starter-layout">
+      <main class="playground-zone">
+        <iframe class="playground-frame" src="starter/index.html" title="Playground du kata bloc-note persistant"></iframe>
+      </main>
+      <aside class="kata-brief" aria-labelledby="brief-title">
+        <div class="brief-content">
+          <p class="level-tag">Kata facile</p>
+          <h2 id="brief-title">Bloc-note persistant</h2>
+          <p>Le texte saisi dans le bloc-note doit rester disponible même après un rechargement de la page.</p>
+          <p>On ne travaille pas encore avec une base de données : le navigateur peut mémoriser une petite valeur grâce à <code>localStorage</code>. Le kata sert à relier un champ de saisie, un état sauvegardé et un retour visuel clair.</p>
+          <h3>Attendu</h3>
+          <ul>
+            <li>Sélectionner le textarea, le statut et le bouton d'effacement.</li>
+            <li>Au chargement, remplir le textarea avec la note déjà enregistrée si elle existe.</li>
+            <li>Ecouter la saisie et sauvegarder la valeur actuelle.</li>
+            <li>Mettre à jour un message de statut court après la sauvegarde.</li>
+            <li>Effacer la note enregistrée quand l'utilisateur clique sur le bouton.</li>
+          </ul>
+          <hr>
+          <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>
+          <hr>
+          <div class="brief-actions">
+            <button class="memo-button" type="button" data-open-memo>Ouvrir le mémo</button>
+            <a class="memo-button" href="starter/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le playground</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="../../../shared/site-nav.js"></script>
+    <script src="../../../shared/kata-memo.js"></script>
+    <script src="../../../shared/kata-progress.js"></script>
+  </body>
+</html>

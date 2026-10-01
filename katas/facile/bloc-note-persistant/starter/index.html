@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Playground - Bloc-note persistant</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="desk">
+      <section class="notebook" aria-labelledby="note-title">
+        <p class="eyebrow">Carnet local</p>
+        <h1 id="note-title">Ma note du jour</h1>
+        <label for="daily-note">Note</label>
+        <textarea id="daily-note" rows="8" placeholder="Ecris une idée, une piste ou un rappel..."></textarea>
+        <div class="note-footer">
+          <p class="status" role="status">Aucune sauvegarde pour le moment.</p>
+          <button type="button">Effacer</button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

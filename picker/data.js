@@ -152,6 +152,14 @@ const KATAS = [
     starter: "katas/facile/message-temporaire/index.html"
   },
   {
+    id: "bloc-note-persistant",
+    title: "Bloc-note persistant",
+    level: "facile",
+    summary: "Sauvegarder une note dans le navigateur et la retrouver au rechargement.",
+    concepts: ["input", "localStorage", "value", "état"],
+    starter: "katas/facile/bloc-note-persistant/index.html"
+  },
+  {
     id: "bouton-fuit",
     title: "Bouton qui fuit",
     level: "moyen",

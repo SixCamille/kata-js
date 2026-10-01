@@ -1,0 +1,8 @@
+{
+  "title": "Bloc-note persistant",
+  "level": "facile",
+  "concepts": ["input", "localStorage", "value", "état"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}
