@@ -3,49 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Playground - Onglets animaux</title>
+    <title>Playground - Onglets emoji</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <main class="kata-stage">
-      <p class="eyebrow">Mini refuge</p>
-      <h1>Fiches animaux</h1>
-      <p class="intro">Clique sur un animal pour afficher sa fiche et cacher les autres.</p>
+      <p class="eyebrow">Mood board</p>
+      <h1>Onglets emoji</h1>
+      <p class="intro">Clique sur un onglet pour afficher son panneau.</p>
 
-      <div class="tabs" role="tablist" aria-label="Animaux du refuge">
-        <button class="is-active" id="tab-renard" type="button" data-tab="renard" role="tab" aria-selected="true" aria-controls="panel-renard">
-          Renard
+      <div class="tabs" role="tablist" aria-label="Onglets emoji">
+        <button class="is-active" id="tab-chaton" type="button" data-tab="chaton" role="tab" aria-selected="true" aria-controls="panel-chaton">
+          <span aria-hidden="true">🐱</span>
+          Chaton
         </button>
-        <button id="tab-tortue" type="button" data-tab="tortue" role="tab" aria-selected="false" aria-controls="panel-tortue">
-          Tortue
+        <button id="tab-lapin" type="button" data-tab="lapin" role="tab" aria-selected="false" aria-controls="panel-lapin">
+          <span aria-hidden="true">🐰</span>
+          Lapin
         </button>
-        <button id="tab-hibou" type="button" data-tab="hibou" role="tab" aria-selected="false" aria-controls="panel-hibou">
-          Hibou
+        <button id="tab-poussin" type="button" data-tab="poussin" role="tab" aria-selected="false" aria-controls="panel-poussin">
+          <span aria-hidden="true">🐥</span>
+          Poussin
         </button>
       </div>
 
-      <section class="panel panel-renard is-active" id="panel-renard" data-panel="renard" role="tabpanel" aria-labelledby="tab-renard">
-        <span class="animal-icon" aria-hidden="true">R</span>
-        <div>
-          <h2>Renard roux</h2>
-          <p>Rapide, discret et très curieux. Sa fiche utilise une couleur chaude.</p>
-        </div>
+      <section class="panel panel-chaton is-active" id="panel-chaton" data-panel="chaton" role="tabpanel" aria-labelledby="tab-chaton">
+        <span class="panel-emoji" aria-hidden="true">🐱</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae sem non justo luctus porta.</p>
       </section>
 
-      <section class="panel panel-tortue" id="panel-tortue" data-panel="tortue" role="tabpanel" aria-labelledby="tab-tortue">
-        <span class="animal-icon" aria-hidden="true">T</span>
-        <div>
-          <h2>Tortue verte</h2>
-          <p>Calme, solide et patiente. Sa fiche utilise une couleur végétale.</p>
-        </div>
+      <section class="panel panel-lapin" id="panel-lapin" data-panel="lapin" role="tabpanel" aria-labelledby="tab-lapin">
+        <span class="panel-emoji" aria-hidden="true">🐰</span>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor.</p>
       </section>
 
-      <section class="panel panel-hibou" id="panel-hibou" data-panel="hibou" role="tabpanel" aria-labelledby="tab-hibou">
-        <span class="animal-icon" aria-hidden="true">H</span>
-        <div>
-          <h2>Hibou nuit</h2>
-          <p>Observateur, silencieux et précis. Sa fiche utilise une couleur nocturne.</p>
-        </div>
+      <section class="panel panel-poussin" id="panel-poussin" data-panel="poussin" role="tabpanel" aria-labelledby="tab-poussin">
+        <span class="panel-emoji" aria-hidden="true">🐥</span>
+        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum.</p>
       </section>
     </main>
     <script src="script.js"></script>

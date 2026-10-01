@@ -265,9 +265,9 @@ const KATAS = [
   },
   {
     id: "onglets",
-    title: "Onglets animaux",
+    title: "Onglets emoji",
     level: "facile",
-    summary: "Afficher la fiche colorée d'un animal quand on clique sur son onglet.",
+    summary: "Afficher un panneau cute quand on clique sur son onglet emoji.",
     concepts: ["click","classList","dataset","aria-selected"],
     starter: "katas/facile/onglets/index.html"
   },
