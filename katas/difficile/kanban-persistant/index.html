@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kata - Kanban persistant</title>
+    <link rel="stylesheet" href="../../../shared/starter-shell.css">
+  </head>
+  <body class="level-difficile" data-kata="kanban-persistant">
+    <div data-site-nav data-root="../../.." data-title="KATA JS" data-active="difficile"></div>
+    <div class="starter-layout">
+      <main class="playground-zone">
+        <iframe class="playground-frame" src="starter/index.html" title="Playground du kata kanban persistant"></iframe>
+      </main>
+      <aside class="kata-brief" aria-labelledby="brief-title">
+        <div class="brief-content">
+          <p class="level-tag">Kata difficile</p>
+          <h2 id="brief-title">Kanban persistant</h2>
+          <p>Le tableau doit permettre d'ajouter des cartes, de les faire avancer entre trois colonnes, puis de retrouver l'état après rechargement.</p>
+          <p>Le point important est de ne pas considérer le HTML comme la source de vérité. Les cartes doivent exister dans un tableau d'objets JavaScript, être rendues dans le DOM, puis être sauvegardées sous forme de texte dans <code>localStorage</code>.</p>
+          <h3>Attendu</h3>
+          <ul>
+            <li>Garder les cartes dans un tableau d'objets avec au moins un identifiant, un titre et un statut.</li>
+            <li>Créer une carte depuis le formulaire d'ajout.</li>
+            <li>Afficher chaque carte dans la colonne correspondant à son statut.</li>
+            <li>Permettre de déplacer une carte vers la colonne précédente ou suivante.</li>
+            <li>Permettre de supprimer une carte précise.</li>
+            <li>Sauvegarder le tableau complet après chaque modification.</li>
+            <li>Relire les données sauvegardées au chargement de la page.</li>
+          </ul>
+          <hr>
+          <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>
+          <hr>
+          <div class="brief-actions">
+            <button class="memo-button" type="button" data-open-memo>Ouvrir le mémo</button>
+            <a class="memo-button" href="starter/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le playground</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="../../../shared/site-nav.js"></script>
+    <script src="../../../shared/kata-memo.js"></script>
+    <script src="../../../shared/kata-progress.js"></script>
+  </body>
+</html>

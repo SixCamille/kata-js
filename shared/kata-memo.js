@@ -24,6 +24,15 @@ const savedValue = localStorage.getItem("cle");
 
 localStorage.removeItem("cle");`
   },
+  jsonStorage: {
+    title: "Sauvegarder une structure",
+    text: "Pour garder un tableau ou un objet, on le transforme en texte JSON avant de le relire.",
+    code: `const items = [{ title: "Exemple", status: "todo" }];
+
+localStorage.setItem("items", JSON.stringify(items));
+
+const savedItems = JSON.parse(localStorage.getItem("items")) || [];`
+  },
   change: {
     title: "Lire une case cochée",
     text: "change est pratique pour les checkbox. checked vaut true ou false.",
@@ -402,6 +411,7 @@ const KATA_MEMO_REFERENCES = {
   "image-flip": { title: "Image qui flip", js: ["click", "classList"], css: ["transform", "transition"] },
   "image-survol": { title: "Image qui change au survol", js: ["mouse", "imageSource"], css: ["transition"] },
   "interface-tinder": { title: "Interface Tinder", js: ["mouse", "array", "style"], css: ["positionFrame", "transform"] },
+  "kanban-persistant": { title: "Kanban persistant", js: ["submit", "array", "createElement", "localStorage", "jsonStorage", "attribute"], css: ["list", "stateClass", "transition"] },
   "lancer-de": { title: "Lancer de dé", js: ["click", "random", "text"], css: ["textFeedback"] },
   "machine-ecrire": { title: "Machine à écrire", js: ["click", "forEach", "state", "condition", "stringSlice", "text", "attribute"], css: ["list", "textFeedback", "transition"] },
   "menu-radial": { title: "Menu radial", js: ["click", "state", "angle", "attribute"], css: ["positionFrame", "transform", "transition"] },

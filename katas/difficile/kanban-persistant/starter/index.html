@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Playground - Kanban persistant</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Projet solo</p>
+          <h1>Tableau de missions</h1>
+        </div>
+        <p class="save-status" role="status">Non sauvegardé</p>
+      </header>
+
+      <form class="task-form">
+        <label for="task-title">Nouvelle carte</label>
+        <div class="form-row">
+          <input id="task-title" type="text" placeholder="Ex : préparer la démo">
+          <button type="submit">Ajouter</button>
+        </div>
+      </form>
+
+      <section class="board" aria-label="Tableau Kanban">
+        <article class="column" data-status="todo">
+          <header>
+            <h2>À faire</h2>
+            <span class="counter">2</span>
+          </header>
+          <div class="card-list">
+            <article class="task-card">
+              <p>Relire la consigne</p>
+              <div class="card-actions">
+                <button type="button" aria-label="Supprimer">×</button>
+                <button type="button">→</button>
+              </div>
+            </article>
+            <article class="task-card">
+              <p>Découper l'état JS</p>
+              <div class="card-actions">
+                <button type="button" aria-label="Supprimer">×</button>
+                <button type="button">→</button>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article class="column" data-status="doing">
+          <header>
+            <h2>En cours</h2>
+            <span class="counter">1</span>
+          </header>
+          <div class="card-list">
+            <article class="task-card accent">
+              <p>Brancher les événements</p>
+              <div class="card-actions">
+                <button type="button">←</button>
+                <button type="button" aria-label="Supprimer">×</button>
+                <button type="button">→</button>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article class="column" data-status="done">
+          <header>
+            <h2>Terminé</h2>
+            <span class="counter">1</span>
+          </header>
+          <div class="card-list">
+            <article class="task-card done">
+              <p>Créer le HTML de départ</p>
+              <div class="card-actions">
+                <button type="button">←</button>
+                <button type="button" aria-label="Supprimer">×</button>
+              </div>
+            </article>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "title": "Kanban persistant",
+  "level": "difficile",
+  "concepts": ["submit", "tableau d'objets", "localStorage", "rendu DOM"],
+  "duration": 20,
+  "hasStarter": true,
+  "hasResources": true
+}

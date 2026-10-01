@@ -480,6 +480,14 @@ const KATAS = [
     starter: "katas/difficile/formulaire-dynamique/index.html"
   },
   {
+    id: "kanban-persistant",
+    title: "Kanban persistant",
+    level: "difficile",
+    summary: "Créer un mini tableau de cartes sauvegardé dans le navigateur.",
+    concepts: ["submit", "tableau d'objets", "localStorage", "rendu DOM"],
+    starter: "katas/difficile/kanban-persistant/index.html"
+  },
+  {
     id: "horloge-analogique",
     title: "Horloge analogique",
     level: "difficile",
