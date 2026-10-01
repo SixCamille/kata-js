@@ -47,9 +47,13 @@ textarea {
 
 .preview img {
   display: block;
-  width: min(420px, 100%);
+  width: min(300px, 100%);
+  aspect-ratio: 596 / 832;
+  object-fit: contain;
+  background: #f8fafc;
   border-radius: 8px;
   border: 1px solid #d6deea;
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.14);
 }
 
 .preview figcaption {

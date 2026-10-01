@@ -251,6 +251,12 @@ element.style.width = "50%";`
     text: "dataset lit les attributs data-*. setAttribute modifie un attribut HTML.",
     code: `console.log(element.dataset.name);
 button.setAttribute("aria-expanded", "true");`
+  },
+  imageSource: {
+    title: "Changer l'image affichée",
+    text: "src indique quel fichier image est affiché par une balise img.",
+    code: `image.src = "nouvelle-image.webp";
+image.alt = "Description de la nouvelle image";`
   }
 };
 
@@ -384,7 +390,7 @@ const KATA_MEMO_REFERENCES = {
   "header-intelligent": { title: "Header intelligent", js: ["scroll", "state", "classList"], css: ["transform", "transition"] },
   "horloge-analogique": { title: "Horloge analogique", js: ["date", "interval", "style"], css: ["transform", "transformOrigin", "positionFrame"] },
   "image-flip": { title: "Image qui flip", js: ["click", "classList"], css: ["transform", "transition"] },
-  "image-survol": { title: "Image qui change au survol", js: ["mouse", "attribute"], css: ["transition"] },
+  "image-survol": { title: "Image qui change au survol", js: ["mouse", "imageSource"], css: ["transition"] },
   "interface-tinder": { title: "Interface Tinder", js: ["mouse", "array", "style"], css: ["positionFrame", "transform"] },
   "lancer-de": { title: "Lancer de dé", js: ["click", "random", "text"], css: ["textFeedback"] },
   "machine-ecrire": { title: "Machine à écrire", js: ["click", "forEach", "state", "condition", "stringSlice", "text", "attribute"], css: ["list", "textFeedback", "transition"] },
