@@ -16,15 +16,15 @@
         <div class="brief-content">
           <p class="level-tag">Kata difficile</p>
           <h2 id="brief-title">Parallax scroll</h2>
-          <p>Les éléments décoratifs doivent se déplacer à des vitesses différentes pendant le scroll.</p>
-          <p>Le scroll fournit une seule valeur, mais chaque couche l'interprète avec son propre facteur. C'est cette différence de vitesse qui crée la sensation de profondeur.</p>
+          <p>Créer une scène inspirée de la Création d'Adam : Adam reste presque fixe, tandis que Dieu et les décors glissent à des vitesses différentes pendant le scroll.</p>
+          <p>Le scroll fournit une seule valeur, mais chaque couche l'interprète avec son propre facteur. Cette différence de vitesse crée la sensation de profondeur : un plan proche peut bouger plus vite qu'un plan lointain.</p>
           <h3>Attendu</h3>
           <ul>
-            <li>Sélectionner les éléments parallax.</li>
-            <li>Ecouter le scroll.</li>
-            <li>Lire la position de scroll.</li>
-            <li>Appliquer un facteur différent par élément.</li>
-            <li>Mettre à jour les transform.</li>
+            <li>Sélectionner les éléments qui ont la classe <code>layer</code>.</li>
+            <li>Ecouter l'événement <code>scroll</code> sur la fenêtre.</li>
+            <li>Lire la position avec <code>window.scrollY</code>.</li>
+            <li>Lire le facteur de chaque couche avec <code>data-speed</code>.</li>
+            <li>Mettre à jour le <code>transform</code> de chaque couche sans casser sa position de départ.</li>
           </ul>
           <hr>
           <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>

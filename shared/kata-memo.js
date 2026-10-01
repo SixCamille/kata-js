@@ -400,7 +400,7 @@ const KATA_MEMO_REFERENCES = {
   "mot-de-passe": { title: "Afficher / masquer un mot de passe", js: ["click", "state", "condition", "inputType"], css: ["textFeedback"] },
   "neige": { title: "Neige dans la fenêtre", js: ["interval", "createElement", "random"], css: ["positionFrame", "transform"] },
   "onglets": { title: "Onglets", js: ["click", "classList", "attribute"], css: ["hiddenPanel", "stateClass"] },
-  "parallax-scroll": { title: "Parallax scroll", js: ["scroll", "attribute", "style"], css: ["positionFrame", "transform"] },
+  "parallax-scroll": { title: "Parallax scroll", js: ["scroll", "forEach", "attribute", "style"], css: ["positionFrame", "transform"] },
   "parallax-souris": { title: "Parallax souris", js: ["mouse", "attribute", "style"], css: ["positionFrame", "transform"] },
   "personnage-clavier": { title: "Petit personnage au clavier", js: ["keydown", "state", "condition", "style"], css: ["positionFrame"] },
   "popup-exterieure": { title: "Popup extérieure", js: ["click", "condition", "classList"], css: ["hiddenPanel", "positionFrame"] },

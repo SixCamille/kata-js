@@ -8,14 +8,23 @@
   </head>
   <body>
     <main class="kata-stage">
-      <h1>Parallax scroll</h1>
-      <p class="intro">Les éléments décoratifs doivent se déplacer à des vitesses différentes pendant le scroll.</p>
-      <section class="hero-parallax">
-        <div class="shape one" data-speed="0.12"></div>
-        <div class="shape two" data-speed="0.25"></div>
-        <h1>Scroll parallax</h1>
+      <section class="intro-panel">
+        <p class="eyebrow">Kata JS</p>
+        <h1>Parallax scroll</h1>
+        <p>Faites défiler la page : chaque couche de la fresque doit se déplacer avec son propre facteur de vitesse.</p>
       </section>
-      <section class="content">Continue à défiler</section>
+
+      <section class="hero-parallax" aria-label="Scène parallax inspirée de la Création d'Adam">
+        <div class="layer aura aura-back" data-speed="-0.05"></div>
+        <div class="layer aura aura-front" data-speed="0.08"></div>
+        <img class="layer adam" src="adam-clair-obscur.png" alt="Adam allongé, le bras tendu" data-speed="0.02">
+        <img class="layer dieu" src="dieu-cherubins.png" alt="Dieu volant entouré de chérubins, le bras tendu" data-speed="0.24">
+        <div class="touch-line" aria-hidden="true"></div>
+      </section>
+
+      <section class="content">
+        <p>Objectif : relier le scroll aux déplacements verticaux des couches.</p>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>
