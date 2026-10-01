@@ -96,7 +96,7 @@ textarea {
 
 .branch img {
   top: 0;
-  width: 900px;
+  width: 800px;
 }
 
 @media (max-width: 640px) {
@@ -120,6 +120,6 @@ textarea {
   }
 
   .branch img {
-    width: 760px;
+    width: 660px;
   }
 }
