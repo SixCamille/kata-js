@@ -387,7 +387,7 @@ const KATAS = [
     id: "todo-enrichie",
     title: "Todo enrichie",
     level: "moyen",
-    summary: "Ajouter, terminer et supprimer des tâches avec compteur restant.",
+    summary: "Ajouter des tâches actives, les retirer quand elles sont faites et compter le reste.",
     concepts: ["submit","tableau","rendu DOM","compteur"],
     starter: "katas/moyen/todo-enrichie/index.html"
   },
@@ -459,8 +459,8 @@ const KATAS = [
     id: "formulaire-dynamique",
     title: "Formulaire dynamique",
     level: "difficile",
-    summary: "Ajouter et supprimer des blocs de champs pour plusieurs participants.",
-    concepts: ["click","createElement","tableau","rendu DOM"],
+    summary: "Ajouter, éditer et supprimer des participants avec aperçu nom/prénom.",
+    concepts: ["click","input","createElement","tableau","rendu DOM"],
     starter: "katas/difficile/formulaire-dynamique/index.html"
   },
   {

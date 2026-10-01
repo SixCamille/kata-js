@@ -97,14 +97,20 @@ textarea {
 
 .participant {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 10px;
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.55fr) auto;
+  gap: 12px;
+  align-items: stretch;
   padding: 14px;
   border: 1px solid #cbd5e1;
   border-left: 5px solid #f59e0b;
   border-radius: 8px;
   background: #f8fafc;
+}
+
+.participant-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .participant label {
@@ -130,6 +136,30 @@ textarea {
 .participant textarea:focus {
   outline: 3px solid rgba(20, 184, 166, 0.22);
   border-color: #0f766e;
+}
+
+.participant-summary {
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  min-height: 70px;
+  padding: 12px;
+  border: 1px solid #d8e2ea;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.participant-summary p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.participant-summary strong {
+  color: #172033;
+  font-size: 1rem;
 }
 
 .remove-person {
@@ -177,7 +207,8 @@ textarea {
   }
 
   .panel-heading,
-  .participant {
+  .participant,
+  .participant-fields {
     grid-template-columns: 1fr;
   }
 

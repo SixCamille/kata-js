@@ -3,6 +3,7 @@
   "level": "difficile",
   "concepts": [
     "click",
+    "input",
     "createElement",
     "tableau",
     "rendu DOM"

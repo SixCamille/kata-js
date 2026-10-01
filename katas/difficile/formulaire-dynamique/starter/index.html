@@ -14,15 +14,33 @@
             <p class="eyebrow">Atelier inscription</p>
             <h1 id="form-title">Formulaire dynamique</h1>
           </div>
-          <p class="status" aria-live="polite"><span>0</span> participant</p>
+          <p class="status" aria-live="polite"><span>1</span> participant</p>
         </div>
 
-        <p class="intro">Ajoutez autant de participants que nécessaire, puis retirez uniquement les lignes concernées.</p>
+        <p class="intro">Ajoutez des participants avec un prénom, un nom et un aperçu lisible des informations saisies.</p>
 
         <button class="add-person" type="button">Ajouter un participant</button>
 
         <form class="dynamic-form">
-          <div class="participants" aria-label="Liste des participants"></div>
+          <div class="participants" aria-label="Liste des participants">
+            <article class="participant">
+              <div class="participant-fields">
+                <label>
+                  Prénom
+                  <input type="text" value="Ada">
+                </label>
+                <label>
+                  Nom
+                  <input type="text" value="Lovelace">
+                </label>
+              </div>
+              <div class="participant-summary" aria-label="Aperçu du participant">
+                <p>Aperçu</p>
+                <strong>Ada Lovelace</strong>
+              </div>
+              <button class="remove-person" type="button">Supprimer</button>
+            </article>
+          </div>
           <p class="empty-state">Aucun participant pour le moment.</p>
         </form>
       </section>

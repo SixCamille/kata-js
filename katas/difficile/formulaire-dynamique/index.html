@@ -17,13 +17,16 @@
           <p class="level-tag">Kata difficile</p>
           <h2 id="brief-title">Formulaire dynamique</h2>
           <p>Le formulaire doit gérer une liste de participants qui évolue pendant l'utilisation.</p>
-          <p>À chaque ajout ou suppression, l'interface doit être reconstruite proprement à partir des données : chaque participant garde son champ, son label et son bouton de suppression, sans casser les autres blocs déjà affichés.</p>
+          <p>Chaque participant possède un prénom et un nom. L'interface affiche les champs éditables, mais aussi une petite zone récapitulative pour vérifier les informations déjà saisies.</p>
+          <p>À chaque ajout, modification ou suppression, l'interface doit rester cohérente : les champs, les boutons et l'aperçu doivent représenter les mêmes données.</p>
           <p>Le point important du kata est de séparer l'état JavaScript, par exemple un tableau de participants, du rendu HTML généré dans le DOM.</p>
           <h3>Attendu</h3>
           <ul>
             <li>Garder les participants dans une structure de données.</li>
             <li>Ajouter un nouveau participant au clic sur le bouton principal.</li>
-            <li>Créer pour chaque participant un bloc avec label, champ texte et action de suppression.</li>
+            <li>Créer pour chaque participant un bloc avec champs prénom et nom.</li>
+            <li>Afficher une petite zone récapitulative qui reprend le prénom et le nom saisis.</li>
+            <li>Mettre à jour les données quand un champ est modifié.</li>
             <li>Supprimer seulement le participant ciblé, puis rafraîchir l'affichage.</li>
             <li>Mettre à jour le compteur et l'état vide quand la liste change.</li>
           </ul>

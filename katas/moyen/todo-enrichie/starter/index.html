@@ -8,14 +8,20 @@
   </head>
   <body>
     <main class="kata-stage">
-      <h1>Todo enrichie</h1>
-      <p class="intro">La liste doit gérer l'ajout, la validation, la suppression et le nombre de tâches restantes.</p>
+      <h1>Todo active</h1>
+      <p class="intro">Ajoutez les tâches à faire. Quand une tâche est cochée ou supprimée, elle quitte la liste active.</p>
       <form class="todo-form">
         <input type="text" placeholder="Nouvelle tâche" aria-label="Nouvelle tâche">
         <button type="submit">Ajouter</button>
       </form>
-      <ul class="todo-list"></ul>
-      <p class="status"><span>0</span> tâche restante</p>
+      <section class="todo-panel" aria-labelledby="todo-title">
+        <div class="todo-heading">
+          <h2 id="todo-title">À faire</h2>
+          <p class="status"><span>0</span> restante</p>
+        </div>
+        <ul class="todo-list"></ul>
+        <p class="empty-state">Aucune tâche active pour le moment.</p>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>
