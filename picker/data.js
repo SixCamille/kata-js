@@ -395,8 +395,8 @@ const KATAS = [
     id: "machine-ecrire",
     title: "Machine à écrire",
     level: "moyen",
-    summary: "Afficher progressivement les lettres d'un texte.",
-    concepts: ["setInterval","index","slice","textContent"],
+    summary: "Composer un message avec un mini clavier cliquable et une touche d'effacement.",
+    concepts: ["click","dataset","état","slice","textContent"],
     starter: "katas/moyen/machine-ecrire/index.html"
   },
   {

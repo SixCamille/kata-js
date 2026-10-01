@@ -224,6 +224,12 @@ element.classList.toggle("is-active");`
     code: `message.textContent = "Bonjour";
 console.log(field.value.length);`
   },
+  stringSlice: {
+    title: "Couper une chaîne",
+    text: "slice renvoie une partie d'une chaîne. Avec -1, on compte depuis la fin.",
+    code: `const start = word.slice(0, 3);
+const shorter = word.slice(0, -1);`
+  },
   inputType: {
     title: "Type d'un input",
     text: "type choisit le comportement du champ. Quelques valeurs courantes : text, email, number, range, checkbox, password.",
@@ -381,7 +387,7 @@ const KATA_MEMO_REFERENCES = {
   "image-survol": { title: "Image qui change au survol", js: ["mouse", "attribute"], css: ["transition"] },
   "interface-tinder": { title: "Interface Tinder", js: ["mouse", "array", "style"], css: ["positionFrame", "transform"] },
   "lancer-de": { title: "Lancer de dé", js: ["click", "random", "text"], css: ["textFeedback"] },
-  "machine-ecrire": { title: "Machine à écrire", js: ["interval", "state", "text"], css: ["textFeedback"] },
+  "machine-ecrire": { title: "Machine à écrire", js: ["click", "forEach", "state", "condition", "stringSlice", "text", "attribute"], css: ["list", "textFeedback", "transition"] },
   "menu-radial": { title: "Menu radial", js: ["click", "state", "angle", "attribute"], css: ["positionFrame", "transform", "transition"] },
   "menu-toggle": { title: "Menu ouvrant / fermant", js: ["click", "classList", "attribute"], css: ["hiddenPanel", "transition"] },
   "message-temporaire": { title: "Message temporaire", js: ["click", "classList", "timeout"], css: ["stateClass", "transition"] },

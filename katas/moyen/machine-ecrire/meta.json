@@ -2,8 +2,9 @@
   "title": "Machine à écrire",
   "level": "moyen",
   "concepts": [
-    "setInterval",
-    "index",
+    "click",
+    "dataset",
+    "état",
     "slice",
     "textContent"
   ],

@@ -16,15 +16,15 @@
         <div class="brief-content">
           <p class="level-tag">Kata moyen</p>
           <h2 id="brief-title">Machine à écrire</h2>
-          <p>Le texte doit apparaître lettre par lettre après le clic.</p>
-          <p>Le texte complet existe dès le départ, mais l'interface n'en montre qu'une partie. À chaque étape, on avance l'index pour révéler une lettre de plus.</p>
+          <p>Un mini clavier de machine à écrire doit remplir une fenêtre de texte au clic.</p>
+          <p>Chaque touche porte une petite donnée lisible par JavaScript. Au clic, cette donnée est ajoutée au texte affiché ; la touche de retour arrière retire seulement la dernière entrée.</p>
           <h3>Attendu</h3>
           <ul>
-            <li>Stocker le texte complet.</li>
-            <li>Garder l'index de la lettre courante.</li>
-            <li>Lancer un intervalle au clic.</li>
-            <li>Ajouter progressivement les lettres à l'écran.</li>
-            <li>Arrêter l'intervalle quand le texte est complet.</li>
+            <li>Sélectionner toutes les touches du clavier miniature.</li>
+            <li>Lire la valeur de chaque touche avec un attribut <code>data-key</code>.</li>
+            <li>Garder le texte courant dans une variable.</li>
+            <li>Mettre à jour la fenêtre avec <code>textContent</code>.</li>
+            <li>Effacer la dernière entrée avec la touche flèche.</li>
           </ul>
           <hr>
           <section class="kata-timer" data-kata-timer aria-label="Suivi du kata"></section>
