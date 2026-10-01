@@ -265,10 +265,10 @@ const KATAS = [
   },
   {
     id: "onglets",
-    title: "Onglets",
+    title: "Onglets animaux",
     level: "facile",
-    summary: "Changer le contenu affiché quand on clique sur un onglet.",
-    concepts: ["click","classList","dataset","contenu actif"],
+    summary: "Afficher la fiche colorée d'un animal quand on clique sur son onglet.",
+    concepts: ["click","classList","dataset","aria-selected"],
     starter: "katas/facile/onglets/index.html"
   },
   {

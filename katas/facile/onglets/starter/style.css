@@ -15,23 +15,39 @@ body {
   display: grid;
   place-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: #172033;
-  background: #f8fafc;
+  color: #233044;
+  background:
+    linear-gradient(135deg, rgba(255, 178, 102, 0.22), transparent 32%),
+    linear-gradient(225deg, rgba(88, 171, 125, 0.18), transparent 34%),
+    #f7f3ec;
 }
 
 .kata-stage {
   width: min(760px, calc(100vw - 32px));
-  padding: 24px;
+  padding: 28px;
+  border: 1px solid rgba(35, 48, 68, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 22px 60px rgba(53, 64, 82, 0.16);
 }
 
 h1 {
-  margin: 0 0 10px;
-  font-size: 1.6rem;
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #b45309;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .intro {
-  margin: 0 0 24px;
-  color: #475569;
+  margin: 0 0 22px;
+  max-width: 48ch;
+  color: #5b6474;
   line-height: 1.5;
 }
 
@@ -43,32 +59,91 @@ textarea {
 
 .tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .tabs button {
-  border: 1px solid #94a3b8;
-  border-radius: 4px;
-  padding: 10px 14px;
-  background: #ffffff;
+  border: 1px solid #d6c8b8;
+  border-radius: 999px;
+  padding: 10px 16px;
+  color: #384255;
+  background: #fffaf3;
   cursor: pointer;
+  font-weight: 700;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.tabs button:hover {
+  transform: translateY(-2px);
 }
 
 .tabs button.is-active {
   color: #ffffff;
-  background: #2563eb;
-  border-color: #2563eb;
+  background: #233044;
+  border-color: #233044;
 }
 
 .panel {
   display: none;
-  padding: 18px;
-  border: 1px solid #d6deea;
-  border-radius: 6px;
-  background: #ffffff;
+  align-items: center;
+  gap: 18px;
+  min-height: 190px;
+  padding: 24px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
 }
 
 .panel.is-active {
-  display: block;
+  display: flex;
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 1.45rem;
+}
+
+.panel p {
+  max-width: 42ch;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.animal-icon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 84px;
+  height: 84px;
+  place-items: center;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.panel-renard {
+  background: linear-gradient(135deg, #d95f27, #f49b45);
+}
+
+.panel-tortue {
+  background: linear-gradient(135deg, #2f855a, #69b578);
+}
+
+.panel-hibou {
+  background: linear-gradient(135deg, #364c84, #7c6bc7);
+}
+
+@media (max-width: 560px) {
+  .kata-stage {
+    padding: 20px;
+  }
+
+  .panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

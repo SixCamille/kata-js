@@ -1,11 +1,12 @@
 {
-  "title": "Onglets",
+  "title": "Onglets animaux",
   "level": "facile",
   "concepts": [
     "click",
     "classList",
     "dataset",
-    "contenu actif"
+    "contenu actif",
+    "accessibilité"
   ],
   "duration": 20,
   "hasStarter": true,

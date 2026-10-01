@@ -3,21 +3,50 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Playground - Onglets</title>
+    <title>Playground - Onglets animaux</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <main class="kata-stage">
-      <h1>Onglets</h1>
-      <p class="intro">Un clic sur un onglet doit afficher le panneau correspondant.</p>
-      <div class="tabs" role="tablist">
-        <button type="button" data-tab="html" aria-selected="true">HTML</button>
-        <button type="button" data-tab="css" aria-selected="false">CSS</button>
-        <button type="button" data-tab="js" aria-selected="false">JS</button>
+      <p class="eyebrow">Mini refuge</p>
+      <h1>Fiches animaux</h1>
+      <p class="intro">Clique sur un animal pour afficher sa fiche et cacher les autres.</p>
+
+      <div class="tabs" role="tablist" aria-label="Animaux du refuge">
+        <button class="is-active" id="tab-renard" type="button" data-tab="renard" role="tab" aria-selected="true" aria-controls="panel-renard">
+          Renard
+        </button>
+        <button id="tab-tortue" type="button" data-tab="tortue" role="tab" aria-selected="false" aria-controls="panel-tortue">
+          Tortue
+        </button>
+        <button id="tab-hibou" type="button" data-tab="hibou" role="tab" aria-selected="false" aria-controls="panel-hibou">
+          Hibou
+        </button>
       </div>
-      <section class="panel is-active" data-panel="html">Structure de la page.</section>
-      <section class="panel" data-panel="css">Apparence de la page.</section>
-      <section class="panel" data-panel="js">Interactions de la page.</section>
+
+      <section class="panel panel-renard is-active" id="panel-renard" data-panel="renard" role="tabpanel" aria-labelledby="tab-renard">
+        <span class="animal-icon" aria-hidden="true">R</span>
+        <div>
+          <h2>Renard roux</h2>
+          <p>Rapide, discret et très curieux. Sa fiche utilise une couleur chaude.</p>
+        </div>
+      </section>
+
+      <section class="panel panel-tortue" id="panel-tortue" data-panel="tortue" role="tabpanel" aria-labelledby="tab-tortue">
+        <span class="animal-icon" aria-hidden="true">T</span>
+        <div>
+          <h2>Tortue verte</h2>
+          <p>Calme, solide et patiente. Sa fiche utilise une couleur végétale.</p>
+        </div>
+      </section>
+
+      <section class="panel panel-hibou" id="panel-hibou" data-panel="hibou" role="tabpanel" aria-labelledby="tab-hibou">
+        <span class="animal-icon" aria-hidden="true">H</span>
+        <div>
+          <h2>Hibou nuit</h2>
+          <p>Observateur, silencieux et précis. Sa fiche utilise une couleur nocturne.</p>
+        </div>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>
